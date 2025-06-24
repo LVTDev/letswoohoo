@@ -9,6 +9,7 @@ const ComingSoonVideoReel = ({}) => {
         height="80%"
         muted={true}
         autoPlay={true}
+        loop
       >
         <source
           src={
