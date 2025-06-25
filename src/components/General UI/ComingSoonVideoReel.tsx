@@ -10,6 +10,7 @@ const ComingSoonVideoReel = ({}) => {
         muted={true}
         autoPlay={true}
         loop
+        playsInline
       >
         <source
           src={
