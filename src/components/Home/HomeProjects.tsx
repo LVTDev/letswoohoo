@@ -4,7 +4,7 @@ import HomeProjectImage from "./HomeProjectImage";
 const HomeProjects = () => {
   return (
     <div className="mt-10 hidden md:block">
-      <div className="flex gap-5 mb-7">
+      <div className="flex">
         <HomeProjectImage
           imageLink="https://cdn.sanity.io/images/5egex671/production/99cf1304b3f58ad25919d13c68ad00920467bc7a-1001x501.png"
           size="large"
@@ -16,7 +16,7 @@ const HomeProjects = () => {
           alt="poster eres unico"
         />
       </div>
-      <div className="flex gap-5 mb-7">
+      <div className="flex">
         <HomeProjectImage
           imageLink="https://cdn.sanity.io/images/5egex671/production/2ae0b00cee0b0f33d9ef5c567ce255aa5684396a-501x501.png"
           size="normal"
@@ -29,7 +29,7 @@ const HomeProjects = () => {
           alt="poster sintaboobs"
         />
       </div>
-      <div className="flex gap-5 mb-7">
+      <div className="flex">
         <HomeProjectImage
           imageLink="https://cdn.sanity.io/images/5egex671/production/55d90f3e765f10eb30c80224b308b74e1e93df76-501x501.png"
           size="normal"
@@ -49,9 +49,9 @@ const HomeProjects = () => {
         />
       </div>
 
-      <div className="flex gap-5 mb-7">
+      <div className="flex">
         <div className="w-2/3">
-          <div className="mb-7">
+          <div className="">
             {" "}
             <HomeProjectImage
               imageLink="https://cdn.sanity.io/images/5egex671/production/89cdc9dbdf89af7128e798764a8be7b0ce66a685-1001x501.png"
@@ -61,7 +61,7 @@ const HomeProjects = () => {
               premio="wina"
             />
           </div>
-          <div className="flex gap-5">
+          <div className="flex ">
             <HomeProjectImage
               imageLink="https://cdn.sanity.io/images/5egex671/production/fb06715d84adf6ee6f22d5e81d89b2f4dae0e702-501x501.png"
               size="normal"
@@ -86,7 +86,7 @@ const HomeProjects = () => {
           />
         </div>
       </div>
-      <div className="flex gap-5 mb-7">
+      <div className="flex">
         <div className="w-1/3">
           <HomeProjectImage
             imageLink="https://cdn.sanity.io/images/5egex671/production/9c38d3ea74843dd59dd6dd95c0224398568c4fb9-501x1001.png"
@@ -97,7 +97,7 @@ const HomeProjects = () => {
           />
         </div>
         <div className="w-2/3">
-          <div className="mb-7 flex gap-5">
+          <div className=" flex ">
             {" "}
             <HomeProjectImage
               imageLink="https://cdn.sanity.io/images/5egex671/production/2d9609a5fda0399379249e0ae931005d82629e5f-501x501.png"
@@ -113,7 +113,7 @@ const HomeProjects = () => {
               full
             />
           </div>
-          <div className="flex gap-5">
+          <div className="flex ">
             <HomeProjectImage
               imageLink="https://cdn.sanity.io/images/5egex671/production/4249ba7053d48b75fbce8706341202c4f6c87931-501x501.png"
               size="normal"
@@ -130,7 +130,7 @@ const HomeProjects = () => {
           </div>
         </div>
       </div>
-      <div className="flex gap-5 mb-7">
+      <div className="flex">
         <HomeProjectImage
           imageLink="https://cdn.sanity.io/images/5egex671/production/d179047401f6f1229bc1584860542769e26aeaee-1001x501.png"
           size="large"
