@@ -3,7 +3,7 @@ import React from "react";
 
 type ImageProps = {
   imageLink: string;
-  size: "normal" | "large" | "tall" | "half";
+  size: "normal" | "large" | "tall" | "half"
   alt: string;
   full?: boolean;
   premio?: "amco" | "muse" | "wina";
@@ -14,14 +14,23 @@ type ImageProps = {
     wina: "https://cdn.sanity.io/images/5egex671/production/cea75aea900778d0d714599f5f6682fc32f7dd14-173x201.png"
  }
 const HomeProjectImage = ({ imageLink, size, alt, full, premio }: ImageProps) => {
+    const sizeClasses = {
+    normal: "col-span-1 aspect-square",
+    half: "col-span-1 aspect-square",
+    large: "col-span-2 aspect-[2/1]",
+    tall: "col-span-1 row-span-2 aspect-[1/2]", // Tall spans two rows
+  };
   return (
-    <div
-      className={`${size === "half" && "w-1/2 aspect-square"} ${size === "normal" && "w-1/3 aspect-square"} ${size === "large" && "w-2/3 aspect-video"} ${size === "tall" && "aspect-[1/2]"} relative ${full && "w-full"}`}
-    >
-      <Image src={imageLink} alt={alt} fill />
+    <div className={`relative w-full ${sizeClasses[size]} ${full ? "col-span-full" : ""}`}>
+      <Image src={imageLink} alt={alt} fill style={{ objectFit: "fill" }} />
       {premio && (
         <div className="absolute right-3 top-0 w-10 h-10">
-          <Image width={40} height={40} src={premioLinks[premio]} alt={`${premio} award`} />
+          <Image
+            width={40}
+            height={40}
+            src={premioLinks[premio]}
+            alt={`${premio} award`}
+          />
         </div>
       )}
     </div>
