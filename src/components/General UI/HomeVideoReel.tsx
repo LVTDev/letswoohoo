@@ -1,10 +1,10 @@
 const HomeVideoReel = ({ url }: { url: string }) => {
   return (
     // <div className="relative w-full pb-[75.25%] md:pb-[45.25%] max-h-[55vh] flex justify-center">
-    <div className="relative w-screen min-h-screen">
+    <div className="relative min-h-screen">
       <video
         data-testid="video"
-        className="w-full  h-full absolute top-0 left-0 object-contain object-center md:block hidden"
+        className="w-[90%]   h-full absolute top-0 left-1/2 -translate-x-1/2 object-contain object-center md:block hidden"
         width="80%"
         height="1000%"
         muted={true}

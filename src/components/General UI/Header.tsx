@@ -4,7 +4,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="flex justify-between py-4 px-8 text-xs">
+    <header className="flex justify-between py-4 px-8 text-xs max-w-screen">
       <div>
         <Link href="/">
          <div className="">
