@@ -3,7 +3,7 @@ import HomeProjectImage from "./HomeProjectImage";
 
 const HomeProjects = () => {
   return (
-    <div className="hidden md:grid grid-cols-3">
+    <div className="hidden gap-5 md:grid grid-cols-3 mt-8">
       <HomeProjectImage
         imageLink="https://cdn.sanity.io/images/5egex671/production/99cf1304b3f58ad25919d13c68ad00920467bc7a-1001x501.png"
         size="large"
