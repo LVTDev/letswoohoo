@@ -5,7 +5,7 @@ const HomeProjects = () => {
   return (
     <div className="hidden gap-5 md:grid grid-cols-3 mt-8">
       <HomeProjectImage
-        imageLink="https://cdn.sanity.io/images/5egex671/production/99cf1304b3f58ad25919d13c68ad00920467bc7a-1001x501.png"
+        imageLink="https://cdn.sanity.io/images/5egex671/production/5273a7e149b52ca4f53b346652f2f9a1212ae1ef-1051x501.png"
         size="large"
         alt="poster monterrey film festival"
       />
@@ -22,7 +22,7 @@ const HomeProjects = () => {
       />
 
       <HomeProjectImage
-        imageLink="https://cdn.sanity.io/images/5egex671/production/60def59f14b48fa96d2ddd5432f79174ca76fdf1-1001x501.png"
+        imageLink="https://cdn.sanity.io/images/5egex671/production/47377fc7a5152c36bd6ac0c5cf70c661d1b4323f-1051x501.png"
         size="large"
         alt="poster sintaboobs"
       />
@@ -45,13 +45,13 @@ const HomeProjects = () => {
         premio="muse"
       />
       <HomeProjectImage
-        imageLink="https://cdn.sanity.io/images/5egex671/production/89cdc9dbdf89af7128e798764a8be7b0ce66a685-1001x501.png"
+        imageLink="https://cdn.sanity.io/images/5egex671/production/ee951d2ea18ebc063999de44366e6babc9ee5c08-1051x501.png"
         size="large"
         alt="poster cocacola goal"
         premio="wina"
       />
       <HomeProjectImage
-        imageLink="https://cdn.sanity.io/images/5egex671/production/a1f9d539a50192f91cff9401f991947ae7f144cf-501x1001.png"
+        imageLink="https://cdn.sanity.io/images/5egex671/production/8cfb23bb3ae8a24e5308fa5be737458179479e62-501x1051.png"
         size="tall"
         alt="poster afirme sol"
         premio="muse"
@@ -67,7 +67,7 @@ const HomeProjects = () => {
         alt="poster top golf"
       />
       <HomeProjectImage
-        imageLink="https://cdn.sanity.io/images/5egex671/production/9c38d3ea74843dd59dd6dd95c0224398568c4fb9-501x1001.png"
+        imageLink="https://cdn.sanity.io/images/5egex671/production/7d04460726c519b2078e78fb915c429bd1e5c6e5-501x1051.png"
         size="tall"
         alt="poster fic19"
         premio="muse"
@@ -95,7 +95,7 @@ const HomeProjects = () => {
         alt="poster Hachiko"
       />
       <HomeProjectImage
-        imageLink="https://cdn.sanity.io/images/5egex671/production/d179047401f6f1229bc1584860542769e26aeaee-1001x501.png"
+        imageLink="https://cdn.sanity.io/images/5egex671/production/5a50f7a6fc69f8b5986b512a262caa6da3c9cad5-1051x501.png"
         size="large"
         alt="Evento Afirme"
       />

@@ -17,8 +17,8 @@ const HomeProjectImage = ({ imageLink, size, alt, full, premio }: ImageProps) =>
     const sizeClasses = {
     normal: "col-span-1 aspect-square",
     half: "col-span-1 aspect-square",
-    large: "col-span-2 aspect-[2/1]",
-    tall: "col-span-1 row-span-2 aspect-[1/2]", // Tall spans two rows
+    large: "col-span-2 aspect-[2.05]",
+    tall: "col-span-1 row-span-2 aspect-[.49]", // Tall spans two rows
   };
   return (
     <div className={`relative w-full ${sizeClasses[size]} ${full ? "col-span-full" : ""}`}>
