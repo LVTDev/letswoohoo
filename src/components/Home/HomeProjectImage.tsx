@@ -31,7 +31,7 @@ const HomeProjectImage = ({
   return (
     <div
     onClick={onClick}
-      className={`relative w-full ${sizeClasses[size]} ${full ? "col-span-full" : ""}`}
+      className={`relative w-full cursor-pointer ${sizeClasses[size]} ${full ? "col-span-full" : ""}`}
     >
       <Image src={imageLink} alt={alt} fill style={{ objectFit: "fill" }} />
       {premio && (
