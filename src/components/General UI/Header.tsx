@@ -4,14 +4,14 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="flex justify-between py-4 px-8 text-xs max-w-screen">
+    <header className="flex justify-between py-4 px-8 text-xs max-w-screen font-albert">
       <div>
         <Link href="/">
          <div className="">
               <Image
                 width={40}
                 height={30}
-                src="/woohooLogo.png"
+                src="/woohoo_menu.png"
                 alt="wooHoo Logo"
               />
             </div>

@@ -125,10 +125,10 @@ const ClientList = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-[90vw] mx-auto">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-5 w-[90vw] max-w-[1000px] mx-auto">
       {clientList.map((client) => (
-        <div key={client.id} className="">
-          <Image src={client.image} height={300} width={300} alt={client.name}  />
+        <div key={client.id} className="flex justify-center">
+          <Image src={client.image} height={350} width={350} alt={client.name}  />
         </div>
       ))}
     </div>
