@@ -12,7 +12,7 @@ const HomeProjects = () => {
     text?: string;
   }>();
   return (
-    <div className="hidden gap-5 md:grid grid-cols-3 mt-8">
+    <div className="hidden gap-5 md:grid grid-cols-3 mt-8 mx-10">
       {homeProjectsDesktop.map((proj) => (
         <HomeProjectImage
           imageLink={proj.imageLink}

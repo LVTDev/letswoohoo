@@ -4,8 +4,8 @@ const HomeVideoReel = ({ url }: { url: string }) => {
     <div className="relative min-h-screen">
       <video
         data-testid="video"
-        className="w-[90%]   h-[80%] absolute top-0 left-1/2 -translate-x-1/2 object-contain object-center md:block hidden"
-        width="80%"
+        className="w-full   h-full absolute top-0 left-1/2 -translate-x-1/2 object-cover object-center md:block hidden"
+        width="100%"
         height="1000%"
         muted={true}
         autoPlay={true}

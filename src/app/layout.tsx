@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/General UI/Header";
+import LetsTalkButton from "@/components/General UI/LetsTalkButton";
 
 
 
@@ -24,9 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${albert.variable} antialiased md:px-8`}
+        className={` ${albert.variable} antialiased`}
       >
         <Header />
+        <LetsTalkButton />
         {children}
       </body>
     </html>
