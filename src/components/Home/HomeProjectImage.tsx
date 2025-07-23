@@ -26,7 +26,7 @@ const HomeProjectImage = ({
     normal: "col-span-1 aspect-square",
     half: "col-span-1 aspect-square",
     large: "col-span-2 aspect-[2.05]",
-    tall: "col-span-1 row-span-2 aspect-[.49]", // Tall spans two rows
+    tall: "col-span-1 row-span-2 ", // Tall spans two rows
   };
   return (
     <div
