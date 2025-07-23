@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, {  useRef } from "react";
+import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -36,27 +36,55 @@ const Header = () => {
   }, [pathname]);
   return (
     <header
-      ref={container}
-      className={`fixed top-0 left-1/2 -translate-x-1/2 flex justify-between items-center  ${
-        pathname === "/" ? "bg-transparent" : "bg-[#2b2f35f2]"
-      } py-4 px-4 md:px-12 text-xs w-screen font-albert z-50 text-white`}
+      className={`fixed top-0 left-1/2 -translate-x-1/2 w-screen font-albert z-50 text-white`}
     >
-      <div className="w-10">
-        <Link href="/">
-          <WoohooSvgWhite />
-        </Link>
+      <div
+        ref={container}
+        className={`justify-between items-center bg-transparent  ${
+          pathname === "/" ? "flex" : "hidden"
+        } py-4 px-4 md:px-12 text-xs`}
+      >
+        <div className="w-10">
+          <Link href="/">
+            <WoohooSvgWhite />
+          </Link>
+        </div>
+        <div className="flex uppercase gap-8 w-1/2 justify-between font-bold">
+          <Link href={"/clients"}>Clients</Link>
+          <Link href={"/services"}>Services</Link>
+          <Link href={"/team"}>Our Team</Link>
+          <Link href={"/blog"}>Blog</Link>
+          <div>
+            <a href="https://barracaproducciones.mx/">
+              <div className="w-14">
+                <BarracaSvgWhite />
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
-      <div className="flex uppercase gap-8 w-1/2 justify-between font-bold">
-        <Link href={"/clients"}>Clients</Link>
-        <Link href={"/services"}>Services</Link>
-        <Link href={"/team"}>Our Team</Link>
-        <Link href={"/blog"}>Blog</Link>
-        <div>
-          <a href="https://barracaproducciones.mx/">
-            <div className="w-14">
-              <BarracaSvgWhite />
-            </div>
-          </a>
+      <div
+        className={`justify-between items-center bg-[#2b2f35f2]  ${
+          pathname === "/" ? "hidden" : "flex"
+        } py-4 px-4 md:px-12 text-xs`}
+      >
+        <div className="w-10">
+          <Link href="/">
+            <WoohooSvgWhite />
+          </Link>
+        </div>
+        <div className="flex uppercase gap-8 w-1/2 justify-between font-bold">
+          <Link href={"/clients"}>Clients</Link>
+          <Link href={"/services"}>Services</Link>
+          <Link href={"/team"}>Our Team</Link>
+          <Link href={"/blog"}>Blog</Link>
+          <div>
+            <a href="https://barracaproducciones.mx/">
+              <div className="w-14">
+                <BarracaSvgWhite />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </header>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>Team</div>
+    <div className='pt-[80px]'>Team</div>
   )
 }
 
