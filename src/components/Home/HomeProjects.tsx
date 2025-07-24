@@ -10,6 +10,10 @@ const HomeProjects = () => {
     imageLink: string;
     alt: string;
     text?: string;
+    fullImage?: string;
+    videoLink?: string;
+    descriptionENG?: string;
+    descriptionESP?: string;
   }>();
   return (
     <div className="hidden gap-5 md:grid grid-cols-3 mt-8 mx-10">
@@ -29,22 +33,27 @@ const HomeProjects = () => {
         onClose={() => setSelectedProject(null)}
       >
         {selectedProject && (
-          <>
-            <h2 className="text-xl font-semibold mb-4 uppercase">
-              {selectedProject.alt}
-            </h2>
-            <div className="relative w-full max-w-md h-[50vh] mx-auto mb-4">
+          <div className="h-[80vh] overflow-auto">
+            <div className="relative w-full max-w-md h-[30vh] mx-auto mb-4">
               <Image
-                src={selectedProject.imageLink}
+                src={selectedProject.fullImage || selectedProject.imageLink}
                 alt={selectedProject.alt}
                 fill
                 className="rounded-lg object-contain"
                 sizes="(max-width: 768px) 90vw, 400px"
               />
             </div>
-            <p>algun texto lorem....</p>
-            <p>{selectedProject?.text}</p>
-          </>
+            {selectedProject.videoLink && (
+              <div className="mx-auto w-max">
+                <video width="320" height="240" controls>
+                  <source src={selectedProject.videoLink} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            )}
+            <p className="font-albert my-6">{selectedProject?.descriptionENG}</p>
+            <p>{selectedProject?.descriptionESP}</p>
+          </div>
         )}
       </Modal>
     </div>

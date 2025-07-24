@@ -4,6 +4,10 @@ type HomeProject = {
   alt: string;
   premio?: string;
   id: number;
+  fullImage?: string;
+  videoLink?: string;
+  descriptionESP?: string;
+  descriptionENG?: string;
 };
 export const homeProjectsDesktop: HomeProject[] = [
   {
@@ -12,6 +16,8 @@ export const homeProjectsDesktop: HomeProject[] = [
     size: "large",
     alt: "poster monterrey film festival",
     id: 1,
+    videoLink:
+      "https://cdn.sanity.io/files/aq7eb5nj/production/343fab1686acaffef7c29f15328d29105b8cfd3d.mp4",
   },
   {
     imageLink:
@@ -19,6 +25,8 @@ export const homeProjectsDesktop: HomeProject[] = [
     size: "half",
     alt: "poster eres unico",
     id: 2,
+    fullImage:
+      "https://cdn.sanity.io/images/aq7eb5nj/production/0166ba8ffa9c35cd27996e377acd41f42da0b58f-736x933.jpg",
   },
   {
     imageLink:
@@ -34,6 +42,10 @@ export const homeProjectsDesktop: HomeProject[] = [
     size: "large",
     alt: "poster sintaboobs",
     id: 5,
+    videoLink:
+      "https://cdn.sanity.io/files/aq7eb5nj/production/7f6d67642d1f13a6940ef90160cd664679627e21.mp4",
+    descriptionENG:
+      'In Mexico, 23,000 cases of breast cancer are detected each year, with 7,000 deaths from a disease with a high survival rate when detected early. There are several methods to obtain it, the simplest and cheapest is breast self-examination. Unfortunately many taboos, both personal and social, prevent many women from performing self-examination, which increases the possibility of a positive diagnosis. At Grupo LVT, as a communication agency led by women, we believe that we must help and raise awareness. We want to transmit and promote the importance of early detection, without taboos. That is our way of joining forces to take care of each other and prevent cases from continuing to grow, because creativity is also a tool for change and support. In this campaign we decided to show breasts without taboos, Break the taboobs, inviting self-examination and raising awareness. This professional campaign titled "Break the taboobs" was published in Mexico in October, 2024. It was created for the brand: grupolvt, by ad agency: Grupo LVT. This Print medium campaign is related to the Agency Self-Promo and Health industries and contains 1 media asset. It was submitted 8 months ago.',
   },
   {
     imageLink:
@@ -49,6 +61,8 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "poster la cancha cocaCola",
     premio: "muse",
     id: 7,
+    fullImage:
+      "https://cdn.sanity.io/images/aq7eb5nj/production/9ffef84362a3f9258647cf88e1c05a8c460e9fa2-1229x2048.jpg",
   },
 
   {
@@ -58,6 +72,8 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "poster cuidad verde",
     premio: "muse",
     id: 8,
+    fullImage:
+      "https://cdn.sanity.io/images/aq7eb5nj/production/80c473fae12adc455937d400f0270b67e5a2af50-736x933.jpg",
   },
   {
     imageLink:
@@ -81,6 +97,8 @@ export const homeProjectsDesktop: HomeProject[] = [
     size: "normal",
     alt: "poster afirmeFutbol",
     id: 11,
+    fullImage:
+      "https://cdn.sanity.io/images/aq7eb5nj/production/7301a584707044745dfd697e2ff91a4287351e56-736x933.jpg",
   },
   {
     imageLink:
@@ -104,6 +122,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "poster BilluVerse",
     premio: "muse",
     id: 14,
+    videoLink: "https://cdn.sanity.io/files/aq7eb5nj/production/fb03609d0306940a867b9b6f4eccd3e2f90497db.mp4"
   },
   {
     imageLink:
@@ -111,6 +130,8 @@ export const homeProjectsDesktop: HomeProject[] = [
     size: "normal",
     alt: "poster topgolf",
     id: 15,
+    fullImage:
+      "https://cdn.sanity.io/images/aq7eb5nj/production/70fe0f18d9dc5a99d51a4e58d6ff149d7ff98ac6-736x933.jpg",
   },
   {
     imageLink:
@@ -126,6 +147,8 @@ export const homeProjectsDesktop: HomeProject[] = [
     size: "normal",
     alt: "poster Hachiko",
     id: 17,
+    fullImage:
+      "https://cdn.sanity.io/images/aq7eb5nj/production/6ec58858181e4f10cb1a96241e9a484783ec5ee6-736x933.jpg",
   },
   {
     imageLink:
@@ -133,6 +156,8 @@ export const homeProjectsDesktop: HomeProject[] = [
     size: "large",
     alt: "Evento Afirme",
     id: 18,
+    fullImage:
+      "https://cdn.sanity.io/images/aq7eb5nj/production/a74d7500f6e52b2dedce51043192ce180b4fa87a-1600x901.jpg",
   },
 
   {
@@ -151,14 +176,18 @@ export const homeProjectsMobile = [
       "https://cdn.sanity.io/images/5egex671/production/5273a7e149b52ca4f53b346652f2f9a1212ae1ef-1051x501.png",
     size: "large",
     alt: "poster monterrey film festival",
-    id: 1
+    id: 1,
+    videoLink:
+      "https://cdn.sanity.io/files/aq7eb5nj/production/343fab1686acaffef7c29f15328d29105b8cfd3d.mp4",
   },
   {
     imageLink:
       "https://cdn.sanity.io/images/5egex671/production/b802c9451a5aa601691c911c5f2b3de7f0c5d38e-501x501.png",
     size: "half",
     alt: "poster eres unico",
-    id: 2
+    id: 2,
+    fullImage:
+      "https://cdn.sanity.io/images/aq7eb5nj/production/0166ba8ffa9c35cd27996e377acd41f42da0b58f-736x933.jpg",
   },
   {
     imageLink:
@@ -166,21 +195,25 @@ export const homeProjectsMobile = [
     size: "half",
     alt: "poster el sol proyecto",
     premio: "muse",
-    id: 3
+    id: 3,
   },
   {
     imageLink:
       "https://cdn.sanity.io/images/5egex671/production/47377fc7a5152c36bd6ac0c5cf70c661d1b4323f-1051x501.png",
     size: "large",
     alt: "poster sintaboobs",
-    id: 4
+    id: 4,
+    videoLink:
+      "https://cdn.sanity.io/files/aq7eb5nj/production/7f6d67642d1f13a6940ef90160cd664679627e21.mp4",
+    descriptionENG:
+      'In Mexico, 23,000 cases of breast cancer are detected each year, with 7,000 deaths from a disease with a high survival rate when detected early. There are several methods to obtain it, the simplest and cheapest is breast self-examination. Unfortunately many taboos, both personal and social, prevent many women from performing self-examination, which increases the possibility of a positive diagnosis. At Grupo LVT, as a communication agency led by women, we believe that we must help and raise awareness. We want to transmit and promote the importance of early detection, without taboos. That is our way of joining forces to take care of each other and prevent cases from continuing to grow, because creativity is also a tool for change and support. In this campaign we decided to show breasts without taboos, Break the taboobs, inviting self-examination and raising awareness. This professional campaign titled "Break the taboobs" was published in Mexico in October, 2024. It was created for the brand: grupolvt, by ad agency: Grupo LVT. This Print medium campaign is related to the Agency Self-Promo and Health industries and contains 1 media asset. It was submitted 8 months ago.',
   },
   {
     imageLink:
       "https://cdn.sanity.io/images/5egex671/production/55d90f3e765f10eb30c80224b308b74e1e93df76-501x501.png",
     size: "half",
     alt: "poster silencio",
-    id: 5
+    id: 5,
   },
   {
     imageLink:
@@ -188,7 +221,9 @@ export const homeProjectsMobile = [
     size: "half",
     alt: "poster la cancha cocaCola",
     premio: "muse",
-    id: 6
+    id: 6,
+    fullImage:
+      "https://cdn.sanity.io/images/aq7eb5nj/production/9ffef84362a3f9258647cf88e1c05a8c460e9fa2-1229x2048.jpg",
   },
   {
     imageLink:
@@ -196,21 +231,23 @@ export const homeProjectsMobile = [
     size: "large",
     alt: "poster cocacola goal",
     premio: "wina",
-    id: 7
+    id: 7,
   },
   {
     imageLink:
       "https://cdn.sanity.io/images/5egex671/production/fb06715d84adf6ee6f22d5e81d89b2f4dae0e702-501x501.png",
     size: "normal",
     alt: "poster afirmeFutbol",
-    id: 8
+    id: 8,
+    fullImage:
+      "https://cdn.sanity.io/images/aq7eb5nj/production/7301a584707044745dfd697e2ff91a4287351e56-736x933.jpg",
   },
   {
     imageLink:
       "https://cdn.sanity.io/images/5egex671/production/99e26a6e799823de030bb22965b7f4a17094d1c7-501x501.png",
     size: "normal",
     alt: "poster top golf",
-    id: 9
+    id: 9,
   },
   {
     imageLink:
@@ -218,7 +255,7 @@ export const homeProjectsMobile = [
     size: "tall",
     alt: "poster fic19",
     premio: "muse",
-    id: 10
+    id: 10,
   },
   {
     imageLink:
@@ -226,7 +263,8 @@ export const homeProjectsMobile = [
     size: "normal",
     alt: "poster BilluVerse",
     premio: "muse",
-    id: 11
+    id: 11,
+    videoLink: "https://cdn.sanity.io/files/aq7eb5nj/production/fb03609d0306940a867b9b6f4eccd3e2f90497db.mp4"
   },
   {
     imageLink:
@@ -234,14 +272,16 @@ export const homeProjectsMobile = [
     size: "normal",
     alt: "poster rutaRosa",
     premio: "amco",
-    id: 12
+    id: 12,
   },
   {
     imageLink:
       "https://cdn.sanity.io/images/5egex671/production/0f11d65158e6abacd41471903b6f9b24fb9bf111-501x501.png",
     size: "normal",
     alt: "poster Hachiko",
-    id: 13
+    id: 13,
+    fullImage:
+      "https://cdn.sanity.io/images/aq7eb5nj/production/6ec58858181e4f10cb1a96241e9a484783ec5ee6-736x933.jpg",
   },
   {
     imageLink:
@@ -249,21 +289,23 @@ export const homeProjectsMobile = [
     size: "tall",
     alt: "poster afirme sol",
     premio: "muse",
-    id: 14
+    id: 14,
   },
   {
     imageLink:
       "https://cdn.sanity.io/images/5egex671/production/70dc4ef398cffb7e922dbc8dec712cde37689529-501x501.png",
     size: "normal",
     alt: "poster topgolf",
-    id: 15
+    id: 15,
+    fullImage:
+      "https://cdn.sanity.io/images/aq7eb5nj/production/70fe0f18d9dc5a99d51a4e58d6ff149d7ff98ac6-736x933.jpg",
   },
   {
     imageLink:
       "https://cdn.sanity.io/images/5egex671/production/94120dd0befb3c11b8c06d43d4edc7a5c8c7ec36-501x501.png",
     size: "half",
     alt: "poster las lloronas",
-    id: 16
+    id: 16,
   },
   {
     imageLink:
@@ -271,13 +313,17 @@ export const homeProjectsMobile = [
     size: "half",
     alt: "poster cuidad verde",
     premio: "muse",
-    id: 17
+    id: 17,
+    fullImage:
+      "https://cdn.sanity.io/images/aq7eb5nj/production/80c473fae12adc455937d400f0270b67e5a2af50-736x933.jpg",
   },
   {
     imageLink:
       "https://cdn.sanity.io/images/5egex671/production/5a50f7a6fc69f8b5986b512a262caa6da3c9cad5-1051x501.png",
     size: "large",
     alt: "Evento Afirme",
-    id: 18
+    id: 18,
+    fullImage:
+      "https://cdn.sanity.io/images/aq7eb5nj/production/a74d7500f6e52b2dedce51043192ce180b4fa87a-1600x901.jpg",
   },
 ];
