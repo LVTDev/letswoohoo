@@ -26,8 +26,7 @@ const AnimatedHeaderLinks = () => {
 
         const headingstart = link.querySelector(".primary");
         const headingend = link.querySelector(".secondary");
-        // const date = link.querySelector('.date')
-        // const linedash = link.querySelector('.line')
+  
 
         linkTL
           .to(headingstart, { yPercent: -100 })
