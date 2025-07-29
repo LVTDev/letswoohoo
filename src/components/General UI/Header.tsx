@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/all";
 import BarracaSvgWhite from "./BarracaSvgWhite";
 import WoohooSvgWhite from "./WoohooSvgWhite";
 import { usePathname } from "next/navigation";
+import AnimatedHeaderLinks from "./AnimatedHeaderLinks";
 
 const Header = () => {
   const pathname = usePathname();
@@ -49,7 +50,7 @@ const Header = () => {
             <WoohooSvgWhite />
           </Link>
         </div>
-        <div className="flex uppercase gap-8 w-1/2 justify-between font-bold">
+        {/* <div className="flex uppercase gap-8 w-1/2 justify-between font-bold">
           <Link href={"/clients"}>Clients</Link>
           <Link href={"/services"}>Services</Link>
           <Link href={"/team"}>Our Team</Link>
@@ -61,7 +62,8 @@ const Header = () => {
               </div>
             </a>
           </div>
-        </div>
+        </div> */}
+        <AnimatedHeaderLinks />
       </div>
       <div
         className={`justify-between items-center bg-[#2b2f35f2]  ${
