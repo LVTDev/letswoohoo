@@ -9,7 +9,7 @@ const items = [
   { label: "Clients", id: "firstSection", link: "/clients" },
   { label: "Services", id: "secondSection", link: "/services" },
   { label: "Our Team", id: "thirdSection", link: "/team" },
-  { label: "Blog", id: "fourthSection", link: "/blog" },
+  { label: "Contact", id: "fourthSection", link: "/letsTalk" },
 ];
 
 const AnimatedHeaderLinks = () => {
