@@ -81,7 +81,7 @@ const ComingSoonVideoReel = ({}) => {
               src={desktopImage}
               alt="Coming Soon Desktop"
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
           </div>
