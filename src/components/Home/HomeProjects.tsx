@@ -16,7 +16,7 @@ const HomeProjects = () => {
     descriptionESP?: string;
   }>();
   return (
-    <div className="hidden gap-5 md:grid grid-cols-3 mt-8 mx-10">
+    <div className="hidden gap-5 md:grid grid-cols-3 mt-8 w-[90vw] mx-auto">
       {homeProjectsDesktop.map((proj) => (
         <HomeProjectImage
           imageLink={proj.imageLink}

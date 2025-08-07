@@ -5,6 +5,8 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import "leaflet/dist/images/marker-shadow.png";
+import 'leaflet-defaulticon-compatibility';
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 // delete L.Icon.Default.prototype._getIconUrl;
 
 L.Icon.Default.mergeOptions({
