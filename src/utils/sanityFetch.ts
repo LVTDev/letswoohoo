@@ -4,7 +4,7 @@ import { groq } from "next-sanity";
 export const fetchSanity = async (fetchSection: string) => {
   const query = groq`   *[_type=='${fetchSection}']{
         ...,
-    }`;
+    } | order(orderPosition)`;
 
   const fetchedData = await client.fetch(query, {}, {cache: "no-store"});
   console.log("FETCHED DATA",fetchedData)

@@ -1,11 +1,13 @@
+import { ArrowRightIcon } from "@sanity/icons";
 import React from "react";
 
 const page = () => {
   return (
     <div className="font-albert md:px-8 pt-[80px]">
       <h1 className="hidden">Services</h1>
-      <div className="w-30 md:w-100 mx-auto mb-10">
-        <svg
+      <div className="w-full mx-auto mb-10">
+        <img src="https://cdn.sanity.io/images/5egex671/production/ab5cb1a0bf635d7c3216066cb78ab3292c462094-1921x541.png" alt="letswoohoo banner" />
+        {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           id="Capa_1"
           version="1.1"
@@ -22,98 +24,95 @@ const page = () => {
             <path d="M358.3,216l-15.6,58h-21.9l8.3-58h29.2Z" />
             <path d="M394.2,287.6c0,2.8,1.8,5,5.5,6.8,3.7,1.7,8.2,3.3,13.5,4.6,5.3,1.3,10.6,3,15.9,5s9.8,5.4,13.5,10.1,5.5,10.6,5.5,17.7c0,10.7-4,19-12,24.7-8,5.8-18,8.7-29.9,8.7-21.4,0-36-8.3-43.8-24.8l23.4-13.1c3.1,9,9.9,13.6,20.4,13.6s14.4-3,14.4-9-1.8-5-5.5-6.8c-3.7-1.7-8.2-3.3-13.5-4.7-5.3-1.4-10.6-3.1-15.9-5.2s-9.8-5.4-13.5-9.9-5.5-10.2-5.5-17c0-10.3,3.8-18.4,11.4-24.3s17-8.9,28.3-8.9,16.2,1.9,23.2,5.7c7,3.8,12.4,9.3,16.5,16.4l-23,12.5c-3.3-7.1-8.9-10.6-16.7-10.6s-6.4.8-8.7,2.3c-2.3,1.5-3.4,3.6-3.4,6.3h0Z" />
           </g>
-        </svg>
+        </svg> */}
       </div>
 
-      <div className="flex border-b border-gray my-7 pb-4">
-        <p className="w-1/2 text-[#6214c5]  text-4xl font-bold"> EXPERIENCIAS</p>
-        <div>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+      <div className=" border-b border-gray my-7 pb-4">
+        <p className="text-4xl font-extrabold tracking-widest"> EXPERIENCES</p>
+        <div className="flex gap-3 my-7 flex-wrap">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Activaciones
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
-            Eventos
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Eventos</p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Convenciones
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
-            Stands
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Stands</p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Exposiciones
           </p>
         </div>
       </div>
 
-      <div className="flex border-b border-gray mb-7 pb-4">
-        <p className="w-1/2  text-[#ce10a5] text-4xl font-bold"> PUBLICIDAD</p>
-        <div>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+      <div className="border-b border-gray mb-7 pb-4">
+        <p className="  text-4xl font-extrabold tracking-widest"> ADVERTISING</p>
+        <div className="flex gap-3 my-7 flex-wrap">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Análisis e Investigación de Mercados
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Publicidad ATL
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Publicidad BTL
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Desarrollo de Campañas
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Diseño Publicitario
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Marketing Digital
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
-            Branding
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
-            Medios
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
-            Shopper
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Branding</p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Medios</p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Shopper</p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Comunicación Interna
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Manejo de Crisis
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
-            Impresos
-          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Impresos</p>
         </div>
       </div>
 
-      <div className="flex  mb-7 pb-4">
-        <p className="w-1/2 text-[#7d52bc] text-4xl font-bold"> PRODUCCIÓN</p>
-        <div>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+      <div className="border-b border-gray mb-7 pb-4">
+        <p className=" text-4xl font-extrabold tracking-widest"> PRODUCTION</p>
+        <div className="flex gap-3 my-7 flex-wrap">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Producción de Cine y Video
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Producción Musical
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Postproduccion
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Producción de Audio
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Videos Corporativos
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Animación 2D y 3D
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">Radio</p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max">
-            Estudio
-          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Radio</p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Estudio</p>
         </div>
+      </div>
+      <div className="border-b border-gray pb-5 mb-3">
+        <p className="uppercase text-4xl font-extrabold mb-5 tracking-widest">
+          let&apos;s <br /> begin
+        </p>
+        <p className="flex items-center text-lg font-medium">
+          <span className="inline mr-3">
+            <ArrowRightIcon className="inline" />
+          </span>
+          hello@letswoohoo.com
+        </p>
       </div>
     </div>
   );

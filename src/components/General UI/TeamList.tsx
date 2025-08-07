@@ -7,7 +7,7 @@ type Person = {
   _id: string;
   orderPosition: string;
   puesto: string;
-  mainImage: { _type: string; alt: string;}
+  mainImage: { _type: string; alt: string };
   nombre: string;
 };
 
@@ -45,29 +45,29 @@ const TeamList = ({ teamList }: Team) => {
 
   return (
     <div className="flex justify-around">
-      <div className="gap-4">
+      <div className="overflow-y-auto w-1/2 p-4 [&::-webkit-scrollbar]:hidden scrollbar-hide">
         {teamList.map((person) => (
           <div
             key={person._id}
             onMouseEnter={() => handleMouseEnter(person)}
             onMouseLeave={handleMouseLeave}
-            className={`${displayedPerson === person && "bg-[#caeb0c]"}`}
+            className={`${displayedPerson === person && "bg-[#caeb0c]"} w-max`}
           >
-            <p>
-              <span>{person.nombre}</span>, {person.puesto}
+            <p className="opacity-80">
+              <span className="font-medium opacity-100">{person.nombre}</span>, {person.puesto}
             </p>
           </div>
         ))}
       </div>
 
-      <div className="mt-6">
+      <div className="w-1/2 p-4 sticky top-0 self-start flex justify-center items-center">
         {displayedPerson && (
           <div className="relative w-[200px] h-[300px] mx-auto md:h-[350px] md:w-[250px]">
             <Image
               fill
               src={urlFor(displayedPerson.mainImage).url()}
               alt={`${displayedPerson.nombre} poster`}
-              className="object-cover rounded-xl shadow-lg"
+              className="object-cover shadow-lg"
             />
           </div>
         )}

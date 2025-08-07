@@ -6,11 +6,11 @@ import React from "react";
 const page = async () => {
   const teamList = await fetchSanity("equipo");
   return (
-    <div className="pt-[80px]">
+    <div className="pt-[80px] w-[90%] mx-auto font-albert">
       <TeamList teamList={teamList} />
       <div className="h-1 bg-gray-600 w-full my-10" />
       <div>
-        <p className="uppercase text-4xl font-bold">our culture</p>
+        <p className="uppercase text-4xl font-extrabold tracking-widest">our culture</p>
         <div>
           <div className="flex gap-3 justify-between my-4">
             <img
@@ -32,9 +32,12 @@ const page = async () => {
         </div>
         <div className="h-1 bg-gray-600 w-full my-10" />
         <div>
-          <p className="uppercase text-4xl font-bold">join our team</p>
-          <p>
-            <ArrowRightIcon /> hello@letswoohoo.com
+          <p className="uppercase text-4xl font-extrabold tracking-widest mb-5">join our <br /> team</p>
+          <p className="flex items-center text-lg font-medium">
+            <span className="inline mr-3">
+              <ArrowRightIcon className="inline" />
+            </span>
+            hello@letswoohoo.com
           </p>
         </div>
         <div className="h-1 bg-gray-600 w-full my-10" />

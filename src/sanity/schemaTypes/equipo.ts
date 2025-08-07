@@ -37,7 +37,7 @@ export const equipoType = defineType({
   ],
   preview: {
     select: {
-      name: 'nombre',
+      title: 'nombre',
       media: 'mainImage',
     },
     prepare(selection) {

@@ -3,6 +3,7 @@ import { Albert_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/General UI/Header";
 import LetsTalkButton from "@/components/General UI/LetsTalkButton";
+import Footer from "@/components/General UI/Footer";
 
 
 
@@ -30,6 +31,7 @@ export default function RootLayout({
         <Header />
         <LetsTalkButton />
         {children}
+        <Footer />
       </body>
     </html>
   );
