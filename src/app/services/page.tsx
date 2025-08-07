@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="font-albert md:px-8 pt-[80px]">
+    <div className="font-albert w-[90vw] mx-auto pt-[80px]">
       <h1 className="hidden">Services</h1>
       <div className="w-full mx-auto mb-10">
         <img src="https://cdn.sanity.io/images/5egex671/production/ab5cb1a0bf635d7c3216066cb78ab3292c462094-1921x541.png" alt="letswoohoo banner" />
@@ -103,7 +103,7 @@ const page = () => {
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Estudio</p>
         </div>
       </div>
-      <div className="border-b border-gray pb-5 mb-3">
+      <div className=" pb-5 mb-3">
         <p className="uppercase text-4xl font-extrabold mb-5 tracking-widest">
           let&apos;s <br /> begin
         </p>

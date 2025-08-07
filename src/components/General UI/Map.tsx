@@ -4,7 +4,7 @@ import React from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-
+import "leaflet/dist/images/marker-shadow.png";
 // delete L.Icon.Default.prototype._getIconUrl;
 
 L.Icon.Default.mergeOptions({
@@ -16,9 +16,9 @@ L.Icon.Default.mergeOptions({
 });
 const Map = () => {
   return (
-    <div className="w-screen mb-8">
+    <div className="w-[90vw] mx-auto overflow-hidden mb-8">
       <MapContainer
-        className="w-screen h-80"
+        className="w-screen h-100"
         center={[25.652817, -100.361108]}
         zoom={13}
         scrollWheelZoom={false}

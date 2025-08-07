@@ -67,7 +67,7 @@ const TeamList = ({ teamList }: Team) => {
               fill
               src={urlFor(displayedPerson.mainImage).url()}
               alt={`${displayedPerson.nombre} poster`}
-              className="object-cover shadow-lg"
+              className="object-cover"
             />
           </div>
         )}

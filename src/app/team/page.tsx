@@ -8,7 +8,7 @@ const page = async () => {
   return (
     <div className="pt-[80px] w-[90%] mx-auto font-albert">
       <TeamList teamList={teamList} />
-      <div className="h-1 bg-gray-600 w-full my-10" />
+      <div className="h-[1px] bg-gray-600 w-full my-10" />
       <div>
         <p className="uppercase text-4xl font-extrabold tracking-widest">our culture</p>
         <div>
@@ -30,7 +30,7 @@ const page = async () => {
             />
           </div>
         </div>
-        <div className="h-1 bg-gray-600 w-full my-10" />
+        <div className="h-[1px] bg-gray-600 w-full mt-10 mb-6" />
         <div>
           <p className="uppercase text-4xl font-extrabold tracking-widest mb-5">join our <br /> team</p>
           <p className="flex items-center text-lg font-medium">
@@ -40,7 +40,6 @@ const page = async () => {
             hello@letswoohoo.com
           </p>
         </div>
-        <div className="h-1 bg-gray-600 w-full my-10" />
       </div>
     </div>
   );

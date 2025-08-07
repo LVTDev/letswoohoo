@@ -10,7 +10,7 @@ const Map = dynamic(() => import("@/components/General UI/Map"), {
 
 const page = () => {
   return (
-    <div className="pt-20 font-albert w-[90%] mx-auto">
+    <div className="pt-[80px] font-albert w-[90%] mx-auto">
       <h1 className="hidden">Contact us</h1>
       <div className="flex">
         <div className="w-1/2 ">

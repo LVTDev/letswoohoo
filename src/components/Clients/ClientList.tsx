@@ -24,7 +24,7 @@ const ClientList = () => {
     {
       name: "Afirme",
       image:
-      "https://cdn.sanity.io/images/5egex671/production/7d26f3d008036f0f9858e18cc747d0fdba35ac61-500x500.png",
+        "https://cdn.sanity.io/images/5egex671/production/7d26f3d008036f0f9858e18cc747d0fdba35ac61-500x500.png",
       id: 4,
     },
     {
@@ -90,7 +90,7 @@ const ClientList = () => {
     {
       name: "Dos Familias",
       image:
-      "https://cdn.sanity.io/images/5egex671/production/6ef74be4beea6aabe3bef523fcace7f1f1382a7f-501x501.png",
+        "https://cdn.sanity.io/images/5egex671/production/6ef74be4beea6aabe3bef523fcace7f1f1382a7f-501x501.png",
       id: 15,
     },
     {
@@ -125,10 +125,15 @@ const ClientList = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-5 w-[90vw] max-w-[1000px] mx-auto">
+    <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-5 w-[90vw] mx-auto">
       {clientList.map((client) => (
         <div key={client.id} className="flex justify-center">
-          <Image src={client.image} height={350} width={350} alt={client.name}  />
+          <Image
+            src={client.image}
+            height={350}
+            width={350}
+            alt={client.name}
+          />
         </div>
       ))}
     </div>
