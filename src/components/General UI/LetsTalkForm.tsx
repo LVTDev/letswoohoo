@@ -44,17 +44,17 @@ const LetsTalkForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (isFormValid) {
-      // fetch("/servicios/serviceRequest", {
-      //   method: "POST",
-      //   body: JSON.stringify({
-      //     name,
-      //     email,
-      //     needs: userNeeds,
-      //   }),
-      //   headers: {
-      //     "Content-type": "application/json",
-      //   },
-      // });
+      fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify({
+          name,
+          email,
+          message: userNeeds,
+        }),
+        headers: {
+          "Content-type": "application/json",
+        },
+      });
       setFormSubmitValid(true);
     } else {
       setFormSubmitValid(false);
