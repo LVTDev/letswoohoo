@@ -22,7 +22,6 @@ const LetsTalkForm = () => {
   useEffect(() => {
     validateForm();
   }, [name, email, userNeeds]);
-  console.log(errors);
   const validateForm = () => {
     const errors = {} as Error;
     if (!name) {
@@ -59,7 +58,6 @@ const LetsTalkForm = () => {
     } else {
       setFormSubmitValid(false);
 
-      console.log("Error");
     }
   };
   return (
@@ -127,11 +125,12 @@ const LetsTalkForm = () => {
           </div>
           <div className="flex justify-end align-bottom">
             {isFormValid ? (
-              <div
+              <button
+                type="submit"
                 className={`mt-auto md:ml-8 px-3 rounded py-2 font-bold bg-black text-white w-max cursor-pointer`}
               >
                 <p>Send</p>
-              </div>
+              </button>
             ) : (
               <button
                 data-testid="inactiveButton"
@@ -153,7 +152,7 @@ const LetsTalkForm = () => {
       {touched.userNeeds && errors.userNeeds && (
         <p className="text-red-600">{errors.userNeeds}</p>
       )}
-      {formSubmitValid && <div>Gracias por contactar con nosotros</div>}
+      {formSubmitValid && <div className="font-bold">Gracias por contactar con nosotros!</div>}
     </div>
   );
 };

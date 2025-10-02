@@ -14,10 +14,9 @@ export async function GET() {
 export async function POST(request: NextRequest) {
   try {
     const requestContent = await request.json();
-    console.log(requestContent)
     const res = await sendMail(
       "Sitio WOOHOO: Formulario Contactanos",
-      "jbotoku@gmail.com",
+      "hello@letswoohoo.com",
       `Client: ${requestContent.name}
      Correo: ${requestContent.email}
      Necessidades: ${requestContent.message}`

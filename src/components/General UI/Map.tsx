@@ -8,14 +8,15 @@ import "leaflet/dist/images/marker-shadow.png";
 import 'leaflet-defaulticon-compatibility';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 // delete L.Icon.Default.prototype._getIconUrl;
+const icon = L.icon({ iconUrl: "/markers/marker-icon.png" });
 
-L.Icon.Default.mergeOptions({
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-    iconUrl: require('leaflet/dist/images/marker-icon.png'),
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    shadowUrl: require('leaflet/dist/images/marker-shadow.png')
-});
+// L.Icon.Default.mergeOptions({
+//     // eslint-disable-next-line @typescript-eslint/no-require-imports
+//     iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+//     iconUrl: require('leaflet/dist/images/marker-icon.png'),
+//     // eslint-disable-next-line @typescript-eslint/no-require-imports
+//     shadowUrl: require('leaflet/dist/images/marker-shadow.png')
+// });
 const Map = () => {
   return (
     <div className="w-[90vw] mx-auto overflow-hidden mb-8">
@@ -29,7 +30,7 @@ const Map = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[25.652817, -100.361108]}>
+        <Marker icon={icon} position={[25.652817, -100.361108]}>
           <Popup>
             Río Rosas Sur 330 1er piso, <br />
             Del Valle, C. P. 66220, <br />

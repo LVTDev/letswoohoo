@@ -12,7 +12,6 @@ const Header = () => {
   const pathname = usePathname();
   const container = useRef<HTMLDivElement | null>(null);
   gsap.registerPlugin(ScrollTrigger, useGSAP);
-  console.log(pathname);
 
   useGSAP(() => {
     if (pathname !== "/") return;
@@ -21,7 +20,6 @@ const Header = () => {
       start: "top top",
       end: "max",
       onUpdate: (self) => {
-        // console.log(self.progress);
         if (self.progress > 0.2) {
           gsap.to(container.current, {
             background: "#2b2f35f2",
