@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     console.log(requestContent)
     const res = await sendMail(
       "Sitio WOOHOO: Formulario Contactanos",
-      "hello@letswwoohoo.com",
+      "jbotoku@gmail.com",
       `Client: ${requestContent.name}
      Correo: ${requestContent.email}
      Necessidades: ${requestContent.message}`
@@ -30,6 +30,6 @@ export async function POST(request: NextRequest) {
     return new Response("success");
   } catch (error) {
     console.log(error);
-    return error;
+    return new Response("error");
   }
 }
