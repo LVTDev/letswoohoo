@@ -17,7 +17,7 @@ type Team = {
 const TeamList = ({ teamList }: Team) => {
   return (
     <div className="">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="flex justify-center gap-40 mb-10">
         {teamList.map((person, i) => {
           if (i > 1) return;
           return (
