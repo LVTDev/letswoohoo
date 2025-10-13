@@ -16,21 +16,45 @@ type Team = {
 
 const TeamList = ({ teamList }: Team) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-      {teamList.map((person) => (
-        <div key={person._id} className="flex flex-col items-center">
-          <div className="relative rounded-full w-[200px] h-[200px] mx-auto ">
-            <Image
-              fill
-              src={urlFor(person.mainImage).url()}
-              alt={`${person.nombre} poster`}
-              className="object-cover rounded-full transition duration-500"
-            />
-          </div>
-          <p className="uppercase font-bold">{person.nombre}</p>
-          <p className="">{person.puesto}</p>
-        </div>
-      ))}
+    <div className="">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {teamList.map((person, i) => {
+          if (i > 1) return;
+          return (
+            <div key={person._id} className="flex flex-col items-center">
+              <div className="relative rounded-full w-[200px] h-[200px] mx-auto border-3 border-blue-300 ">
+                <Image
+                  fill
+                  src={urlFor(person.mainImage).url()}
+                  alt={`${person.nombre} poster`}
+                  className="object-cover rounded-full transition duration-500"
+                />
+              </div>
+              <p className="uppercase font-bold mt-3">{person.nombre}</p>
+              <p className="">{person.puesto}</p>
+            </div>
+          );
+        })}
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {teamList.map((person, i) => {
+          if (i < 2) return;
+          return (
+            <div key={person._id} className="flex flex-col items-center">
+              <div className="relative rounded-full w-[200px] h-[200px] mx-auto border-3 border-blue-300 ">
+                <Image
+                  fill
+                  src={urlFor(person.mainImage).url()}
+                  alt={`${person.nombre} poster`}
+                  className="object-cover rounded-full transition duration-500"
+                />
+              </div>
+              <p className="uppercase font-bold mt-3">{person.nombre}</p>
+              <p className="">{person.puesto}</p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -26,7 +26,7 @@ const Header = () => {
           });
         } else {
           gsap.to(container.current, {
-            background: "transparent",
+            background: "#2b2f3579",
           });
         }
       },
@@ -34,7 +34,7 @@ const Header = () => {
   }, [pathname]);
   return (
     <header
-      className={`fixed top-0 left-1/2 -translate-x-1/2 w-screen font-albert z-50 text-white`}
+      className={`fixed top-0 left-1/2 -translate-x-1/2 w-screen font-albert z-50   text-white`}
     >
       <div
         ref={container}
@@ -44,7 +44,7 @@ const Header = () => {
       >
         <div className="w-10">
           <Link href="/">
-            <WoohooSvgWhite />
+            <WoohooSvgWhite fill="white" />
           </Link>
         </div>
         {/* <div className="flex uppercase gap-8 w-1/2 justify-between font-bold">
@@ -69,7 +69,7 @@ const Header = () => {
       >
         <div className="w-10">
           <Link href="/">
-            <WoohooSvgWhite />
+            <WoohooSvgWhite fill="white" />
           </Link>
         </div>
         {/* <div className="flex uppercase gap-8 w-1/2 justify-between font-bold">

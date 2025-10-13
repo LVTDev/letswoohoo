@@ -93,12 +93,12 @@ const ClientList = () => {
         "https://cdn.sanity.io/images/5egex671/production/6ef74be4beea6aabe3bef523fcace7f1f1382a7f-501x501.png",
       id: 15,
     },
-    {
-      name: "Refran",
-      image:
-        "https://cdn.sanity.io/images/5egex671/production/77ba4b09f4f4d422cc6c5348c15120dc05c2a5a9-501x501.png",
-      id: 16,
-    },
+    // {
+    //   name: "Refran",
+    //   image:
+    //     "https://cdn.sanity.io/images/5egex671/production/77ba4b09f4f4d422cc6c5348c15120dc05c2a5a9-501x501.png",
+    //   id: 16,
+    // },
     {
       name: "Fuerza regia",
       image:

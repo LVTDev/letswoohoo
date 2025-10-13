@@ -1,3 +1,4 @@
+import WoohooSvgWhite from "@/components/General UI/WoohooSvgWhite";
 import { ArrowRightIcon } from "@sanity/icons";
 import React from "react";
 
@@ -6,7 +7,10 @@ const page = () => {
     <div className="font-albert w-[90vw] mx-auto pt-[80px]">
       <h1 className="hidden">Services</h1>
       <div className="w-full mx-auto mb-10">
-        <img src="https://cdn.sanity.io/images/5egex671/production/ab5cb1a0bf635d7c3216066cb78ab3292c462094-1921x541.png" alt="letswoohoo banner" />
+        <img
+          src="https://cdn.sanity.io/images/5egex671/production/ab5cb1a0bf635d7c3216066cb78ab3292c462094-1921x541.png"
+          alt="letswoohoo banner"
+        />
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           id="Capa_1"
@@ -28,16 +32,25 @@ const page = () => {
       </div>
 
       <div className=" border-b border-gray my-7 pb-4">
-        <p className="text-4xl font-extrabold tracking-widest"> EXPERIENCES</p>
+        <div className="text-4xl font-extrabold tracking-widest flex">
+          <div className="w-10 ">
+            <WoohooSvgWhite fill="#000" />
+          </div>{" "}
+          EXPERIENCES
+        </div>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Activaciones
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Eventos</p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Eventos
+          </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Convenciones
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Stands</p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Stands
+          </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Exposiciones
           </p>
@@ -45,7 +58,10 @@ const page = () => {
       </div>
 
       <div className="border-b border-gray mb-7 pb-4">
-        <p className="  text-4xl font-extrabold tracking-widest"> ADVERTISING</p>
+        <p className="  text-4xl font-extrabold tracking-widest">
+          {" "}
+          ADVERTISING
+        </p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Análisis e Investigación de Mercados
@@ -65,16 +81,24 @@ const page = () => {
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Marketing Digital
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Branding</p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Medios</p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Shopper</p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Branding
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Medios
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Shopper
+          </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Comunicación Interna
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Manejo de Crisis
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Impresos</p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Impresos
+          </p>
         </div>
       </div>
 
@@ -99,8 +123,15 @@ const page = () => {
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Animación 2D y 3D
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Radio</p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">Estudio</p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Radio
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Estudio
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Renta de Equipo
+          </p>
         </div>
       </div>
       <div className=" pb-5 mb-3">
