@@ -1,4 +1,3 @@
-import WoohooSvgWhite from "@/components/General UI/WoohooSvgWhite";
 // import { ArrowRightIcon } from "@sanity/icons";
 import React from "react";
 
@@ -45,9 +44,9 @@ const page = () => {
 
       <div className=" border-b border-gray my-7 pb-4">
         <div className="text-4xl font-extrabold tracking-widest flex">
-          <div className="w-10 ">
+          {/* <div className="w-10 ">
             <WoohooSvgWhite fill="#000" />
-          </div>{" "}
+          </div>{" "} */}
           EXPERIENCES
         </div>
         <div className="flex gap-3 my-7 flex-wrap">
