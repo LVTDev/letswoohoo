@@ -7,7 +7,7 @@ export default function Home() {
     <div className="">
       <HomeVideoReel
         url={
-          "https://cdn.sanity.io/files/5egex671/production/4bb4aea80b9af4f95ceddc9697f9da96f8b00672.mp4"
+          "https://cdn.sanity.io/files/5egex671/production/d9c17e1bb5023c98774f97b3aa1f4a651b417fa8.mp4"
         }
       />
       <HomeProjects />
