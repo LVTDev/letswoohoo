@@ -1,5 +1,5 @@
-import { ArrowRightIcon } from "@sanity/icons";
 import React from "react";
+import { Facebook, Instagram, Linkedin, Mail, Phone, Youtube } from "react-feather";
 
 const Footer = () => {
   return (
@@ -12,22 +12,25 @@ const Footer = () => {
           <p>TÉRMINOS Y CONDICIONES DE USO</p>
         </div>
         <div>
-          <p>+52 81 8461 0062</p>
-          <p>HELLO@LETSWOOHOO.COM</p>
+          <p className="flex items-center"><Phone className="inline  mr-1" width={16} />+52 81 8461 0062</p>
+          <p><Mail className="inline mr-1" width={16} />HELLO@LETSWOOHOO.COM</p>
         </div>
-        <div>
-          <p>
-            <ArrowRightIcon className="inline" /> FACEBOOK
-          </p>
-          <p>
-            <ArrowRightIcon className="inline" /> INSTAGRAM
-          </p>
-          <p>
-            <ArrowRightIcon className="inline" /> LINKEDIN
-          </p>
-          <p>
-            <ArrowRightIcon className="inline" /> YOUTUBE
-          </p>
+        <div className="flex flex-col">
+          <a href="https://www.facebook.com/letswoohoomx" target="_blank">
+            <Facebook className="inline" width={16} color="black" /> FACEBOOK
+          </a>
+          <a href="https://www.instagram.com/letswoohoomx/" target="_blank">
+            <Instagram width={16} color="black" className="inline" /> INSTAGRAM
+          </a>
+          <a
+            href="https://www.linkedin.com/company/letswoohoomx/"
+            target="_blank"
+          >
+            <Linkedin width={16} color="black" className="inline" /> LINKEDIN
+          </a>
+          <a href="https://www.youtube.com/@letswoohoomx" target="_blank">
+            <Youtube width={16} color="black" className="inline" /> YOUTUBE
+          </a>
         </div>
       </div>
     </footer>

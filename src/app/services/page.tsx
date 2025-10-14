@@ -1,5 +1,5 @@
 import WoohooSvgWhite from "@/components/General UI/WoohooSvgWhite";
-import { ArrowRightIcon } from "@sanity/icons";
+// import { ArrowRightIcon } from "@sanity/icons";
 import React from "react";
 
 const page = () => {
@@ -7,10 +7,22 @@ const page = () => {
     <div className="font-albert w-[90vw] mx-auto pt-[80px]">
       <h1 className="hidden">Services</h1>
       <div className="w-full mx-auto mb-10">
-        <img
+        <video
+          data-testid="video"
+          className="w-full   h-full  object-cover object-center md:block hidden"
+          width="100%"
+          height="1000%"
+          muted={true}
+          autoPlay={true}
+          loop
+          playsInline
+        >
+          <source src={"https://cdn.sanity.io/files/5egex671/production/90cdc65b68a29e678ff5f95a64f7181b8e48f08e.mp4"} type="video/mp4" />
+        </video>
+        {/* <img
           src="https://cdn.sanity.io/images/5egex671/production/ab5cb1a0bf635d7c3216066cb78ab3292c462094-1921x541.png"
           alt="letswoohoo banner"
-        />
+        /> */}
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           id="Capa_1"
@@ -102,7 +114,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="border-b border-gray mb-7 pb-4">
+      <div className=" mb-7 pb-4">
         <p className=" text-4xl font-extrabold tracking-widest"> PRODUCTION</p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
@@ -134,7 +146,7 @@ const page = () => {
           </p>
         </div>
       </div>
-      <div className=" pb-5 mb-3">
+      {/* <div className=" pb-5 mb-3">
         <p className="uppercase text-4xl font-extrabold mb-5 tracking-widest">
           let&apos;s <br /> begin
         </p>
@@ -144,7 +156,7 @@ const page = () => {
           </span>
           hello@letswoohoo.com
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
