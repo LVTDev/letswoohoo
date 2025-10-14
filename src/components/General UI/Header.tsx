@@ -34,11 +34,11 @@ const Header = () => {
   // }, [pathname]);
   return (
     <header
-      className={`fixed top-0 left-1/2 -translate-x-1/2 w-screen font-albert z-50   text-white`}
+      className={`fixed top-0 left-0  w-screen font-albert z-50   text-white`}
     >
       {" "}
       <div
-        className={`justify-between items-center bg-[#2b2f35c4]  ${"flex"} py-4 px-4 md:px-12 text-xs`}
+        className={`justify-between items-center w-full bg-[#2b2f35c4]  ${"flex"} py-4 px-4 md:px-12 text-xs`}
       >
         <div className="w-10">
           <Link href="/">

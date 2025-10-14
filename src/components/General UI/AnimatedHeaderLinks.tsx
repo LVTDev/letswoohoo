@@ -60,12 +60,12 @@ const AnimatedHeaderLinks = () => {
 
   return (
     <div ref={containerRef}>
-      <ul className="flex uppercase gap-8 w-1/2 justify-between font-bold">
+      <ul className="flex uppercase md:gap-8 gap-2 w-1/2 justify-between font-bold">
         {items.map(({ label, id, link }) => (
           <li key={id} className="">
             <Link href={link}>
               <div
-                className={`overflow-hidden h-4 w-max relative ${id} heading-container`}
+                className={`overflow-hidden md:h-4 h-3 w-max relative ${id} heading-container text-[8px] md:text-sm`}
               >
                 <p className="primary">{label}</p>
                 <p className="secondary">{label}</p>
