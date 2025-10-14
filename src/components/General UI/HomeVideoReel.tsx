@@ -1,4 +1,4 @@
-const HomeVideoReel = ({ url }: { url: string }) => {
+const HomeVideoReel = ({ url, urlVertical }: { url: string, urlVertical: string }) => {
   return (
     // <div className="relative w-full pb-[75.25%] md:pb-[45.25%] max-h-[55vh] flex justify-center">
     <div className="relative min-h-screen">
@@ -16,7 +16,7 @@ const HomeVideoReel = ({ url }: { url: string }) => {
       </video>
       <video
         data-testid="video"
-        className="w-full  h-full absolute top-0 left-0 object-contain md:hidden"
+        className="w-full  h-full absolute top-0 left-0 object-cover md:hidden"
         width="100%"
         height="80%"
         muted={true}
@@ -24,7 +24,7 @@ const HomeVideoReel = ({ url }: { url: string }) => {
         loop
         playsInline
       >
-        <source src={url} type="video/mp4" />
+        <source src={urlVertical} type="video/mp4" />
       </video>
     </div>
   );
