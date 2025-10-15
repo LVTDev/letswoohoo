@@ -1,14 +1,17 @@
 "use client";
 import React, { useState, useEffect } from "react";
-
+import { useRouter } from "next/navigation";
 const LetsTalkForm = () => {
   type Error = {
     name: string;
     email: string;
     userNeeds: string;
+    phone: string;
   };
+   const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [userNeeds, setUserNeeds] = useState("");
   const [isFormValid, setIsFormValid] = useState(false);
   const [errors, setErrors] = useState({} as Error);
@@ -17,22 +20,27 @@ const LetsTalkForm = () => {
     name: false,
     email: false,
     userNeeds: false,
+    phone: false,
   });
 
   useEffect(() => {
     validateForm();
-  }, [name, email, userNeeds]);
+  }, [name, email, phone, userNeeds]);
   const validateForm = () => {
     const errors = {} as Error;
     if (!name) {
       errors.name = "Necesitamos tu nombre";
     }
     if (!email) {
-      errors.email = "Email is required.";
+      errors.email = "Email es requerido";
     } else if (!/\S+@\S+\.\S+/.test(email)) {
       errors.email = "Email invalid";
     }
-
+    if (!phone) {
+      errors.phone = "Número de teléfono requerido.";
+    } else if (!/^[\d\s()+-]{7,}$/.test(phone)) {
+      errors.phone = "Número de teléfono inválido.";
+    }
     if (!userNeeds) {
       errors.userNeeds = "Necesitamos mas informacion";
     }
@@ -48,6 +56,7 @@ const LetsTalkForm = () => {
         body: JSON.stringify({
           name,
           email,
+          phone,
           message: userNeeds,
         }),
         headers: {
@@ -55,9 +64,11 @@ const LetsTalkForm = () => {
         },
       });
       setFormSubmitValid(true);
+            setTimeout(() => {
+        router.push("/letsTalk/thank-you");
+      }, 1000);
     } else {
       setFormSubmitValid(false);
-
     }
   };
   return (
@@ -103,6 +114,20 @@ const LetsTalkForm = () => {
                 className="border border-black placeholder-black text-black rounded-full bg-transparent w-full px-2 py-2 "
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="mb-5">
+              <label className="hidden" htmlFor="phone">
+                Teléfono
+              </label>
+              <input
+                placeholder="Teléfono"
+                type="tel"
+                id="phone"
+                className="border border-black placeholder-black text-black rounded-full bg-transparent w-full px-2 py-2"
+                value={phone}
+                onBlur={() => setTouched((prev) => ({ ...prev, phone: true }))}
+                onChange={(e) => setPhone(e.target.value)}
               />
             </div>
             <div>
@@ -152,7 +177,12 @@ const LetsTalkForm = () => {
       {touched.userNeeds && errors.userNeeds && (
         <p className="text-red-600">{errors.userNeeds}</p>
       )}
-      {formSubmitValid && <div className="font-bold">Gracias por contactar con nosotros!</div>}
+      {touched.phone && errors.phone && (
+        <p className="text-red-600">{errors.phone}</p>
+      )}
+      {formSubmitValid && (
+        <div className="font-bold">Gracias por contactar con nosotros!</div>
+      )}
     </div>
   );
 };

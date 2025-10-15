@@ -3,7 +3,7 @@ import React from "react";
 
 const LetsTalkButton = () => {
   return (
-    <div className="w-12 md:w-18 fixed right-2 bottom-[10%] z-10">
+    <div className="w-12 md:w-22 fixed right-2 bottom-[10%] z-10">
       <Link href={"/letsTalk"}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

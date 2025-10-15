@@ -3,6 +3,7 @@ import LetsTalkForm from "@/components/General UI/LetsTalkForm";
 
 import React from "react";
 import dynamic from "next/dynamic";
+import { Mail } from "react-feather";
 
 const Map = dynamic(() => import("@/components/General UI/Map"), {
   ssr: false
@@ -23,7 +24,7 @@ const page = () => {
             San Pedro Garza Garcia, N.L., <br />
             +52 81 8461 0062
           </p>
-          <p className="text-lg font-medium mt-8">hello@letswoohoo.com</p>
+          <p className="text-2xl font-medium mt-8 flex items-center text-[#a501fc]"><Mail className="inline mr-1" width={22} />hello@letswoohoo.com</p>
         </div>
         <LetsTalkForm />
       </div>

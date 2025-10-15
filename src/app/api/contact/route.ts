@@ -19,6 +19,7 @@ export async function POST(request: NextRequest) {
       "hello@letswoohoo.com",
       `Client: ${requestContent.name}
      Correo: ${requestContent.email}
+     Telefono:${requestContent.phone}
      Necessidades: ${requestContent.message}`
     );
     console.log(res)
