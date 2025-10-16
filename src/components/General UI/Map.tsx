@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 "use client";
-import React from "react";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import React, { useEffect } from "react";
+import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import "leaflet/dist/images/marker-shadow.png";
@@ -18,12 +18,20 @@ const icon = L.icon({ iconUrl: "/markers/marker-icon.png" });
 //     shadowUrl: require('leaflet/dist/images/marker-shadow.png')
 // });
 const Map = () => {
+  const SetViewOnMarker = ({ coords }: { coords: [number, number] }) => {
+  const map = useMap();
+  useEffect(() => {
+    map.setView(coords, map.getZoom(), { animate: true });
+    map.invalidateSize();
+  }, [map, coords]);
+  return null;
+};
   return (
-    <div className="w-[90vw] mx-auto overflow-hidden mb-8">
+    <div className="w-[60vw] mx-auto overflow-hidden mb-8">
       <MapContainer
-        className="w-screen h-100"
-        center={[25.652817, -100.361108]}
-        zoom={13}
+        className="w-screen h-150 max-h-[70vh]"
+        center={[25.652817, -100.355108]}
+        zoom={16}
         scrollWheelZoom={false}
       >
         <TileLayer
@@ -37,6 +45,7 @@ const Map = () => {
             San Pedro Garza Garcia, N.L., <br />
           </Popup>
         </Marker>
+         <SetViewOnMarker coords={[25.652817, -100.355108]} />
       </MapContainer>
     </div>
   );

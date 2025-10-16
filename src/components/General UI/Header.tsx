@@ -34,7 +34,7 @@ const Header = () => {
   // }, [pathname]);
   return (
     <header
-      className={`fixed top-0 left-0  w-screen font-albert z-50   text-white`}
+      className={`fixed top-0 left-0  w-screen font-albert z-1000   text-white`}
     >
       {" "}
       <div

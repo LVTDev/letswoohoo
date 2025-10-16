@@ -2,10 +2,8 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 const WoohooSvgWhite = ({ fill }: { fill: string }) => {
-  gsap.registerPlugin(MotionPathPlugin);
   const dotRef = useRef<null | SVGSVGElement>(null);
   useGSAP(() => {
     gsap.to(dotRef.current, {
