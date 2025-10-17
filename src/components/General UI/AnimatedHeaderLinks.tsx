@@ -2,8 +2,8 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
-import BarracaSvgWhite from "./BarracaSvgWhite";
 import Link from "next/link";
+import Image from "next/image";
 
 const items = [
   { label: "Clients", id: "firstSection", link: "/clients" },
@@ -60,7 +60,7 @@ const AnimatedHeaderLinks = () => {
 
   return (
     <div ref={containerRef}>
-      <ul className="flex uppercase md:gap-8 gap-2 w-1/2 justify-between font-bold">
+      <ul className="flex uppercase md:gap-8 gap-2 w-1/2 justify-between items-center font-bold">
         {items.map(({ label, id, link }) => (
           <li key={id} className="">
             <Link href={link}>
@@ -76,7 +76,8 @@ const AnimatedHeaderLinks = () => {
         <div>
           <a href="https://barracaproducciones.mx/">
             <div className="w-14">
-              <BarracaSvgWhite />
+              <Image alt="logo woohoo audiovisual"  src={"/woohoo audivisual.png"} width={100} height={100}/>
+              {/* <BarracaSvgWhite /> */}
             </div>
           </a>
         </div>
