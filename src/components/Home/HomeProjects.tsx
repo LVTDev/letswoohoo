@@ -31,6 +31,7 @@ const HomeProjects = () => {
           isImage={proj.isImage}
           isVideo={proj.isVideo}
           full={proj.full}
+          hasLink={proj.hasLink}
         />
       ))}
 

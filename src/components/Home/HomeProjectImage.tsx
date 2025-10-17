@@ -1,5 +1,6 @@
 // import Image from "next/image";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type ImageProps = {
@@ -8,6 +9,7 @@ type ImageProps = {
   full?: string;
   premio?: "amco" | "muse" | "wina";
   videoLink?: string;
+  hasLink?: string;
   isImage?: boolean;
   isVideo?: boolean;
   onClick: () => void;
@@ -26,12 +28,13 @@ const HomeProjectImage = ({
   videoLink,
   isImage,
   isVideo,
+  hasLink,
 }: ImageProps) => {
-  if (isImage && imageLink && imageLink.length > 0)
-    return (
+  if (isImage && imageLink && imageLink.length > 0) {
+    const imageElement = (
       <div
         onClick={onClick}
-        className={`relative cursor-pointer   rounded-lg overflow-hidden ${full === "full" && "col-span-3 h-[84vh]"} ${full === "wide" && "col-span-2  h-auto"} ${full === "thin" && "col-span-1 aspect-square"}`}
+        className={`relative   rounded-lg overflow-hidden ${full === "full" && "col-span-3 h-[84vh]"} ${full === "wide" && "col-span-2  h-auto"} ${full === "thin" && "col-span-1 aspect-square"}`}
       >
         {/* <img src={imageLink} alt={alt} className=""  /> */}
         {/* {premio && (
@@ -57,6 +60,8 @@ const HomeProjectImage = ({
         </div>
       </div>
     );
+    return hasLink ? <Link href={hasLink}>{imageElement}</Link> : imageElement;
+  }
 
   if (isVideo)
     return (

@@ -9,6 +9,7 @@ type HomeProject = {
   descriptionENG?: string;
   isImage?: boolean;
   isVideo?: boolean;
+  hasLink?: string
 };
 
 export const homeProjectsDesktop: HomeProject[] = [
@@ -37,6 +38,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "Entrevista Denisse",
     id: 3,
     isImage: true,
+    hasLink: "/blog/marketing-women",
   },
   {
     full: "full",
@@ -112,13 +114,12 @@ export const homeProjectsDesktop: HomeProject[] = [
     isImage: true,
   },
   {
-
     full: "wide",
     alt: "Naterra",
     id: 13,
     isVideo: true,
     videoLink:
-    "https://cdn.sanity.io/files/aq7eb5nj/production/fb03609d0306940a867b9b6f4eccd3e2f90497db.mp4",
+      "https://cdn.sanity.io/files/aq7eb5nj/production/fb03609d0306940a867b9b6f4eccd3e2f90497db.mp4",
   },
   {
     imageLink:
@@ -138,14 +139,13 @@ export const homeProjectsDesktop: HomeProject[] = [
   },
   {
     imageLink:
-    "https://cdn.sanity.io/images/5egex671/production/26689ba0fed1ad6648e73ac1061c143f093de750-1920x1080.jpg",
+      "https://cdn.sanity.io/images/5egex671/production/26689ba0fed1ad6648e73ac1061c143f093de750-1920x1080.jpg",
     full: "wide",
     alt: "Naterra",
     id: 16,
     isVideo: true,
     videoLink:
-    "https://cdn.sanity.io/files/5egex671/production/2034b5e91a4074504f09184d9e6df13b40cd0e4c.mp4",
-    
+      "https://cdn.sanity.io/files/5egex671/production/2034b5e91a4074504f09184d9e6df13b40cd0e4c.mp4",
   },
   {
     imageLink:
