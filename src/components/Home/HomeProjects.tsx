@@ -1,34 +1,40 @@
 "use client";
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import HomeProjectImage from "./HomeProjectImage";
 import { homeProjectsDesktop } from "@/utils/clientsHomeDesktop";
-import Modal from "../General UI/Modal";
-import Image from "next/image";
+// import Modal from "../General UI/Modal";
+// import Image from "next/image";
 
 const HomeProjects = () => {
-  const [selectedProject, setSelectedProject] = useState<null | {
-    imageLink: string;
-    alt: string;
-    text?: string;
-    fullImage?: string;
-    videoLink?: string;
-    descriptionENG?: string;
-    descriptionESP?: string;
-  }>();
+  // const [selectedProject, setSelectedProject] = useState<null | {
+  //   imageLink: string;
+  //   alt: string;
+  //   text?: string;
+  //   fullImage?: string;
+  //   videoLink?: string;
+  //   descriptionENG?: string;
+  //   descriptionESP?: string;
+  //     isImage?: boolean;
+  // isVideo?: boolean;
+  // }>();
   return (
-    <div className="hidden gap-5 md:grid grid-cols-3 mt-8 w-[90vw] mx-auto">
+    <div className=" gap-5 grid grid-cols-3 mt-8 w-[85vw]   mx-auto ">
       {homeProjectsDesktop.map((proj) => (
         <HomeProjectImage
           imageLink={proj.imageLink}
-          size={proj.size as "normal" | "large" | "tall" | "half"}
           alt={proj.alt}
           premio={proj.premio as "amco" | "muse" | "wina"}
           key={proj.id}
-          onClick={() => setSelectedProject(proj)}
+          // onClick={() => setSelectedProject(proj)}
+          onClick={() =>{}}
+          videoLink={proj.videoLink}
+          isImage={proj.isImage}
+          isVideo={proj.isVideo}
+          full={proj.full}
         />
       ))}
 
-      <Modal
+      {/* <Modal
         isOpen={!!selectedProject}
         onClose={() => setSelectedProject(null)}
       >
@@ -55,7 +61,7 @@ const HomeProjects = () => {
             <p>{selectedProject?.descriptionESP}</p>
           </div>
         )}
-      </Modal>
+      </Modal> */}
     </div>
   );
 };

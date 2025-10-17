@@ -4,11 +4,12 @@ import React from "react";
 const ClientList = () => {
   const clientList = [
     {
-      name: "Arca",
+      name: "Auna",
       image:
-        "https://cdn.sanity.io/images/5egex671/production/7c8398a7fa8441dfb856227edc598cd317d7becc-501x500.png",
-      id: 1,
+        "https://cdn.sanity.io/images/5egex671/production/992b926672d87d26aae476b59e0461bd3203843b-501x501.png",
+      id: 3,
     },
+
     {
       name: "FIC",
       image:
@@ -16,17 +17,18 @@ const ClientList = () => {
       id: 2,
     },
     {
-      name: "Auna",
+      name: "Arca",
       image:
-        "https://cdn.sanity.io/images/5egex671/production/992b926672d87d26aae476b59e0461bd3203843b-501x501.png",
-      id: 3,
+        "https://cdn.sanity.io/images/5egex671/production/7c8398a7fa8441dfb856227edc598cd317d7becc-501x500.png",
+      id: 1,
     },
     {
-      name: "Afirme",
+      name: "Naterra",
       image:
-        "https://cdn.sanity.io/images/5egex671/production/7d26f3d008036f0f9858e18cc747d0fdba35ac61-500x500.png",
-      id: 4,
+        "https://cdn.sanity.io/images/5egex671/production/102df00f3d24bf73a94e96f868392b59874a15fe-501x501.png",
+      id: 8,
     },
+
     {
       name: "Soriana",
       image:
@@ -39,23 +41,26 @@ const ClientList = () => {
         "https://cdn.sanity.io/images/5egex671/production/cddb95ab0e73fe7ac9cde2f01c483ff24ed26756-501x501.png",
       id: 6,
     },
-    {
-      name: "Afirme Seguros",
-      image:
-        "https://cdn.sanity.io/images/5egex671/production/befc1748c04864aa28776ea7864bf7159db0a42c-501x501.png",
-      id: 7,
-    },
-    {
-      name: "Naterra",
-      image:
-        "https://cdn.sanity.io/images/5egex671/production/102df00f3d24bf73a94e96f868392b59874a15fe-501x501.png",
-      id: 8,
-    },
+
     {
       name: "Tulip",
       image:
         "https://cdn.sanity.io/images/5egex671/production/b137be9949a2f83b8f1d5e53cebce229a2a2f48c-501x501.png",
       id: 9,
+    },
+       {
+      name: "Como comí",
+      image:
+        "https://cdn.sanity.io/images/5egex671/production/b4c934907d5eb3ead27aec73c511f0872b2da4fa-2084x2084.png",
+      id: 21,
+    },
+  
+
+    {
+      name: "Ballet Monterrey",
+      image:
+        "https://cdn.sanity.io/images/5egex671/production/bdde72b1b2340331d9ad8a394c7261b0a35586ef-501x501.png",
+      id: 19,
     },
     {
       name: "Barraca Producciones",
@@ -69,6 +74,26 @@ const ClientList = () => {
         "https://cdn.sanity.io/images/5egex671/production/e3ae89e9e4cd271d43039c7fa0a158321fd8d82c-501x500.png",
       id: 11,
     },
+   {
+      name: "Afirme",
+      image:
+        "https://cdn.sanity.io/images/5egex671/production/7d26f3d008036f0f9858e18cc747d0fdba35ac61-500x500.png",
+      id: 4,
+    },
+       {
+      name: "Bokados",
+      image:
+        "https://cdn.sanity.io/images/5egex671/production/e374f9bb515f7ae69d70d599f4dc69e09b3b5b70-501x501.png",
+      id: 14,
+    },
+ 
+    {
+      name: "Villacero",
+      image:
+        "https://cdn.sanity.io/images/5egex671/production/f5b33f54c50e15fcc32f79ce300a2dba512dda07-501x501.png",
+      id: 13,
+    },
+    
     {
       name: "Top Golf",
       image:
@@ -76,16 +101,10 @@ const ClientList = () => {
       id: 12,
     },
     {
-      name: "Villacero",
+      name: "Players",
       image:
-        "https://cdn.sanity.io/images/5egex671/production/f5b33f54c50e15fcc32f79ce300a2dba512dda07-501x501.png",
-      id: 13,
-    },
-    {
-      name: "Bokados",
-      image:
-        "https://cdn.sanity.io/images/5egex671/production/e374f9bb515f7ae69d70d599f4dc69e09b3b5b70-501x501.png",
-      id: 14,
+        "https://cdn.sanity.io/images/5egex671/production/a69cc020758144056dfa8b90495c1226fe9585a5-2084x2084.png",
+      id: 22,
     },
     {
       name: "Dos Familias",
@@ -112,10 +131,10 @@ const ClientList = () => {
       id: 18,
     },
     {
-      name: "Ballet Monterrey",
+      name: "Afirme Seguros",
       image:
-        "https://cdn.sanity.io/images/5egex671/production/bdde72b1b2340331d9ad8a394c7261b0a35586ef-501x501.png",
-      id: 19,
+        "https://cdn.sanity.io/images/5egex671/production/befc1748c04864aa28776ea7864bf7159db0a42c-501x501.png",
+      id: 7,
     },
     {
       name: "Amare",
@@ -127,7 +146,7 @@ const ClientList = () => {
   return (
     <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-5 w-[90vw] mx-auto">
       {clientList.map((client) => (
-        <div key={client.id} className="flex justify-center">
+        <div key={client.id} className="flex justify-center rounded-lg overflow-hidden">
           <Image
             src={client.image}
             height={350}

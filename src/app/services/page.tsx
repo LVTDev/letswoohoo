@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="font-albert w-[90vw] mx-auto pt-[80px]">
+    <div className="font-albert w-[90vw] mx-auto pt-[40px]">
       <h1 className="hidden">Services</h1>
       <div className="w-full mx-auto mb-10">
         <video

@@ -30,7 +30,7 @@ export default function RootLayout({
       >
         <Header />
         <LetsTalkButton />
-        {children}
+        <div className="pt-16">{children}</div>
         <Footer />
       </body>
     </html>

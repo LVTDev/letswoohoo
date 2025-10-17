@@ -1,9 +1,16 @@
+import Image from "next/image";
 import React from "react";
 
 const page = () => {
   return (
-    <div className="pt-[80px] font-albert w-[90%] mx-auto">
-      <p className="text-center">Gracias por comunicarse con nosotros</p>
+    <div className=" font-albert  mx-auto">
+            <div className=" relative h-[500px]">
+                <Image
+                  fill
+                  src={"/Thanks.png"}
+                  alt={`Thanks bg`}
+                />
+              </div>
     </div>
   );
 };

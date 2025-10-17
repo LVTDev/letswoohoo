@@ -3,7 +3,7 @@ import LetsTalkForm from "@/components/General UI/LetsTalkForm";
 
 import React, { useRef } from "react";
 import dynamic from "next/dynamic";
-import { Mail } from "react-feather";
+import { Aperture, Disc, Mail } from "react-feather";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -12,29 +12,24 @@ const Map = dynamic(() => import("@/components/General UI/Map"), {
 });
 
 const Page = () => {
-  gsap.registerPlugin( useGSAP);
+  gsap.registerPlugin(useGSAP);
   const logoRef = useRef<null | HTMLDivElement>(null);
   useGSAP(() => {
     gsap.to(logoRef.current, {
       repeat: -1,
       yoyo: true,
-      duration: .76,
+      duration: 0.76,
       ease: "bounce.inOut",
       // scale: 1.2,
-       rotationY: 360, 
+      rotationY: 360,
       repeatDelay: 3.2,
-    
     });
-
   });
 
-
-
-
   return (
-    <div className="pt-[80px] font-albert w-[90%] mx-auto">
+    <div className=" font-albert w-[90%] mx-auto">
       <h1 className="hidden">Contact us</h1>
-      <div className="flex">
+      <div className="flex  pb-6">
         <div className="w-1/2 ">
           <p className="font-bold text-4xl tracking-widest uppercase mb-6">
             Contact <br /> Details
@@ -51,13 +46,18 @@ const Page = () => {
             </div>
             hello@letswoohoo.com
           </div>
-          <div className="mb-8 ">
-            <div>
-              <p className="font-bold text-2xl tracking-widest uppercase mb-1">
-                Comercial
-              </p>
+        </div>
+        <LetsTalkForm />
+      </div>
+      <div>
+        <div className="mb-8 md:flex pt-6 justify-around  border-b border-gray pb-6">
+          <div className="md:w-3/4">
+            <p className="font-bold text-2xl tracking-widest uppercase mb-1">
+              Comercial
+            </p>
+            <div className="md:flex justify-between">
               <div>
-                <p className=" font-medium mb-1">Juan Pablo Gutierrez </p>
+                <p className=" font-medium mb-1 flex items-center"><Disc  className="inline-block mr-1" width={16}/>Juan Pablo Gutierrez </p>
                 <p className="italic">
                   {" "}
                   <Mail className="inline mr-1" width={18} />
@@ -65,35 +65,34 @@ const Page = () => {
                 </p>
               </div>
               <div>
-                <p className=" font-medium mb-1">Ernesto Vallejo</p>
+                <p className=" font-medium mb-1 flex items-center"><Disc  className="inline-block  mr-1" width={16}/>Ernesto Vallejo</p>
                 <p className="italic">
                   <Mail className="inline mr-1" width={18} />
                   vallejo@letswoohoo.com
                 </p>
               </div>
               <div>
-                <p className=" font-medium mb-1">Cristina Rodriguez</p>
+                <p className=" font-medium mb-1 flex items-center"><Disc  className="inline-block  mr-1" width={16}/>Cristina Rodriguez</p>
                 <p className="italic">
                   <Mail className="inline mr-1" width={18} />
                   cristina@letswoohoo.com
                 </p>
               </div>
             </div>
-            <div className="mt-5 ">
-              <p className="font-bold text-2xl tracking-widest uppercase mb-1">
-                Producción
+          </div>
+          <div className="mt-5 md:mt-0">
+            <p className="font-bold text-2xl tracking-widest uppercase mb-1">
+              Producción
+            </p>
+            <div>
+              <p className="font-medium flex items-center"><Aperture className="inline-block  mr-1" width={16}/>Nancy Monsivais</p>
+              <p className="italic">
+                <Mail className="inline mr-1" width={18} />
+                nancy@letswoohoo.com
               </p>
-              <div>
-                <p className="font-medium">Nancy Monsivais</p>
-                <p className="italic">
-                  <Mail className="inline mr-1" width={18} />
-                  nancy@letswoohoo.com
-                </p>
-              </div>
             </div>
           </div>
         </div>
-        <LetsTalkForm />
       </div>
       <div>
         <p className="font-bold text-4xl tracking-widest uppercase">
