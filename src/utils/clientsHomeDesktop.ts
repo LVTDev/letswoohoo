@@ -1,5 +1,5 @@
 type HomeProject = {
-  imageLink: string;
+  imageLink?: string;
   alt: string;
   premio?: string;
   id: number;
@@ -39,7 +39,6 @@ export const homeProjectsDesktop: HomeProject[] = [
     isImage: true,
   },
   {
-    imageLink: "",
     full: "full",
     alt: "top golf",
     id: 4,
@@ -89,7 +88,6 @@ export const homeProjectsDesktop: HomeProject[] = [
     isImage: true,
   },
   {
-    imageLink: "",
     full: "full",
     alt: "Billu",
     id: 10,
@@ -114,8 +112,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     isImage: true,
   },
   {
-    imageLink:
-    "https://cdn.sanity.io/images/5egex671/production/26689ba0fed1ad6648e73ac1061c143f093de750-1920x1080.jpg",
+
     full: "wide",
     alt: "Naterra",
     id: 13,

@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 type ImageProps = {
-  imageLink: string;
+  imageLink?: string;
   alt: string;
   full?: string;
   premio?: "amco" | "muse" | "wina";
@@ -27,7 +27,7 @@ const HomeProjectImage = ({
   isImage,
   isVideo,
 }: ImageProps) => {
-  if (isImage)
+  if (isImage && imageLink && imageLink.length > 0)
     return (
       <div
         onClick={onClick}
