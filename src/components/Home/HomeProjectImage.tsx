@@ -31,7 +31,7 @@ const HomeProjectImage = ({
     return (
       <div
         onClick={onClick}
-        className={`relative cursor-pointer   rounded-lg overflow-hidden ${full === "full" && "col-span-3 h-[80vh]"} ${full === "wide" && "col-span-2  h-auto"} ${full === "thin" && "col-span-1 aspect-square"}`}
+        className={`relative cursor-pointer   rounded-lg overflow-hidden ${full === "full" && "col-span-3 h-[84vh]"} ${full === "wide" && "col-span-2  h-auto"} ${full === "thin" && "col-span-1 aspect-square"}`}
       >
         {/* <img src={imageLink} alt={alt} className=""  /> */}
         {/* {premio && (

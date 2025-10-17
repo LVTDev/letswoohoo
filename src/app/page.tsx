@@ -9,7 +9,7 @@ export default function Home() {
         url={
           "https://cdn.sanity.io/files/5egex671/production/76b959f4aab3c47ee922e5a68fd61783b10b3b96.mp4"
         }
-        urlVertical="https://cdn.sanity.io/files/5egex671/production/09ab9c880911675931d8bd223663d23d4dea448c.mp4"
+        urlVertical="https://cdn.sanity.io/files/5egex671/production/806d4c48e992d4a6c46bb240ac9fd170accc82f7.mp4"
       />
       <HomeProjects />
       {/* <HomeProjectsMobile /> */}

@@ -1,13 +1,13 @@
 "use client";
-import React, { useState } from "react";
-import Modal from "./Modal";
+// import React, { useState } from "react";
+// import Modal from "./Modal";
 
 const OurCulture = () => {
-  const [selectedProject, setSelectedProject] = useState<null | {
-    imageLink: string;
-    text: string;
-    title: string;
-  }>(null);
+  // const [selectedProject, setSelectedProject] = useState<null | {
+  //   imageLink: string;
+  //   text: string;
+  //   title: string;
+  // }>(null);
 
   const ourCultureInfo = [
     {
@@ -34,12 +34,16 @@ const OurCulture = () => {
     <div>
       <div className="flex gap-3 justify-between my-4">
         {ourCultureInfo.map((section, i) => (
-          <div className="w-1/3" key={i} onClick={() => setSelectedProject(section)}>
-            <img  src={section.imageLink} alt="equipo LVT" />
+          <div
+            className="w-1/3"
+            key={i}
+            // onClick={() => setSelectedProject(section)}
+          >
+            <img src={section.imageLink} alt="equipo LVT" />
           </div>
         ))}
       </div>
-      <Modal
+      {/* <Modal
         isOpen={!!selectedProject}
         onClose={() => setSelectedProject(null)}
       >
@@ -51,7 +55,7 @@ const OurCulture = () => {
               <p>{selectedProject.text}</p>
           </div>
         )}
-      </Modal>
+      </Modal> */}
     </div>
   );
 };

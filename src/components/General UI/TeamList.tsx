@@ -1,6 +1,6 @@
 "use client";
-import { urlFor } from "@/sanity/lib/image";
-import Image from "next/image";
+
+import TeamListImage from "./TeamListImage";
 
 type Person = {
   _id: string;
@@ -8,6 +8,7 @@ type Person = {
   puesto: string;
   mainImage: { _type: string; alt: string };
   nombre: string;
+  departamento: string;
 };
 
 type Team = {
@@ -19,41 +20,81 @@ const TeamList = ({ teamList }: Team) => {
     <div className="">
       <div className="flex justify-center gap-40 mb-10">
         {teamList.map((person, i) => {
-          if (i > 1) return;
-          return (
-            <div key={person._id} className="flex flex-col items-center">
-              <div className="relative rounded-full w-[200px] h-[200px] mx-auto border-3 border-blue-300 ">
-                <Image
-                  fill
-                  src={urlFor(person.mainImage).url()}
-                  alt={`${person.nombre} poster`}
-                  className="object-cover rounded-full transition duration-500"
-                />
-              </div>
-              <p className="uppercase font-bold mt-3">{person.nombre}</p>
-              <p className="">{person.puesto}</p>
-            </div>
-          );
+          if (!(person.departamento === "direccion")) return;
+          return <TeamListImage key={i} person={person} />;
         })}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {teamList.map((person, i) => {
-          if (i < 2) return;
-          return (
-            <div key={person._id} className="flex flex-col items-center">
-              <div className="relative rounded-full w-[200px] h-[200px] mx-auto border-3 border-blue-300 ">
-                <Image
-                  fill
-                  src={urlFor(person.mainImage).url()}
-                  alt={`${person.nombre} poster`}
-                  className="object-cover rounded-full transition duration-500"
-                />
-              </div>
-              <p className="uppercase font-bold mt-3">{person.nombre}</p>
-              <p className="">{person.puesto}</p>
-            </div>
-          );
-        })}
+      <div>
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Cuentas</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {teamList.map((person, i) => {
+            if (!(person.departamento === "cuentas")) return;
+            return <TeamListImage key={i} person={person} />;
+          })}
+        </div>
+      </div>
+      <div className="mt-10">
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Creativo</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {teamList.map((person, i) => {
+            if (!(person.departamento === "creativo")) return;
+            return <TeamListImage key={i} person={person} />;
+          })}
+        </div>
+      </div>
+      <div className="mt-10">
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Comercial</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {teamList.map((person, i) => {
+            if (!(person.departamento === "comercial")) return;
+            return <TeamListImage key={i} person={person} />;
+          })}
+        </div>
+      </div>
+      <div className="mt-10">
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Produccion</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {teamList.map((person, i) => {
+            if (!(person.departamento === "produccion")) return;
+            return <TeamListImage key={i} person={person} />;
+          })}
+        </div>
+      </div>
+      <div className="mt-10">
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Operaciones</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {teamList.map((person, i) => {
+            if (!(person.departamento === "operaciones")) return;
+            return <TeamListImage key={i} person={person} />;
+          })}
+        </div>
+      </div>
+      <div className="mt-10">
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Comunicacion Interna</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {teamList.map((person, i) => {
+            if (!(person.departamento === "communicacion")) return;
+            return <TeamListImage key={i} person={person} />;
+          })}
+        </div>
+      </div>
+      <div className="mt-10">
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Recursos Humanos</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {teamList.map((person, i) => {
+            if (!(person.departamento === "rh")) return;
+            return <TeamListImage key={i} person={person} />;
+          })}
+        </div>
+      </div>
+      <div className="mt-10">
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Finanzas</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {teamList.map((person, i) => {
+            if (!(person.departamento === "finanzas")) return;
+            return <TeamListImage key={i} person={person} />;
+          })}
+        </div>
       </div>
     </div>
   );

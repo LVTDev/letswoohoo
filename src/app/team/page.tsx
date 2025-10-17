@@ -6,6 +6,7 @@ import React from "react";
 
 const page = async () => {
   const teamList = await fetchSanity("equipo");
+  console.log(teamList)
   return (
     <div className="pt-[40px] w-[90%] mx-auto font-albert">
       <TeamList teamList={teamList} />

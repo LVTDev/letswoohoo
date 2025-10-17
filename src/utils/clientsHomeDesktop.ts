@@ -65,7 +65,7 @@ export const homeProjectsDesktop: HomeProject[] = [
   },
   {
     imageLink:
-      "https://cdn.sanity.io/images/5egex671/production/8bb2ab5dcf0833ba7f7acc84ef82fa65b8efceb9-1920x1080.jpg",
+      "https://cdn.sanity.io/images/5egex671/production/a53448a8265066afa17c602674c59b2e5e80e2c7-1920x1080.jpg",
     full: "full",
     alt: "sin taboobs",
     id: 7,
@@ -157,7 +157,7 @@ export const homeProjectsDesktop: HomeProject[] = [
   },
   {
     imageLink:
-      "https://cdn.sanity.io/images/5egex671/production/5af9a8a5f4fa03488d39f235e64f41d4c703a2cd-1920x1080.jpg",
+      "https://cdn.sanity.io/images/5egex671/production/d30de09712dd025ff98528e1700604f9abdf587f-1920x1080.jpg",
     full: "wide",
     alt: "Afirme dedo",
     id: 18,

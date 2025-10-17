@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="pb-8 font-albert font-bold w-[90%] mx-auto">
       <div className="h-[1px] bg-gray-600 w-full my-6" />
-      <div className="flex justify-around  ">
+      <div className="md:flex justify-around  ">
         <div>
           <p>&copy; 2025 WOOHOO</p>
           <p>AVISO DE PRIVACIDAD</p>
