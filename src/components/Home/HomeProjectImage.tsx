@@ -1,7 +1,9 @@
 // import Image from "next/image";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 
 type ImageProps = {
   imageLink?: string;
@@ -30,6 +32,24 @@ const HomeProjectImage = ({
   isVideo,
   hasLink,
 }: ImageProps) => {
+  gsap.registerPlugin(useGSAP);
+  const contRef = useRef<null | HTMLDivElement>(null);
+  const tl = gsap.timeline({ paused: true });
+  useGSAP(() => {
+    if(!contRef.current || !hasLink) return
+    tl.to(contRef.current, {
+      scale: 1.1,
+      rotate: 2,
+      duration: 0.8,
+      ease: "elastic.out",
+    });
+      // Add hover events
+    const onEnter = () => tl.play();
+    const onLeave = () => tl.reverse();
+
+    contRef.current.addEventListener("mouseenter", onEnter);
+    contRef.current.addEventListener("mouseleave", onLeave);
+  });
   if (isImage && imageLink && imageLink.length > 0) {
     const imageElement = (
       <div
@@ -47,7 +67,7 @@ const HomeProjectImage = ({
             />
           </div>
         )} */}
-        <div className="relative w-full h-full ">
+        <div ref={contRef} className="relative w-full h-full ">
           {" "}
           {/* fixed height for uniform display */}
           <Image
