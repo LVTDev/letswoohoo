@@ -1,6 +1,5 @@
 "use client";
 // import React, { useState } from "react";
-// import Modal from "./Modal";
 
 const OurCulture = () => {
   // const [selectedProject, setSelectedProject] = useState<null | {
