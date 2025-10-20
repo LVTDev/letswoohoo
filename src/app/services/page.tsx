@@ -16,7 +16,12 @@ const page = () => {
           loop
           playsInline
         >
-          <source src={"https://cdn.sanity.io/files/5egex671/production/90cdc65b68a29e678ff5f95a64f7181b8e48f08e.mp4"} type="video/mp4" />
+          <source
+            src={
+              "https://cdn.sanity.io/files/5egex671/production/90cdc65b68a29e678ff5f95a64f7181b8e48f08e.mp4"
+            }
+            type="video/mp4"
+          />
         </video>
         {/* <img
           src="https://cdn.sanity.io/images/5egex671/production/ab5cb1a0bf635d7c3216066cb78ab3292c462094-1921x541.png"
@@ -51,17 +56,22 @@ const page = () => {
         </div>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Publicidad BTL
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Activaciones
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Eventos
           </p>
+
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Convenciones
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Stands
           </p>
+
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Exposiciones
           </p>
@@ -80,9 +90,7 @@ const page = () => {
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Publicidad ATL
           </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Publicidad BTL
-          </p>
+
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Desarrollo de Campañas
           </p>
@@ -114,7 +122,7 @@ const page = () => {
       </div>
 
       <div className=" mb-7 pb-4">
-        <p className=" text-4xl font-extrabold tracking-widest"> PRODUCTION</p>
+        <p className=" text-4xl font-extrabold tracking-widest">AudioVisual</p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Producción de Cine y Video

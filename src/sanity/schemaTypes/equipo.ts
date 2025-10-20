@@ -48,7 +48,8 @@ export const equipoType = defineType({
           "rh",
           "finanzas",
           "direccion",
-          "communicacion"
+          "communicacion",
+          "estrategia",
         ],
       },
     }),

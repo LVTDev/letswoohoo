@@ -25,7 +25,7 @@ const TeamList = ({ teamList }: Team) => {
         })}
       </div>
       <div>
-        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Cuentas</p>
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Accounts</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "cuentas")) return;
@@ -34,7 +34,7 @@ const TeamList = ({ teamList }: Team) => {
         </div>
       </div>
       <div className="mt-10">
-        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Creativo</p>
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Creative</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "creativo")) return;
@@ -43,7 +43,16 @@ const TeamList = ({ teamList }: Team) => {
         </div>
       </div>
       <div className="mt-10">
-        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Comercial</p>
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Strategy</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {teamList.map((person, i) => {
+            if (!(person.departamento === "estrategia")) return;
+            return <TeamListImage key={i} person={person} />;
+          })}
+        </div>
+      </div>
+      <div className="mt-10">
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Commercial</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "comercial")) return;
@@ -52,7 +61,7 @@ const TeamList = ({ teamList }: Team) => {
         </div>
       </div>
       <div className="mt-10">
-        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Produccion</p>
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">AudioVisual</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "produccion")) return;
@@ -61,7 +70,7 @@ const TeamList = ({ teamList }: Team) => {
         </div>
       </div>
       <div className="mt-10">
-        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Operaciones</p>
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Operations/Experiences</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "operaciones")) return;
@@ -70,7 +79,7 @@ const TeamList = ({ teamList }: Team) => {
         </div>
       </div>
       <div className="mt-10">
-        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Comunicacion Interna</p>
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Internal Communication</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "communicacion")) return;
@@ -79,7 +88,7 @@ const TeamList = ({ teamList }: Team) => {
         </div>
       </div>
       <div className="mt-10">
-        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Recursos Humanos</p>
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Human Resources</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "rh")) return;
@@ -88,7 +97,7 @@ const TeamList = ({ teamList }: Team) => {
         </div>
       </div>
       <div className="mt-10">
-        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Finanzas</p>
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Finances</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "finanzas")) return;
