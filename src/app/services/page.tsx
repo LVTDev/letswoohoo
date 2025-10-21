@@ -122,7 +122,7 @@ const page = () => {
       </div>
 
       <div className=" mb-7 pb-4">
-        <p className=" text-4xl font-extrabold tracking-widest">AudioVisual</p>
+        <p className=" text-4xl font-extrabold tracking-widest uppercase">AudioVisual</p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Producción de Cine y Video
