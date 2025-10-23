@@ -54,7 +54,7 @@ const HomeProjectImage = ({
     const imageElement = (
       <div
         onClick={onClick}
-        className={`relative   rounded-lg overflow-hidden ${full === "full" && "col-span-3 h-[84vh]"} ${full === "wide" && "col-span-2  h-auto"} ${full === "thin" && "col-span-1 aspect-square"}`}
+        className={`relative   rounded-lg overflow-hidden ${full === "full" && "col-span-3 h-[200px] md:h-[84vh]"} ${full === "wide" && "col-span-2  h-auto"} ${full === "thin" && "col-span-1 aspect-square"}`}
       >
         {/* <img src={imageLink} alt={alt} className=""  /> */}
         {/* {premio && (
@@ -85,7 +85,7 @@ const HomeProjectImage = ({
 
   if (isVideo)
     return (
-      <div className="relative col-span-3 max-h-[80vh] min-h-[400px] rounded-lg overflow-hidden">
+      <div className="relative col-span-3 max-h-[80vh] md:min-h-[400px] rounded-lg overflow-hidden">
         <video
           data-testid="video"
           // className="w-full   h-full absolute top-0 left-1/2 -translate-x-1/2 object-cover object-center md:block hidden"

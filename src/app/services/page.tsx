@@ -56,24 +56,29 @@ const page = () => {
         </div>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Publicidad BTL
+            {/* Publicidad BTL */}
+            Publicity BTL
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Activaciones
+            {/* Activaciones */}
+            Activations
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Eventos
+            {/* Eventos */}
+            Events
           </p>
 
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Convenciones
+            {/* Convenciones */}
+            Conventions
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Stands
           </p>
 
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Exposiciones
+            {/* Exposiciones */}
+            Expositions
           </p>
         </div>
       </div>
@@ -85,71 +90,86 @@ const page = () => {
         </p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Análisis e Investigación de Mercados
+            {/* Análisis e Investigación de Mercados */}
+            Market Analysis and Research
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Publicidad ATL
+            {/* Publicidad ATL */}
+            Publicity ATL
           </p>
 
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Desarrollo de Campañas
+            {/* Desarrollo de Campañas */}
+            Campaign Development
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Diseño Publicitario
+            {/* Diseño Publicitario */}
+            Advertising Design
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Marketing Digital
+            {/* Marketing Digital */}
+            Digital Marketing
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Branding
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Medios
+            {/* Medios */}
+            Media
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Shopper
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Comunicación Interna
+            {/* Comunicación Interna */}
+            Internal Communication
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Manejo de Crisis
+            {/* Manejo de Crisis */}
+            Crisis Management
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Impresos
+            {/* Impresos */}
+            Prints
           </p>
         </div>
       </div>
 
       <div className=" mb-7 pb-4">
-        <p className=" text-4xl font-extrabold tracking-widest uppercase">AudioVisual</p>
+        <p className=" text-4xl font-extrabold tracking-widest uppercase">
+          AudioVisual
+        </p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Producción de Cine y Video
+            {/* Producción de Cine y Video */}
+            Film and Video Production
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Producción Musical
+            {/* Producción Musical */}
+            Musical Propduction
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Postproduccion
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Producción de Audio
+            {/* Producción de Audio */}
+            Audio Production
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Videos Corporativos
+            {/* Videos Corporativos */}
+            Corporate Videos
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Animación 2D y 3D
+            2D and 3D Animations
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Radio
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Estudio
+            Studio
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Renta de Equipo
+            Equipment Rental
           </p>
         </div>
       </div>

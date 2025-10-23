@@ -1,5 +1,13 @@
+import Link from "next/link";
 import React from "react";
-import { Facebook, Instagram, Linkedin, Mail, Phone, Youtube } from "react-feather";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  Youtube,
+} from "react-feather";
 
 const Footer = () => {
   return (
@@ -8,12 +16,22 @@ const Footer = () => {
       <div className="md:flex justify-between  ">
         <div>
           <p>&copy; 2025 WOOHOO</p>
-          <p>AVISO DE PRIVACIDAD</p>
-          <p>TÉRMINOS Y CONDICIONES DE USO</p>
+          <div className="block">
+            <Link href={"/aviso-de-privacidad"}>PRIVACY NOTICE</Link>
+          </div>
+          <div className="block">
+            <Link href="/terminos">TERMS AND CONDITIONS OF USE</Link>
+          </div>
         </div>
         <div>
-          <p className="flex items-center"><Phone className="inline  mr-1" width={16} />+52 81 8461 0062</p>
-          <p><Mail className="inline mr-1" width={16} />HELLO@LETSWOOHOO.COM</p>
+          <p className="flex items-center">
+            <Phone className="inline  mr-1" width={16} />
+            +52 81 8461 0062
+          </p>
+          <p>
+            <Mail className="inline mr-1" width={16} />
+            HELLO@LETSWOOHOO.COM
+          </p>
         </div>
         <div className="flex flex-col">
           <a href="https://www.facebook.com/letswoohoomx" target="_blank">

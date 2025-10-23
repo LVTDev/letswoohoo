@@ -29,8 +29,8 @@ const Page = () => {
   return (
     <div className=" font-albert w-[90%] mx-auto">
       <h1 className="hidden">Contact us</h1>
-      <div className="flex  pb-6">
-        <div className="w-1/2 ">
+      <div className="md:flex  pb-6">
+        <div className="md:w-1/2 ">
           <p className="font-bold text-4xl tracking-widest uppercase mb-6">
             Contact <br /> Details
           </p>

@@ -72,7 +72,7 @@ const LetsTalkForm = () => {
     }
   };
   return (
-    <div className="w-3/4" id="contactanos">
+    <div className="md:w-3/4" id="contactanos">
       <p className="font-bold text-4xl tracking-widest uppercase mb-6">
         {" "}
         talk <br /> to us
