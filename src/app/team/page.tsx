@@ -17,7 +17,6 @@ const page = async () => {
         </p>
         <p>
          Escríbenos, visítanos o mándanos un “Let’s Woohoo” y hagamos que tus ideas se vuelvan ecoooo.
-
         </p>
       </div>
       <TeamList teamList={teamList} />

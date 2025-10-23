@@ -97,7 +97,7 @@ const TeamList = ({ teamList }: Team) => {
         </div>
       </div>
       <div className="mt-10">
-        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Finances</p>
+        <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Accounting</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "finanzas")) return;
