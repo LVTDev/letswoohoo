@@ -15,6 +15,8 @@ export const metadata: Metadata = {
   title: "Agencia de Publicidad y Producción Audiovisual en Monterrey | Woohoo",
   description:
     "Woohoo es una agencia creativa y productora audiovisual en Monterrey. Creamos campañas, contenidos y experiencias que hacen eco y mueven emociones.",
+  keywords:
+    "Agencia de publicidad en Monterrey, agencia creativa, producción audiovisual, casa productora, BTL, marketing 360.",
 };
 
 export default function RootLayout({
@@ -36,7 +38,6 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={` ${albert.variable} antialiased`}>
-        
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-K275LP93"

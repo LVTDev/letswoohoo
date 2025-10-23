@@ -4,7 +4,25 @@ import React from "react";
 const page = () => {
   return (
     <div className="font-albert w-[90vw] mx-auto pt-[40px]">
-      <h1 className="hidden">Services</h1>
+      <div className="h-0 opacity-0">
+        <h1 className="hidden">Services</h1>
+        <h1>Las ideas se mueeeven. Nosotros las llevamos más leeejos.</h1>
+        <p>
+          Desde la creatividad hasta la ejecución, Woohoo es una agencia de
+          publicidad, marketing y producción audiovisual en Monterrey que
+          convierte cada idea en una experiencia que vibraaa, conecta y deja
+          eeeco.
+        </p>
+        <p>
+          Diseñamos activaciones, eventos y experiencias de marca que hacen que
+          las ideas saaalten del plano digital al mundo real.
+        </p>
+        <p>
+          Cada montaje, cada convención y cada stand se convierte en una
+          historia que despierta emociooones y genera conexión genuina entre las
+          marcas y las personas.
+        </p>
+      </div>
       <div className="w-full mx-auto mb-10">
         <video
           data-testid="video"
@@ -52,7 +70,7 @@ const page = () => {
           {/* <div className="w-10 ">
             <WoohooSvgWhite fill="#000" />
           </div>{" "} */}
-          EXPERIENCES
+          <h2>EXPERIENCES</h2>
         </div>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
@@ -146,7 +164,7 @@ const page = () => {
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             {/* Producción Musical */}
-            Musical Propduction
+            Musical Production
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Postproduccion
