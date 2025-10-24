@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="pt-10">
+    <div className="pt-10 font-albert">
       <div className="md:flex w-[90vw] gap-10 mx-auto">
         <div className="md:w-3/5">
           <h1 className="text-center text-3xl font-bold">Marketing Women 2025</h1>

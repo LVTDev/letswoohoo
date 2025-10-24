@@ -24,14 +24,14 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <p className="flex items-center">
+          <a href="https://wa.me/528184610062" className="flex items-center">
             <Phone className="inline  mr-1" width={16} />
             +52 81 8461 0062
-          </p>
-          <p>
+          </a>
+          <a href="mailto:hello@letswoohoo.com">
             <Mail className="inline mr-1" width={16} />
             HELLO@LETSWOOHOO.COM
-          </p>
+          </a>
         </div>
         <div className="flex flex-col">
           <a href="https://www.facebook.com/letswoohoomx" target="_blank">

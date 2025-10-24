@@ -10,6 +10,8 @@ type HomeProject = {
   isImage?: boolean;
   isVideo?: boolean;
   hasLink?: string
+  campana?: string
+  tags?: string[]
 };
 
 export const homeProjectsDesktop: HomeProject[] = [
@@ -22,6 +24,9 @@ export const homeProjectsDesktop: HomeProject[] = [
     videoLink:
       "https://cdn.sanity.io/files/aq7eb5nj/production/343fab1686acaffef7c29f15328d29105b8cfd3d.mp4",
     isImage: true,
+    campana: "ficmonterrey 20",
+    tags: ["AudioVisual Production", "BTL"]
+
   },
   {
     imageLink:
@@ -30,6 +35,8 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "Arca Mundial",
     id: 2,
     isImage: true,
+     campana: "Open a Goal Scream",
+    tags: ["Branding", "Creativity"]
   },
   {
     imageLink:
@@ -42,11 +49,13 @@ export const homeProjectsDesktop: HomeProject[] = [
   },
   {
     full: "full",
-    alt: "top golf",
+    alt: "Auna Video",
     id: 4,
     isVideo: true,
     videoLink:
       "https://cdn.sanity.io/files/5egex671/production/42bd087789e789cbddbe63f96d3f0ed317dc319d.mp4",
+       campana: "Protect what you love most with Oncosalud",
+    tags: ["AudioVisual Production", "Traditional and Digital Media Campaign"]
   },
 
   {

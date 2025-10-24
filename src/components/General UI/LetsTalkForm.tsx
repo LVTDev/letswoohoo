@@ -91,7 +91,7 @@ const LetsTalkForm = () => {
                 Name
               </label>
               <input
-                placeholder="Nombre"
+                placeholder="Name"
                 type="text"
                 name="name"
                 id="name"
@@ -121,7 +121,7 @@ const LetsTalkForm = () => {
                 Teléfono
               </label>
               <input
-                placeholder="Teléfono"
+                placeholder="Telephone"
                 type="tel"
                 id="phone"
                 className="border border-black placeholder-black text-black rounded-full bg-transparent w-full px-2 py-2"
@@ -137,7 +137,7 @@ const LetsTalkForm = () => {
               <textarea
                 name="info"
                 id="info"
-                placeholder="Cuéntanos qúe necesita tu empresa"
+                placeholder="Tell us what your company needs"
                 className="border border-black placeholder-black text-black rounded-xl bg-transparent w-full px-2 py-2 "
                 rows={4}
                 value={userNeeds}

@@ -32,6 +32,8 @@ const HomeProjects = () => {
           isVideo={proj.isVideo}
           full={proj.full}
           hasLink={proj.hasLink}
+          campana={proj.campana!}
+          tags={proj.tags!}
         />
       ))}
 

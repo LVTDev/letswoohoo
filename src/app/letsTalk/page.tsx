@@ -53,7 +53,7 @@ const Page = () => {
         <div className="mb-8 md:flex pt-6 justify-around  border-b border-gray pb-6">
           <div className="md:w-3/4">
             <p className="font-bold text-2xl tracking-widest uppercase mb-1">
-              Comercial
+              Commercial
             </p>
             <div className="md:flex justify-between">
               <div>
@@ -82,7 +82,7 @@ const Page = () => {
           </div>
           <div className="mt-5 md:mt-0">
             <p className="font-bold text-2xl tracking-widest uppercase mb-1">
-              Producción
+              Production
             </p>
             <div>
               <p className="font-medium flex items-center"><Aperture className="inline-block  mr-1" width={16}/>Nancy Monsivais</p>
