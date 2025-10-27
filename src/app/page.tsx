@@ -22,7 +22,7 @@ export default function Home() {
         />
       </div>
       <HomeProjects />
-      <p>TEST TEST</p>
+      <p>TEST TEST Test</p>
       {/* <HomeProjectsMobile /> */}
     </div>
   );
