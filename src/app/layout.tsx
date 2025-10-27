@@ -5,11 +5,13 @@ import Header from "@/components/General UI/Header";
 import LetsTalkButton from "@/components/General UI/LetsTalkButton";
 import Footer from "@/components/General UI/Footer";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 const albert = Albert_Sans({
   variable: "--font-albert",
   subsets: ["latin"],
 });
+
 
 export const metadata: Metadata = {
   // title: "Agencia de Publicidad y Producción Audiovisual en Monterrey | Woohoo",
@@ -49,6 +51,7 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
+        <Analytics />
 
         <Header />
         <LetsTalkButton />

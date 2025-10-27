@@ -37,7 +37,7 @@ const LetsTalkForm = () => {
       errors.email = "Email invalid";
     }
     if (!phone) {
-      errors.phone = "Número de teléfono requerido.";
+      errors.phone = "Telephone number required";
     } else if (!/^[\d\s()+-]{7,}$/.test(phone)) {
       errors.phone = "Invalid telephone number";
     }
