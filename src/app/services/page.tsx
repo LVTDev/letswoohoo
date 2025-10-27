@@ -5,7 +5,6 @@ const page = () => {
   return (
     <div className="font-albert w-[90vw] mx-auto pt-[40px]">
       <div className="h-0 opacity-0">
-        <h1 className="hidden">Services</h1>
         <h1>Las ideas se mueeeven. Nosotros las llevamos más leeejos.</h1>
         <p>
           Desde la creatividad hasta la ejecución, Woohoo es una agencia de

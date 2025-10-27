@@ -29,7 +29,7 @@ const LetsTalkForm = () => {
   const validateForm = () => {
     const errors = {} as Error;
     if (!name) {
-      errors.name = "Necesitamos tu nombre";
+      errors.name = "We need your name";
     }
     if (!email) {
       errors.email = "Email es requerido";
@@ -39,10 +39,10 @@ const LetsTalkForm = () => {
     if (!phone) {
       errors.phone = "Número de teléfono requerido.";
     } else if (!/^[\d\s()+-]{7,}$/.test(phone)) {
-      errors.phone = "Número de teléfono inválido.";
+      errors.phone = "Invalid telephone number";
     }
     if (!userNeeds) {
-      errors.userNeeds = "Necesitamos mas informacion";
+      errors.userNeeds = "We need more information";
     }
 
     setErrors(errors);
@@ -181,7 +181,7 @@ const LetsTalkForm = () => {
         <p className="text-red-600">{errors.phone}</p>
       )}
       {formSubmitValid && (
-        <div className="font-bold">Gracias por contactar con nosotros!</div>
+        <div className="font-bold">Thanks for contacting us.</div>
       )}
     </div>
   );

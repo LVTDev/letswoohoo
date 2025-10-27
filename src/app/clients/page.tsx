@@ -5,12 +5,11 @@ const page = () => {
   return (
     <div className="pt-[40px]">
       <div className="h-0 opacity-0">
-        <h1 className="hidden">Clients</h1>
         <h1>Las marcas que hacen ecooo con nosotros</h1>
-        <p>
+        <h2>
           En Woohoo, cada cliente es una historia que vibra, evoluciona y se
           multiplica.
-        </p>
+        </h2>
         <p>
           Trabajamos con marcas nacionales e internacionales que confían en
           nosotros para transformar ideas en campañas, experiencias y

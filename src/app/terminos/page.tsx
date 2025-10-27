@@ -4,7 +4,7 @@ const page = () => {
   return (
     <div className="w-[90vw] mx-auto pt-4">
       <h1 className="font-bold text-2xl">TÉRMINOS Y CONDICIONES DE USO</h1>
-      <p className="my-3">Última actualización: 8 de octubre de 2025</p>
+      <h2 className="my-3">Última actualización: 8 de octubre de 2025</h2>
       <p>
         Gracias por visitar el sitio web de Wuhucorp, S.A. de C.V. (“Wuhucorp”).
         El acceso y uso de este sitio web (el “Sitio”) se rige por los presentes

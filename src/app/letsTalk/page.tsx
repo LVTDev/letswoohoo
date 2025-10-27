@@ -31,9 +31,9 @@ const Page = () => {
       <h1 className="hidden">Contact us</h1>
       <div className="md:flex  pb-6">
         <div className="md:w-1/2 ">
-          <p className="font-bold text-4xl tracking-widest uppercase mb-6">
+          <h2 className="font-bold text-4xl tracking-widest uppercase mb-6">
             Contact <br /> Details
-          </p>
+          </h2>
           <p className="text-lg font-medium">
             Río Rosas Sur 330 1er piso, <br />
             Del Valle, C. P. 66220, <br />

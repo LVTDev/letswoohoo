@@ -13,7 +13,7 @@ const page = () => {
         en Posesión de los Particulares, su Reglamento, y los Lineamientos del
         Aviso de Privacidad emitidos por el INAI.
       </p>
-      <h3 className="font-bold my-3">1. Datos personales que se recaban</h3>
+      <h2 className="font-bold my-3">1. Datos personales que se recaban</h2>
       <p>
         Wuhucorp podrá recabar los siguientes datos personales:
         <br />

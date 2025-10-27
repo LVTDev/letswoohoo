@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contacto | Woohoo Agencia de Publicidad y Producción Audiovisual",
+  title: "Contact | Woohoo Creative & Production Agency in Monterrey",
   description:
-    "Contacta a Woohoo, agencia de publicidad y producción audiovisual en Monterrey. Hablemos de ideas, creatividad y campañas que hacen eco.",
+    "Get in touch with Woohoo,  a creative and audiovisual production agency in Monterrey, Mexico. Let’s create campaigns and experiences that make ideas echo.",
 };
 
 export default function ContactLayout({

@@ -7,6 +7,7 @@ export default function Home() {
     <div className="">
       <div className="h-0 opacity-0">
         <h1>Donde las ideas se vuelven ecoooo</h1>
+        <h2> Agencia de publicidad y producción audiovisual</h2>
         <p>
           Agencia de publicidad y producción audiovisual en Monterrey que crea
           campañas, contenidos y experiencias que resuenaaaan.

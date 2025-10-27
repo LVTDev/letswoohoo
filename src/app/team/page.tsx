@@ -9,9 +9,9 @@ const page = async () => {
     <div className="pt-[40px] w-[90%] mx-auto font-albert">
       <div className="h-0 opacity-0">
         <h1 className="hidden">Hablemos de ideas que hacen ecooo</h1>
-        <p>
+        <h2>
          ¿Tienes una marca lista para moverse, brillar o sonar más fuerte?
-        </p>
+        </h2>
         <p>
          Estamos aquí para crear contigo.
         </p>

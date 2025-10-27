@@ -15,7 +15,7 @@ const page = () => {
             visión que tenemos de una agencia del mañana… con eloptimismo como
             esencia para compartir valores y sentimientos”.
           </p>
-          <p className="font-bold text-lg pt-6">Rebranding con propósito: del nombre a la narrativa de valor</p>
+          <h2 className="font-bold text-lg pt-6">Rebranding con propósito: del nombre a la narrativa de valor</h2>
           <p className="pt-3">
             Originaria de Monterrey, WOOHOO es hoy el resultado de una
             trayectoria que combinarigor estratégico y curiosidad creativa. La
