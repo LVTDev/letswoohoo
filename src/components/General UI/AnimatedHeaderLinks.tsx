@@ -3,13 +3,13 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 const items = [
   { label: "Clients", id: "firstSection", link: "/clients" },
   { label: "Services", id: "secondSection", link: "/services" },
   { label: "Our Team", id: "thirdSection", link: "/team" },
   { label: "Contact", id: "fourthSection", link: "/letsTalk" },
+  { label: "AudioVisual", id: "fifthSection", link: "https://barracaproducciones.mx/" },
 ];
 
 const AnimatedHeaderLinks = () => {
@@ -73,14 +73,10 @@ const AnimatedHeaderLinks = () => {
             </Link>
           </li>
         ))}
-        <div>
-          <a href="https://barracaproducciones.mx/">
-            <div className="w-14">
-              <Image alt="logo woohoo audiovisual"  src={"/woohoo audivisual.png"} width={100} height={100}/>
-              {/* <BarracaSvgWhite /> */}
-            </div>
-          </a>
-        </div>
+        
+
+
+        
       </ul>
     </div>
   );

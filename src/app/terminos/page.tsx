@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="w-[90vw] mx-auto pt-4">
+    <div className="w-[90vw] mx-auto pt-4 font-albert">
       <h1 className="font-bold text-2xl">TÉRMINOS Y CONDICIONES DE USO</h1>
       <h2 className="my-3">Última actualización: 8 de octubre de 2025</h2>
       <p>

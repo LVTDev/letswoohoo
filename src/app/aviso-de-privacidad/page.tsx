@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="w-[90vw] mx-auto pt-4">
+    <div className="w-[90vw] mx-auto pt-4 font-albert">
       <h1 className="font-bold text-2xl">AVISO DE PRIVACIDAD</h1>
       <p className="my-3">Última actualización: 8 de octubre de 2025</p>
       <p>
