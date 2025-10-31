@@ -2,7 +2,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
-const LangSwitch = () => {
+const LangSwitch = ({lang}:{lang:string}) => {
   const router = useRouter();
   const pathname = usePathname();
   console.log(pathname);
@@ -26,7 +26,7 @@ const LangSwitch = () => {
       if (engPath) router.push(engPath);
     }
   };
-  return <div onClick={handleLangSwitch}>LangSwitch</div>;
+    return <div className="cursor-pointer" onClick={handleLangSwitch}><span className={`${lang === "en" && "font-bold text-[#caeb0c] cursor-pointer"}`}>EN</span>/ <span className={`${lang === "es" && "font-bold text-[#caeb0c]"} `}>ES</span></div>;
 };
 
 export default LangSwitch;

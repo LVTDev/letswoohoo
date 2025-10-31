@@ -60,7 +60,7 @@ const Header = ({lang}:{lang: string}) => {
           </div>
         </div> */}
         <AnimatedHeaderLinks lang={lang} />
-        <LangSwitch />
+        <LangSwitch lang={lang} />
       </div>
     </header>
     // <header

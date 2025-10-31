@@ -98,7 +98,7 @@ const Page = () => {
         <p className="font-bold text-4xl tracking-widest uppercase">
           dónde <br /> encontrarnos
         </p>
-        {/* <Map /> */}
+        <Map />
       </div>
     </div>
   );
