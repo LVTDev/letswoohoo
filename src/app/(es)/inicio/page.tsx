@@ -2,7 +2,7 @@ import HomeVideoReel from "@/components/General UI/HomeVideoReel";
 import HomeProjects from "@/components/Home/HomeProjects";
 // import HomeProjectsMobile from "@/components/Home/HomeProjectsMobile";
 
-export default function Home() {
+export default function Inicio() {
   return (
     <div className="">
       <div className="h-0 opacity-0">

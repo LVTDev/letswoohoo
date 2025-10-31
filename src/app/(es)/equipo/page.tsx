@@ -19,7 +19,7 @@ const page = async () => {
          Escríbenos, visítanos o mándanos un “Let’s Woohoo” y hagamos que tus ideas se vuelvan ecoooo.
         </p>
       </div>
-      <TeamList teamList={teamList} />
+      <TeamList teamList={teamList} lang={"es"} />
       <div className="h-[1px] bg-gray-600 w-full my-10" />
       <div>
         <p className="uppercase text-4xl font-extrabold tracking-widest">

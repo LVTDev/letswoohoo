@@ -9,19 +9,21 @@ type Person = {
   mainImage: { _type: string; alt: string };
   nombre: string;
   departamento: string;
+  puestoESP: string
 };
 
 type Team = {
   teamList: Person[];
+  lang: string
 };
 
-const TeamList = ({ teamList }: Team) => {
+const TeamList = ({ teamList, lang }: Team) => {
   return (
     <div className="">
       <div className="md:flex justify-center gap-40 mb-10">
         {teamList.map((person, i) => {
           if (!(person.departamento === "direccion")) return;
-          return <TeamListImage key={i} person={person} />;
+          return <TeamListImage lang={lang} key={i} person={person} />;
         })}
       </div>
       <div>
@@ -29,7 +31,7 @@ const TeamList = ({ teamList }: Team) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "cuentas")) return;
-            return <TeamListImage key={i} person={person} />;
+            return <TeamListImage lang={lang} key={i} person={person} />;
           })}
         </div>
       </div>
@@ -38,7 +40,7 @@ const TeamList = ({ teamList }: Team) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "creativo")) return;
-            return <TeamListImage key={i} person={person} />;
+            return <TeamListImage lang={lang} key={i} person={person} />;
           })}
         </div>
       </div>
@@ -47,7 +49,7 @@ const TeamList = ({ teamList }: Team) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "estrategia")) return;
-            return <TeamListImage key={i} person={person} />;
+            return <TeamListImage lang={lang} key={i} person={person} />;
           })}
         </div>
       </div>
@@ -56,7 +58,7 @@ const TeamList = ({ teamList }: Team) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "comercial")) return;
-            return <TeamListImage key={i} person={person} />;
+            return <TeamListImage lang={lang} key={i} person={person} />;
           })}
         </div>
       </div>
@@ -65,7 +67,7 @@ const TeamList = ({ teamList }: Team) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "produccion")) return;
-            return <TeamListImage key={i} person={person} />;
+            return <TeamListImage lang={lang} key={i} person={person} />;
           })}
         </div>
       </div>
@@ -74,7 +76,7 @@ const TeamList = ({ teamList }: Team) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "operaciones")) return;
-            return <TeamListImage key={i} person={person} />;
+            return <TeamListImage lang={lang} key={i} person={person} />;
           })}
         </div>
       </div>
@@ -83,7 +85,7 @@ const TeamList = ({ teamList }: Team) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "communicacion")) return;
-            return <TeamListImage key={i} person={person} />;
+            return <TeamListImage lang={lang} key={i} person={person} />;
           })}
         </div>
       </div>
@@ -92,7 +94,7 @@ const TeamList = ({ teamList }: Team) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "rh")) return;
-            return <TeamListImage key={i} person={person} />;
+            return <TeamListImage lang={lang} key={i} person={person} />;
           })}
         </div>
       </div>
@@ -101,7 +103,7 @@ const TeamList = ({ teamList }: Team) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "finanzas")) return;
-            return <TeamListImage key={i} person={person} />;
+            return <TeamListImage lang={lang} key={i} person={person} />;
           })}
         </div>
       </div>

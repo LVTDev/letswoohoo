@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/General UI/Header";
 import LetsTalkButton from "@/components/General UI/LetsTalkButton";
 import Footer from "@/components/General UI/Footer";
 import Script from "next/script";
@@ -15,13 +14,7 @@ const albert = Albert_Sans({
 
 export const metadata: Metadata = {
   // title: "Agencia de Publicidad y Producción Audiovisual en Monterrey | Woohoo",
-  title: "Creative & Advertising Agency in Monterrey | Woohoo",
-  description:
-    // "Woohoo es una agencia creativa y productora audiovisual en Monterrey. Creamos campañas, contenidos y experiencias que hacen eco y mueven emociones.",
-    "Woohoo is a creative and audiovisual production agency in Monterrey, Mexico. We craft campaigns, content, and brand experiences that move people and make ideas echo.",
-  keywords:
-    // "Agencia de publicidad en Monterrey, agencia creativa, producción audiovisual, casa productora, BTL, marketing 360.",
-    "Advertising agency in Monterrey, creative agency, audiovisual production, full-scale production house, BTL.",
+
 };
 
 export default function RootLayout({
@@ -53,9 +46,8 @@ export default function RootLayout({
         </noscript>
         <Analytics />
 
-        <Header />
         <LetsTalkButton />
-        <div className="pt-16">{children}</div>
+        <div>{children}</div>
         <Footer />
       </body>
     </html>

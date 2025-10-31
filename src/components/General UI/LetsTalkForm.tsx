@@ -1,14 +1,14 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-const LetsTalkForm = () => {
+const LetsTalkForm = ({ lang }: { lang: string }) => {
   type Error = {
     name: string;
     email: string;
     userNeeds: string;
     phone: string;
   };
-   const router = useRouter();
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -29,20 +29,31 @@ const LetsTalkForm = () => {
   const validateForm = () => {
     const errors = {} as Error;
     if (!name) {
-      errors.name = "We need your name";
+      errors.name =
+        lang === "en" ? "We need your name" : "Necessitamos tu nombre";
     }
     if (!email) {
-      errors.email = "Email es requerido";
+      errors.email =
+        lang === "en" ? "Email is required" : "Correo es obligatorio";
     } else if (!/\S+@\S+\.\S+/.test(email)) {
-      errors.email = "Email invalid";
+      errors.email = lang === "en" ? "Email invalid" : "Correo invalido";
     }
     if (!phone) {
-      errors.phone = "Telephone number required";
+      errors.phone =
+        lang === "en"
+          ? "Telephone number required"
+          : "Número de teléfono obligatorio";
     } else if (!/^[\d\s()+-]{7,}$/.test(phone)) {
-      errors.phone = "Invalid telephone number";
+      errors.phone =
+        lang === "en"
+          ? "Invalid telephone number"
+          : "Número de teléfono no válido";
     }
     if (!userNeeds) {
-      errors.userNeeds = "We need more information";
+      errors.userNeeds =
+        lang === "en"
+          ? "We need more information"
+          : "Necesitamos más información";
     }
 
     setErrors(errors);
@@ -64,7 +75,7 @@ const LetsTalkForm = () => {
         },
       });
       setFormSubmitValid(true);
-            setTimeout(() => {
+      setTimeout(() => {
         router.push("/letsTalk/thank-you");
       }, 1000);
     } else {
@@ -75,7 +86,7 @@ const LetsTalkForm = () => {
     <div className="md:w-3/4" id="contactanos">
       <p className="font-bold text-4xl tracking-widest uppercase mb-6">
         {" "}
-        talk <br /> to us
+        hablar <br /> a nosotors
       </p>
 
       {!formSubmitValid && (
@@ -88,10 +99,10 @@ const LetsTalkForm = () => {
           <div className="">
             <div className="mb-5">
               <label className="hidden" htmlFor="name">
-                Name
+                {lang === "en" ? "Name" : "Nombre"}
               </label>
               <input
-                placeholder="Name"
+                placeholder={lang === "en" ? "Name" : "Nombre"}
                 type="text"
                 name="name"
                 id="name"
@@ -106,7 +117,7 @@ const LetsTalkForm = () => {
                 Email
               </label>
               <input
-                placeholder="Email"
+                placeholder={lang === "en" ? "Email" : "Correo"}
                 type="email"
                 name="email"
                 onBlur={() => setTouched((prev) => ({ ...prev, email: true }))}
@@ -121,7 +132,7 @@ const LetsTalkForm = () => {
                 Teléfono
               </label>
               <input
-                placeholder="Telephone"
+                placeholder={lang === "en" ? "Telephone" : "Teléfono"}
                 type="tel"
                 id="phone"
                 className="border border-black placeholder-black text-black rounded-full bg-transparent w-full px-2 py-2"
@@ -137,7 +148,11 @@ const LetsTalkForm = () => {
               <textarea
                 name="info"
                 id="info"
-                placeholder="Tell us what your company needs"
+                placeholder={
+                  lang === "en"
+                    ? "Tell us what your company needs"
+                    : "Cuéntanos qué necesita tu empresa."
+                }
                 className="border border-black placeholder-black text-black rounded-xl bg-transparent w-full px-2 py-2 "
                 rows={4}
                 value={userNeeds}
@@ -154,7 +169,7 @@ const LetsTalkForm = () => {
                 type="submit"
                 className={`mt-auto md:ml-8 px-3 rounded py-2 font-bold bg-black text-white w-max cursor-pointer`}
               >
-                <p>Send</p>
+                <p>{lang === "en" ? "Send" : "Enviar"}</p>
               </button>
             ) : (
               <button
@@ -162,7 +177,7 @@ const LetsTalkForm = () => {
                 disabled
                 className="h-max md:ml-8 px-3 rounded py-2 font-bold bg-black text-white ml-auto cursor-not-allowed"
               >
-                Send
+                <p>{lang === "en" ? "Send" : "Enviar"}</p>
               </button>
             )}
           </div>
@@ -181,7 +196,7 @@ const LetsTalkForm = () => {
         <p className="text-red-600">{errors.phone}</p>
       )}
       {formSubmitValid && (
-        <div className="font-bold">Thanks for contacting us.</div>
+        <div className="font-bold">{lang === "en" ? "Thanks for contacting us." : "Gracias por contactar con nosotros."}</div>
       )}
     </div>
   );

@@ -47,7 +47,7 @@ const Page = () => {
             hello@letswoohoo.com
           </div>
         </div>
-        <LetsTalkForm />
+        <LetsTalkForm lang={"en"} />
       </div>
       <div>
         <div className="mb-8 md:flex pt-6 justify-around  border-b border-gray pb-6">
