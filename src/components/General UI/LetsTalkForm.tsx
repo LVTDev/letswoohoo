@@ -84,10 +84,19 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
   };
   return (
     <div className="md:w-3/4" id="contactanos">
-      <p className="font-bold text-4xl tracking-widest uppercase mb-6">
+      <div className="font-bold text-4xl tracking-widest uppercase mb-6">
         {" "}
-        hablar <br /> a nosotors
-      </p>
+        {lang === "en" ? (
+          <p>
+            lets
+            <br /> talk
+          </p>
+        ) : (
+          <p>
+            hablar <br /> a nosotors
+          </p>
+        )}
+      </div>
 
       {!formSubmitValid && (
         <form
@@ -196,7 +205,11 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
         <p className="text-red-600">{errors.phone}</p>
       )}
       {formSubmitValid && (
-        <div className="font-bold">{lang === "en" ? "Thanks for contacting us." : "Gracias por contactar con nosotros."}</div>
+        <div className="font-bold">
+          {lang === "en"
+            ? "Thanks for contacting us."
+            : "Gracias por contactar con nosotros."}
+        </div>
       )}
     </div>
   );
