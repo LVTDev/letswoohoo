@@ -65,17 +65,17 @@ const Page = () => {
                 </p>
               </div>
               <div>
-                <p className=" font-medium mb-1 flex items-center"><Disc  className="inline-block  mr-1" width={16}/>Ernesto Vallejo</p>
+                <p className=" font-medium mb-1 flex items-center"><Disc  className="inline-block  mr-1" width={16}/>Blanca González</p>
                 <p className="italic">
                   <Mail className="inline mr-1" width={18} />
-                  vallejo@letswoohoo.com
+                  blanca@letswoohoo.com
                 </p>
               </div>
               <div>
-                <p className=" font-medium mb-1 flex items-center"><Disc  className="inline-block  mr-1" width={16}/>Cristina Rodriguez</p>
+                <p className=" font-medium mb-1 flex items-center"><Disc  className="inline-block  mr-1" width={16}/>Arely Gutiérrez</p>
                 <p className="italic">
                   <Mail className="inline mr-1" width={18} />
-                  cristina@letswoohoo.com
+                  arely@letswoohoo.com
                 </p>
               </div>
             </div>

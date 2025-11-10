@@ -114,13 +114,13 @@ const HomeProjectImage = ({
         {campana && (
           <div
             ref={campanaRef}
-            className="absolute top-2 left-2 opacity-0 -translate-y-4 bg-[#ffffff7a] backdrop-blur-lg text-black px-2 py-1 rounded-full text-sm md:text-base"
+            className="absolute font-albert top-2 left-2 opacity-0 -translate-y-4 bg-[#ffffff7a] backdrop-blur-lg text-black px-2 py-1 rounded-full text-sm md:text-base"
           >
             {campana}
           </div>
         )}
         {tags && tags.length > 0 && (
-          <div className="absolute flex gap-3 w-auto bottom-2 left-2">
+          <div className="absolute font-albert flex gap-3 w-auto bottom-2 left-2">
             {tags.map((tag, i) => (
               <p
                 ref={(el) => {

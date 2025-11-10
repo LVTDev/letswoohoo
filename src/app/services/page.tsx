@@ -22,7 +22,7 @@ const page = () => {
           marcas y las personas.
         </p>
       </div>
-      <div className="w-full mx-auto mb-10">
+      <div className="w-full mx-auto mb-10 rounded-lg overflow-hidden">
         <video
           data-testid="video"
           className="w-full   h-full  object-cover object-center md:block hidden"
