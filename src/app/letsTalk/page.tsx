@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import { Aperture, Disc, Mail } from "react-feather";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import CalendlyForm from "@/components/General UI/CalendlyForm";
 
 const Map = dynamic(() => import("@/components/General UI/Map"), {
   ssr: false,
@@ -29,6 +30,7 @@ const Page = () => {
   return (
     <div className=" font-albert w-[90%] mx-auto">
       <h1 className="hidden">Contact us</h1>
+      <CalendlyForm />
       <div className="md:flex  pb-6">
         <div className="md:w-1/2 ">
           <h2 className="font-bold text-4xl tracking-widest uppercase mb-6">
