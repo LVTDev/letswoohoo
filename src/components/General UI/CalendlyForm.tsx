@@ -5,7 +5,7 @@ const CalendlyForm = () => {
     <div>
       <div
         className="calendly-inline-widget"
-        data-url="https://calendly.com/desarrollador-letswoohoo/30min"
+       data-url="https://calendly.com/juanpablo-letswoohoo/30min"
         style={{minWidth:"320px", height:"700px"}}
       ></div>
       <script
@@ -16,5 +16,4 @@ const CalendlyForm = () => {
     </div>
   );
 };
-
 export default CalendlyForm;
