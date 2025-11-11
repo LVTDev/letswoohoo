@@ -30,7 +30,6 @@ const Page = () => {
   return (
     <div className=" font-albert w-[90%] mx-auto">
       <h1 className="hidden">Contact us</h1>
-      <CalendlyForm />
       <div className="md:flex  pb-6">
         <div className="md:w-1/2 ">
           <h2 className="font-bold text-4xl tracking-widest uppercase mb-6">
@@ -58,23 +57,35 @@ const Page = () => {
               Commercial
             </p>
             <div className="md:flex justify-between">
-              <div>
-                <p className=" font-medium mb-1 flex items-center"><Disc  className="inline-block mr-1" width={16}/>Juan Pablo Gutierrez </p>
-                <p className="italic">
-                  {" "}
-                  <Mail className="inline mr-1" width={18} />
-                  juanpablo@letswoohoo.com
-                </p>
+              <div className="flex">
+                <div >
+                  <p className=" font-medium mb-1 flex items-center">
+                    <Disc className="inline-block mr-1" width={16} />
+                    Juan Pablo Gutierrez{" "}
+                  </p>
+                  <p className="italic">
+                    {" "}
+                    <Mail className="inline mr-1" width={18} />
+                    juanpablo@letswoohoo.com
+                  </p>
+                </div>
+                <CalendlyForm />
               </div>
               <div>
-                <p className=" font-medium mb-1 flex items-center"><Disc  className="inline-block  mr-1" width={16}/>Ernesto Vallejo</p>
+                <p className=" font-medium mb-1 flex items-center">
+                  <Disc className="inline-block  mr-1" width={16} />
+                  Ernesto Vallejo
+                </p>
                 <p className="italic">
                   <Mail className="inline mr-1" width={18} />
                   vallejo@letswoohoo.com
                 </p>
               </div>
               <div>
-                <p className=" font-medium mb-1 flex items-center"><Disc  className="inline-block  mr-1" width={16}/>Cristina Rodriguez</p>
+                <p className=" font-medium mb-1 flex items-center">
+                  <Disc className="inline-block  mr-1" width={16} />
+                  Cristina Rodriguez
+                </p>
                 <p className="italic">
                   <Mail className="inline mr-1" width={18} />
                   cristina@letswoohoo.com
@@ -87,7 +98,10 @@ const Page = () => {
               Production
             </p>
             <div>
-              <p className="font-medium flex items-center"><Aperture className="inline-block  mr-1" width={16}/>Nancy Monsivais</p>
+              <p className="font-medium flex items-center">
+                <Aperture className="inline-block  mr-1" width={16} />
+                Nancy Monsivais
+              </p>
               <p className="italic">
                 <Mail className="inline mr-1" width={18} />
                 nancy@letswoohoo.com
@@ -96,6 +110,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+
       <div>
         <p className="font-bold text-4xl tracking-widest uppercase">
           where to <br /> find us

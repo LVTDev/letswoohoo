@@ -1,19 +1,8 @@
+"use client";
 import React from "react";
+import { InlineWidget } from "react-calendly";
 
 const CalendlyForm = () => {
-  return (
-    <div>
-      <div
-        className="calendly-inline-widget"
-       data-url="https://calendly.com/juanpablo-letswoohoo/30min"
-        style={{minWidth:"320px", height:"700px"}}
-      ></div>
-      <script
-        type="text/javascript"
-        src="https://assets.calendly.com/assets/external/widget.js"
-        async
-      ></script>
-    </div>
-  );
+  return <InlineWidget url="https://calendly.com/juanpablo-letswoohoo/30min" />;
 };
 export default CalendlyForm;
