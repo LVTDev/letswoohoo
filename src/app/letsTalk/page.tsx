@@ -3,9 +3,10 @@ import LetsTalkForm from "@/components/General UI/LetsTalkForm";
 
 import React, { useRef } from "react";
 import dynamic from "next/dynamic";
-import { Aperture, Disc, Mail } from "react-feather";
+import {  Disc, Mail } from "react-feather";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import CalendlyForm from "@/components/General UI/CalendlyForm";
 
 const Map = dynamic(() => import("@/components/General UI/Map"), {
   ssr: false,
@@ -51,52 +52,29 @@ const Page = () => {
       </div>
       <div>
         <div className="mb-8 lg:flex pt-6 justify-around  border-b border-gray pb-6">
-          <div className="md:w-1/4">
-            <p className="font-bold text-2xl tracking-widest uppercase mb-1">
-              Commercial
-            </p>
-            <div className="">
-              <div>
-                <p className=" font-medium mb-1 flex items-center">
-                  <Disc className="inline-block mr-1" width={16} />
-                  Juan Pablo Gutierrez{" "}
-                </p>
-                <p className="italic w-max">
-                  {" "}
-                  <Mail className="inline mr-1" width={18} />
-                  juanpablo@letswoohoo.com
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="md:w-2/4 mt-5 md:mt-0">
-            <p className="font-bold text-2xl tracking-widest uppercase mb-1">
-              Event Design
-            </p>
-            <div className="md:flex gap-20">
+          <div className="md:w-1/4 md:flex justify-between gap-15">
+            <div>
+              <p className="font-bold text-2xl tracking-widest uppercase mb-1">
+                Commercial
+              </p>
               <div className="">
-                <p className=" font-medium mb-1 flex items-center">
-                  <Disc className="inline  mr-1" width={16} />
-                  Blanca González
-                </p>
-                <p className="italic w-max">
-                  <Mail className="inline-block mr-1" width={18} />
-                  blanca@letswoohoo.com
-                </p>
-              </div>
-              <div className="mt-5 md:mt-0">
-                <p className=" font-medium mb-1 flex items-center">
-                  <Disc className="inline-block  mr-1" width={16} />
-                  Arely Gutiérrez
-                </p>
-                <p className="italic w-max">
-                  <Mail className="inline mr-1 " width={18} />
-                  arely@letswoohoo.com
-                </p>
+                <div>
+                  <p className=" font-medium mb-1 flex items-center">
+                    <Disc className="inline-block mr-1" width={16} />
+                    Juan Pablo Gutierrez{" "}
+                  </p>
+                  <p className="italic w-max">
+                    {" "}
+                    <Mail className="inline mr-1" width={18} />
+                    juanpablo@letswoohoo.com
+                  </p>
+                </div>
               </div>
             </div>
+            <CalendlyForm/>
           </div>
-          <div className="mt-5 md:mt-0">
+        
+          {/* <div className="mt-5 md:mt-0">
             <p className="font-bold text-2xl tracking-widest uppercase mb-1">
               Production
             </p>
@@ -110,7 +88,7 @@ const Page = () => {
                 nancy@letswoohoo.com
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div>
