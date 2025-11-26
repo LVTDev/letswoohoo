@@ -6,30 +6,40 @@ import { sendMail } from "./mailService";
 
 // const con = await dbConnect();
 export async function GET() {
-//   const userRequestContent = await ServiceRequestSchema.find({});
+  //   const userRequestContent = await ServiceRequestSchema.find({});
   return new NextResponse("test");
-//   return new NextResponse(userRequestContent);
+  //   return new NextResponse(userRequestContent);
 }
 
 export async function POST(request: NextRequest) {
   try {
     const requestContent = await request.json();
-    const res = await sendMail(
+    const emailSent = await sendMail(
       "Sitio WOOHOO: Formulario Contactanos",
-      "hello@letswoohoo.com",
+      "vbotoku@grupolvt.com",
       `Client: ${requestContent.name}
      Correo: ${requestContent.email}
      Telefono:${requestContent.phone}
      Necessidades: ${requestContent.message}`
     );
-    console.log(res)
+
     // const userRequestContent = await ServiceRequestSchema.create(
     //   requestContent
     // );
     // return new Response(JSON.stringify(userRequestContent));
-    return new Response("success");
+    if (!emailSent) {
+      return NextResponse.json(
+        { success: false, error: "Email failed to send" },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.log(error);
-    return new Response("error");
+    return NextResponse.json(
+      { success: false, error: "Server error" },
+      { status: 500 }
+    );
   }
 }

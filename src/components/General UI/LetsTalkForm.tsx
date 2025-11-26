@@ -8,7 +8,7 @@ const LetsTalkForm = () => {
     userNeeds: string;
     phone: string;
   };
-   const router = useRouter();
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -48,10 +48,10 @@ const LetsTalkForm = () => {
     setErrors(errors);
     setIsFormValid(Object.keys(errors).length === 0);
   };
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (isFormValid) {
-      fetch("/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         body: JSON.stringify({
           name,
@@ -63,10 +63,13 @@ const LetsTalkForm = () => {
           "Content-type": "application/json",
         },
       });
-      setFormSubmitValid(true);
-            setTimeout(() => {
-        router.push("/letsTalk/thank-you");
-      }, 1000);
+      const data = await response.json();
+      if (response.ok && data.success) {
+        setFormSubmitValid(true);
+        setTimeout(() => {
+          router.push("/letsTalk/thank-you");
+        }, 1000);
+      }
     } else {
       setFormSubmitValid(false);
     }
