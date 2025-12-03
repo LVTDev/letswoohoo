@@ -9,9 +9,10 @@ type HomeProject = {
   descriptionENG?: string;
   isImage?: boolean;
   isVideo?: boolean;
-  hasLink?: string
-  campana?: string
-  tags?: string[]
+  hasLink?: string;
+  campana?: string;
+  tags?: string[];
+  sizes?: string;
 };
 
 export const homeProjectsDesktop: HomeProject[] = [
@@ -25,8 +26,8 @@ export const homeProjectsDesktop: HomeProject[] = [
       "https://cdn.sanity.io/files/aq7eb5nj/production/343fab1686acaffef7c29f15328d29105b8cfd3d.mp4",
     isImage: true,
     campana: "ficmonterrey 20",
-    tags: ["AudioVisual Production", "BTL"]
-
+    tags: ["AudioVisual Production", "BTL"],
+    sizes: "(min-width: 460px) 85vw, calc(12.14vw + 321px)",
   },
   {
     imageLink:
@@ -35,8 +36,9 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "Arca Mundial",
     id: 2,
     isImage: true,
-     campana: "Open a Goal Scream",
-    tags: ["Branding", "Creativity"]
+    campana: "Open a Goal Scream",
+    tags: ["Branding", "Creativity"],
+    sizes: "56.67vw",
   },
   {
     imageLink:
@@ -46,6 +48,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     id: 3,
     isImage: true,
     hasLink: "/blog/marketing-women",
+    sizes: "calc(28.33vw - 13px)",
   },
   {
     full: "full",
@@ -54,8 +57,8 @@ export const homeProjectsDesktop: HomeProject[] = [
     isVideo: true,
     videoLink:
       "https://cdn.sanity.io/files/5egex671/production/42bd087789e789cbddbe63f96d3f0ed317dc319d.mp4",
-       campana: "Protect what you love most with Oncosalud",
-    tags: ["AudioVisual Production", "Traditional and Digital Media Campaign"]
+    campana: "Protect what you love most with Oncosalud",
+    tags: ["AudioVisual Production", "Traditional and Digital Media Campaign"],
   },
 
   {
@@ -65,6 +68,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "top golf",
     id: 5,
     isImage: true,
+    sizes: "calc(28.33vw - 13px)",
   },
   {
     imageLink:
@@ -73,6 +77,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "lets woohoo",
     id: 6,
     isImage: true,
+    sizes: "56.67vw",
   },
   {
     imageLink:
@@ -81,6 +86,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "sin taboobs",
     id: 7,
     isImage: true,
+    sizes: "(min-width: 460px) 85vw, calc(12.14vw + 321px)",
   },
   {
     imageLink:
@@ -89,6 +95,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "afirme  ruta rosa",
     id: 8,
     isImage: true,
+    sizes: "56.67vw",
   },
   {
     imageLink:
@@ -97,6 +104,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "las lloronas",
     id: 9,
     isImage: true,
+    sizes: "calc(28.33vw - 13px)",
   },
   {
     full: "full",
@@ -113,6 +121,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "afirme  cuidad verde",
     id: 11,
     isImage: true,
+    sizes: "calc(28.33vw - 13px)",
   },
   {
     imageLink:
@@ -121,6 +130,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "lets woohoo",
     id: 12,
     isImage: true,
+    sizes: "56.67vw",
   },
   {
     full: "wide",
@@ -137,6 +147,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "temp",
     id: 14,
     isImage: true,
+    sizes: "56.67vw",
   },
   {
     imageLink:
@@ -145,6 +156,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "afirme paneles",
     id: 15,
     isImage: true,
+    sizes: "calc(28.33vw - 13px)",
   },
   {
     imageLink:
@@ -163,6 +175,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "arca mundial 2",
     id: 17,
     isImage: true,
+    sizes: "calc(28.33vw - 13px)",
   },
   {
     imageLink:
@@ -171,6 +184,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     alt: "Afirme dedo",
     id: 18,
     isImage: true,
+    sizes: "56.67vw",
   },
 ];
 // export const homeProjectsDesktop: HomeProject[] = [
