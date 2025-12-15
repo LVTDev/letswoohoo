@@ -2,9 +2,10 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 const LetsTalkButton = () => {
+  const [fillColor, setFillColor] = useState("black")
   gsap.registerPlugin(useGSAP);
   const buttonRef = useRef<SVGSVGElement | null>(null);
 
@@ -45,7 +46,7 @@ const LetsTalkButton = () => {
     { scope: buttonRef }
   );
   return (
-    <div className="w-12 md:w-22 fixed right-2 bottom-[10%] z-1000">
+    <div onMouseLeave={() => setFillColor("black")} onMouseEnter={() => setFillColor("white")}  className="w-12 hover:text-white transition md:w-22 fixed right-2 bottom-[10%] z-1000">
       <Link href={"/letsTalk"}>
         <svg
           className="opacity-0 scale-80 translate-y-20"
@@ -59,7 +60,7 @@ const LetsTalkButton = () => {
             className="st0_letsTalk"
             d="M168.2,198.2l-17.2,24-15.5-24H30c-16.5,0-30-13.5-30-30V30C0,13.5,13.5,0,30,0h138.2c16.5,0,30,13.5,30,30v138.2c0,16.5-13.5,30-30,30Z"
           />
-          <g className="letsTalk_text-cont" fill="">
+          <g className="letsTalk_text-cont"   fill={fillColor}>
             <path d="M41.9,94.3v-47.5h9.8v47.5h-9.8Z" />
             <path d="M67.5,82c1.1,3,3.7,4.5,7.8,4.5s4.7-.8,6.2-2.5l7.8,4.5c-3.2,4.5-7.9,6.7-14.2,6.7s-9.8-1.6-13.1-4.9c-3.3-3.2-4.9-7.3-4.9-12.3s1.6-9,4.8-12.3c3.2-3.3,7.4-4.9,12.4-4.9s8.7,1.6,11.8,4.9c3.1,3.3,4.7,7.4,4.7,12.3s-.1,2.7-.4,3.9h-23.1ZM67.3,74.7h14c-1-3.4-3.2-5.1-6.9-5.1s-6.1,1.7-7.1,5.1Z" />
             <path d="M114.5,71.2h-6.7v11.5c0,1.3.5,2.1,1.6,2.5,1,.3,2.8.5,5.1.3v8.8c-6.2.7-10.5,0-12.9-1.8-2.4-1.8-3.6-5.1-3.6-9.8v-11.5h-5.2v-9.4h5.2v-6.2l9.8-2.9v9.1h6.7v9.4Z" />
