@@ -74,12 +74,6 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
           "Content-type": "application/json",
         },
       });
-<<<<<<< HEAD
-      setFormSubmitValid(true);
-      setTimeout(() => {
-        router.push("/letsTalk/thank-you");
-      }, 1000);
-=======
       const data = await response.json();
       if (response.ok && data.success) {
         setFormSubmitValid(true);
@@ -87,7 +81,6 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
           router.push("/letsTalk/thank-you");
         }, 1000);
       }
->>>>>>> main
     } else {
       setFormSubmitValid(false);
     }
