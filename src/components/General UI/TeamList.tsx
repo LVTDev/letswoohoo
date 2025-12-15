@@ -112,7 +112,7 @@ const TeamList = ({ teamList, lang }: Team) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
             if (!(person.departamento === "administrativo")) return;
-            return <TeamListImage key={i} person={person} />;
+            return <TeamListImage lang={lang} key={i} person={person} />;
           })}
         </div>
       </div>
