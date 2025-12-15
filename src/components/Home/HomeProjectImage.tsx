@@ -16,6 +16,7 @@ type ImageProps = {
   isVideo?: boolean;
   campana: string;
   tags: string[];
+  sizes: string
   onClick: () => void;
 };
 // const premioLinks = {
@@ -35,6 +36,7 @@ const HomeProjectImage = ({
   hasLink,
   campana,
   tags,
+  sizes
 }: ImageProps) => {
   gsap.registerPlugin(useGSAP);
   const contRef = useRef<null | HTMLDivElement>(null);
@@ -108,19 +110,19 @@ const HomeProjectImage = ({
             alt={alt}
             fill
             className="object-cover object-center" // crop while keeping aspect ratio
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes={sizes}
           />
         </div>
         {campana && (
           <div
             ref={campanaRef}
-            className="absolute top-2 left-2 opacity-0 -translate-y-4 bg-[#ffffff7a] backdrop-blur-lg text-black px-2 py-1 rounded-full text-sm md:text-base"
+            className="absolute font-albert top-2 left-2 opacity-0 -translate-y-4 bg-[#ffffff7a] backdrop-blur-lg text-black px-2 py-1 rounded-full text-sm md:text-base"
           >
             {campana}
           </div>
         )}
         {tags && tags.length > 0 && (
-          <div className="absolute flex gap-3 w-auto bottom-2 left-2">
+          <div className="absolute font-albert flex gap-3 w-auto bottom-2 left-2">
             {tags.map((tag, i) => (
               <p
                 ref={(el) => {

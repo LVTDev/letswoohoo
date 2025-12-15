@@ -59,10 +59,10 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
     setErrors(errors);
     setIsFormValid(Object.keys(errors).length === 0);
   };
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (isFormValid) {
-      fetch("/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         body: JSON.stringify({
           name,
@@ -74,10 +74,20 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
           "Content-type": "application/json",
         },
       });
+<<<<<<< HEAD
       setFormSubmitValid(true);
       setTimeout(() => {
         router.push("/letsTalk/thank-you");
       }, 1000);
+=======
+      const data = await response.json();
+      if (response.ok && data.success) {
+        setFormSubmitValid(true);
+        setTimeout(() => {
+          router.push("/letsTalk/thank-you");
+        }, 1000);
+      }
+>>>>>>> main
     } else {
       setFormSubmitValid(false);
     }

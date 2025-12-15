@@ -34,6 +34,7 @@ const HomeProjects = () => {
           hasLink={proj.hasLink}
           campana={proj.campana!}
           tags={proj.tags!}
+          sizes={proj.sizes!}
         />
       ))}
 
