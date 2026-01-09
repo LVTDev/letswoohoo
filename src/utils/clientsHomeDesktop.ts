@@ -108,11 +108,11 @@ export const homeProjectsDesktop: HomeProject[] = [
   },
   {
     full: "full",
-    alt: "Billu",
+    alt: "Ballet de monterrey",
     id: 10,
     isVideo: true,
     videoLink:
-      "https://cdn.sanity.io/files/aq7eb5nj/production/fb03609d0306940a867b9b6f4eccd3e2f90497db.mp4",
+      "https://cdn.sanity.io/files/5egex671/production/f08a0434e946c3d8352984e4ec7784dd8d34d596.mp4",
   },
   {
     imageLink:
@@ -134,7 +134,7 @@ export const homeProjectsDesktop: HomeProject[] = [
   },
   {
     full: "wide",
-    alt: "Naterra",
+    alt: "Billu",
     id: 13,
     isVideo: true,
     videoLink:
@@ -162,7 +162,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     imageLink:
       "https://cdn.sanity.io/images/5egex671/production/26689ba0fed1ad6648e73ac1061c143f093de750-1920x1080.jpg",
     full: "wide",
-    alt: "Naterra",
+    alt: "Afirme gordo",
     id: 16,
     isVideo: true,
     videoLink:
