@@ -24,7 +24,7 @@ const TeamListImage = ({ person }: { person: Person }) => {
           />
         </div>
         <p className="uppercase font-bold mt-3">{person.nombre}</p>
-        <p className="">{person.puesto}</p>
+        <p className="text-center">{person.puesto}</p>
       </div>
     </div>
   );

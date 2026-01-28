@@ -18,7 +18,7 @@ type Team = {
 const TeamList = ({ teamList }: Team) => {
   return (
     <div className="">
-      <div className="md:flex justify-center gap-40 mb-10">
+      <div className="md:flex text-center justify-center gap-40 mb-10">
         {teamList.map((person, i) => {
           if (!(person.departamento === "direccion")) return;
           return <TeamListImage key={i} person={person} />;
