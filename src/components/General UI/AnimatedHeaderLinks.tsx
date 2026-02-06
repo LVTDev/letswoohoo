@@ -9,6 +9,7 @@ const items = [
   { label: "Services", id: "secondSection", link: "/services" },
   { label: "Our Team", id: "thirdSection", link: "/team" },
   { label: "Contact", id: "fourthSection", link: "/letsTalk" },
+  { label: "Our Culture", id: "sixthSection", link: "/our-culture" },
   { label: "AudioVisual", id: "fifthSection", link: "https://barracaproducciones.mx/" },
 ];
 
