@@ -1,60 +1,38 @@
 "use client";
+
+import { cancerMama, posada } from "@/app/our-culture/eventos";
+
 // import React, { useState } from "react";
 
 const OurCulture = () => {
-  // const [selectedProject, setSelectedProject] = useState<null | {
-  //   imageLink: string;
-  //   text: string;
-  //   title: string;
-  // }>(null);
-
-  const ourCultureInfo = [
-    {
-      imageLink:
-        "https://cdn.sanity.io/images/5egex671/production/676488691f5b9e05241c859e9e0d2eb483b8c129-476x476.png",
-      title: "Event 1",
-      text: "Texto Event 1",
-    },
-    {
-      imageLink:
-        "https://cdn.sanity.io/images/5egex671/production/09304705fef63876a33255b02832840d1f9a99e7-476x476.png",
-      title: "Event 2",
-      text: "Texto Event 2",
-    },
-    {
-      imageLink:
-        "https://cdn.sanity.io/images/5egex671/production/0fe357b56875813b396a641796ee6f02ac90cdba-476x476.png",
-      title: "Event 3",
-      text: "Texto Event 3",
-    },
-  ];
+  
 
   return (
-    <div>
-      <div className="flex gap-3 justify-between my-4">
-        {ourCultureInfo.map((section, i) => (
-          <div
-            className="w-1/3"
-            key={i}
-            // onClick={() => setSelectedProject(section)}
-          >
-            <img src={section.imageLink} alt="equipo LVT" />
-          </div>
-        ))}
-      </div>
-      {/* <Modal
-        isOpen={!!selectedProject}
-        onClose={() => setSelectedProject(null)}
-      >
-        {selectedProject && (
-          <div className="h-[80vh] overflow-auto">
-            <img className="max-w-[300px]" src={selectedProject.imageLink} alt="equipo LVT" />
+    <div className="font-albert">
+      <h1 className="text-4xl my-3 text-center ">Our Culture</h1>
 
-              <p>{selectedProject.title}</p>
-              <p>{selectedProject.text}</p>
-          </div>
-        )}
-      </Modal> */}
+      <div>
+        <h3 className="text-xl text-center my-4">Posada 2025</h3>
+        <div className="grid md:grid-cols-2 grid-cols-1 md:gap-5 w-[80%] gap-y-3  md:w-[65%] mx-auto">
+          {posada.map((event, i) => <div className={`${event.size === "large" && "col-span-2 "} relative rounded-lg overflow-hidden`} key={i}>
+            <img className=""  src={event.link} alt="Posada equipo LVT" />
+            <div className="absolute bg-[#caeb0c] px-2 py-1 left-3 bottom-3 font-bold rounded text-sm md:text-base">Posada</div>
+            <div className="absolute bg-[#caeb0c] px-2 py-1 right-3 bottom-3 font-bold rounded text-sm md:text-base">Dec 2025</div>
+          </div>)}
+        </div>
+      </div>
+      <div>
+        <h3 className="text-xl text-center mt-6 mb-3">Hablemos de Cáncer de Mama</h3>
+        <div className="grid md:grid-cols-2 grid-cols-1 md:gap-5 w-[80%] gap-y-3 md:w-[65%] mx-auto justify-center">
+          {cancerMama.map((event, i) => <div className={`${event.size === "large" && "col-span-2"} rounded-lg overflow-hidden relative`} key={i}>
+            <img  src={event.link} alt="Posada equipo LVT" />
+            <div className="absolute bg-rose-200 px-2 py-1 left-3 bottom-3 font-bold rounded text-sm md:text-base">Cancer de Mama</div>
+            <div className="absolute bg-rose-200 px-2 py-1 right-3 bottom-3 font-bold rounded text-sm md:text-base">Oct 2025</div>
+
+          </div>)}
+        </div>
+      </div>
+      
     </div>
   );
 };
