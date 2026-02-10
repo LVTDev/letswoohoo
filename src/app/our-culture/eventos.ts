@@ -1,15 +1,15 @@
 const posada: { link: string; size: string }[] = [
   {
+    link: "https://cdn.sanity.io/images/5egex671/production/b06a0f785aa803e11a2002347f692cc49c44108e-2880x1920.jpg",
+    size: "large",
+  },
+  {
     link: "https://cdn.sanity.io/images/5egex671/production/fa42d8f731096a0adea72ee94a22b148c7c36d19-1920x1920.jpg",
     size: "small",
   },
   {
     link: "https://cdn.sanity.io/images/5egex671/production/95c2425c3be17ac7db1a4966e0eaa1cbfda5f494-1920x1920.jpg",
     size: "small",
-  },
-  {
-    link: "https://cdn.sanity.io/images/5egex671/production/b06a0f785aa803e11a2002347f692cc49c44108e-2880x1920.jpg",
-    size: "large",
   },
   {
     link: "https://cdn.sanity.io/images/5egex671/production/4a47fb4b34f9ff23cacbcdd18f44de167eea28e7-1920x1920.jpg",
@@ -63,5 +63,11 @@ const cancerMama: { link: string; size: string }[] = [
     size: "small",
   },
 ];
+export const titles = {
+  posada: "Posada 2025",
+  cancerMama: "Hablemos de Cáncer de Mama"
+}
 
-export { posada, cancerMama };
+const events = { posada, cancerMama } ;
+
+export default events
