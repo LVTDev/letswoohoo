@@ -25,9 +25,9 @@ const page = () => {
           <img
             className=""
             src={
-              "https://cdn.sanity.io/images/5egex671/production/5cb1bcd8d260b28eae46c5929a87f6cef07219b4-3412x1920.jpg"
+              "https://cdn.sanity.io/images/5egex671/production/3d91044d8bf93260b4af243227d06995c81c19e6-3413x1920.jpg"
             }
-            alt="Posada equipo LVT"
+            alt="Evento Cancer de Mama"
           />
         </Link>
       </div>
