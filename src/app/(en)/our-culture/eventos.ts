@@ -67,6 +67,10 @@ export const titles = {
   posada: "Posada 2025",
   cancerMama: "Hablemos de Cáncer de Mama"
 }
+export const titlesEN = {
+  posada: "End of Year Party 2025",
+  cancerMama: "Let's Talk About Breast Cancer"
+}
 
 const events = { posada, cancerMama } ;
 

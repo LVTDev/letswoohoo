@@ -1,6 +1,6 @@
 import OurCulture from "@/components/General UI/OurCulture";
 import React from "react";
-import events from "../eventos";
+import events from "@/app/(en)/our-culture/eventos"; 
 
 const page = async ({ params }: { params: Promise<{ event: keyof typeof events }> }) => {
   const { event } = await params;
@@ -8,7 +8,7 @@ const page = async ({ params }: { params: Promise<{ event: keyof typeof events }
 
   return (
     <div>
-      <OurCulture lang={"en"} event={event} />
+      <OurCulture lang={"es"} event={event} />
     </div>
   );
 };

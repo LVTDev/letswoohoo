@@ -67,7 +67,7 @@ const AnimatedHeaderLinks = ({lang}: {lang: string}) => {
           <li key={id} className="">
             <Link href={`${lang === "en" ? link : linkEs}`}>
               <div
-                className={`overflow-hidden md:h-4 h-3 w-max relative ${id} heading-container text-[8px] md:text-sm`}
+                className={`overflow-hidden md:h-4 h-2 w-max relative ${id} heading-container text-[7px] sm:text-[10px] md:text-sm`}
               >
                 <p className="primary">{lang === "en" ? label : labelEs}</p>
                 <p className="secondary">{lang === "en" ? label : labelEs}</p>

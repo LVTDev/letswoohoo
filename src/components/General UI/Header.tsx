@@ -39,7 +39,7 @@ const Header = ({lang}:{lang: string}) => {
     >
       {" "}
       <div
-        className={`justify-between items-center w-full bg-[#2b2f35] h-16  ${"flex"} py-2 px-4 md:px-12 text-xs`}
+        className={`justify-between items-center w-full bg-[#2b2f35] h-16  ${"flex"} py-2 px-1 md:px-12 text-xs`}
       >
         <div className="w-10 md:w-16">
           <Link href={`${lang === "en" ? "/" : "/inicio"}`}>

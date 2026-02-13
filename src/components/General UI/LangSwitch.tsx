@@ -12,6 +12,9 @@ const LangSwitch = ({lang}:{lang:string}) => {
     "/services": "/servicios",
     "/letsTalk": "/contacto",
     "/team": "/equipo",
+    "/our-culture": "/cultura",
+    "/our-culture/posada": "/cultura/posada",
+    "/our-culture/cancerMama": "/cultura/cancerMama",
   };
   const engLinks = Object.keys(links);
 
@@ -26,7 +29,7 @@ const LangSwitch = ({lang}:{lang:string}) => {
       if (engPath) router.push(engPath);
     }
   };
-    return <div className="cursor-pointer" onClick={handleLangSwitch}><span className={`${lang === "en" && "font-bold text-[#caeb0c] cursor-pointer"}`}>EN</span>/ <span className={`${lang === "es" && "font-bold text-[#caeb0c]"} `}>ES</span></div>;
+    return <div className="cursor-pointer text-[6px] md:text-base" onClick={handleLangSwitch}><span className={`${lang === "en" && "font-bold text-[#caeb0c]  cursor-pointer"}`}>EN</span>/ <span className={`${lang === "es" && "font-bold text-[#caeb0c]"} `}>ES</span></div>;
 };
 
 export default LangSwitch;

@@ -1,13 +1,21 @@
 // import events, {titles} from "@/app/our-culture/eventos";
 
-import events, { titles } from "@/app/(en)/our-culture/eventos";
+import events, { titles, titlesEN } from "@/app/(en)/our-culture/eventos";
 
-const OurCulture = ({ event }: { event: keyof typeof events }) => {
-  
+const OurCulture = ({
+  event,
+  lang,
+}: {
+  event: keyof typeof events;
+  lang: string;
+}) => {
   return (
     <div className="font-albert">
       <div>
-        <h1 className="text-center text-3xl  my-5">{titles[event]}</h1>
+        <h1 className="text-center text-3xl underline  my-5">
+          {" "}
+          {lang === "es" ? titles[event] : titlesEN[event]}
+        </h1>
         <div className="grid md:grid-cols-2 grid-cols-1 md:gap-5 w-[80%] gap-y-3  md:w-[65%] mx-auto">
           {events[event].map((event, i) => (
             <div
