@@ -1,4 +1,6 @@
-import events, {titles} from "@/app/our-culture/eventos";
+// import events, {titles} from "@/app/our-culture/eventos";
+
+import events, { titles } from "@/app/(en)/our-culture/eventos";
 
 const OurCulture = ({ event }: { event: keyof typeof events }) => {
   
