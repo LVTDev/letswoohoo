@@ -35,6 +35,10 @@ export const equipoType = defineType({
       type: "string",
     }),
     defineField({
+      name: "puestoESP",
+      type: "string",
+    }),
+    defineField({
       name: "departamento",
       type: "string",
       title: "Departamento",

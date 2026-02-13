@@ -22,7 +22,7 @@ const page = () => {
           marcas y las personas.
         </p>
       </div>
-      <div className="w-full mx-auto mb-10 rounded-lg overflow-hidden">
+      <div className="w-full mx-auto mb-10">
         <video
           data-testid="video"
           className="w-full   h-full  object-cover object-center md:block hidden"
@@ -69,33 +69,28 @@ const page = () => {
           {/* <div className="w-10 ">
             <WoohooSvgWhite fill="#000" />
           </div>{" "} */}
-          <h2>EXPERIENCES</h2>
+          <h2>EXPERIENCIAS</h2>
         </div>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Publicidad BTL */}
-            Publicity BTL
+            Publicidad BTL
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Activaciones */}
-            Activations
+            Activaciones
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Eventos */}
-            Events
+            Eventos
           </p>
 
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Convenciones */}
-            Conventions
+            Convenciones
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Stands
           </p>
 
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Exposiciones */}
-            Expositions
+            Exposiciones
           </p>
         </div>
       </div>
@@ -103,51 +98,42 @@ const page = () => {
       <div className="border-b border-gray mb-7 pb-4">
         <p className="  text-4xl font-extrabold tracking-widest">
           {" "}
-          ADVERTISING
+          PUBLICIDAD
         </p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Análisis e Investigación de Mercados */}
-            Market Analysis and Research
+            Análisis e Investigación de Mercados
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Publicidad ATL */}
-            Publicity ATL
+            Publicidad ATL
           </p>
 
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Desarrollo de Campañas */}
-            Campaign Development
+            Desarrollo de Campañas
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Diseño Publicitario */}
-            Advertising Design
+            Diseño Publicitario
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Marketing Digital */}
-            Digital Marketing
+            Marketing Digital
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Branding
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Medios */}
-            Media
+            Medios
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Shopper
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Comunicación Interna */}
-            Internal Communication
+            Comunicación Interna
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Manejo de Crisis */}
-            Crisis Management
+            Manejo de Crisis
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Impresos */}
-            Prints
+            Impresos
           </p>
         </div>
       </div>
@@ -158,26 +144,22 @@ const page = () => {
         </p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Producción de Cine y Video */}
-            Film and Video Production
+            Producción de Cine y Video
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Producción Musical */}
-            Musical Production
+            Producción Musical
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Postproduccion
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Producción de Audio */}
-            Audio Production
+            Producción de Audio
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Videos Corporativos */}
-            Corporate Videos
+            Videos Corporativos
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            2D and 3D Animations
+            Animaciones 2D y 3D
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Radio
@@ -186,7 +168,7 @@ const page = () => {
             Studio
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Equipment Rental
+            Renta de Equipo
           </p>
         </div>
       </div>

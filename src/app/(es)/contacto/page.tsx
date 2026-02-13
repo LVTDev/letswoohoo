@@ -29,11 +29,11 @@ const Page = () => {
 
   return (
     <div className=" font-albert w-[90%] mx-auto">
-      <h1 className="hidden">Contact us</h1>
+      <h1 className="hidden">Contáctanos</h1>
       <div className="md:flex  pb-6">
         <div className="md:w-1/2 ">
           <h2 className="font-bold text-4xl tracking-widest uppercase mb-6">
-            Contact <br /> Details
+            Detalles  <br /> de Contacto
           </h2>
           <p className="text-lg font-medium">
             Río Rosas Sur 330 1er piso, <br />
@@ -48,52 +48,46 @@ const Page = () => {
             hello@letswoohoo.com
           </div>
         </div>
-        <LetsTalkForm />
+        <LetsTalkForm lang={"es"} />
       </div>
       <div>
-        <div className="mb-8 lg:flex pt-6 justify-around  border-b border-gray pb-6">
+        <div className="mb-8 md:flex pt-6 justify-around  border-b border-gray pb-6">
           <div className="md:w-1/4 md:flex justify-between gap-15">
             <div>
               <p className="font-bold text-2xl tracking-widest uppercase mb-1">
-                Commercial
+                Comercial
               </p>
-              <div className="">
+              <div className="md:flex justify-between">
                 <div>
-                  <p className=" font-medium mb-1 flex items-center">
-                    <Disc className="inline-block mr-1" width={16} />
-                    Juan Pablo Gutierrez{" "}
-                  </p>
-                  <p className="italic w-max">
+                  <p className=" font-medium mb-1 flex items-center"><Disc  className="inline-block mr-1" width={16}/>Juan Pablo Gutierrez </p>
+                  <p className="italic">
                     {" "}
                     <Mail className="inline mr-1" width={18} />
                     juanpablo@letswoohoo.com
                   </p>
                 </div>
+              
               </div>
             </div>
-            <CalendlyForm/>
           </div>
-        
           {/* <div className="mt-5 md:mt-0">
             <p className="font-bold text-2xl tracking-widest uppercase mb-1">
-              Production
+              Producción
             </p>
             <div>
-              <p className="font-medium flex items-center mb-1">
-                <Aperture className="inline-block  mr-1" width={16} />
-                Nancy Monsivais
-              </p>
+              <p className="font-medium flex items-center"><Aperture className="inline-block  mr-1" width={16}/>Nancy Monsivais</p>
               <p className="italic">
                 <Mail className="inline mr-1" width={18} />
                 nancy@letswoohoo.com
               </p>
             </div>
           </div> */}
+          <CalendlyForm />
         </div>
       </div>
       <div>
         <p className="font-bold text-4xl tracking-widest uppercase">
-          where to <br /> find us
+          dónde <br /> encontrarnos
         </p>
         <Map />
       </div>

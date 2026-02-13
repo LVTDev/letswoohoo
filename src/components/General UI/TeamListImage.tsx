@@ -8,9 +8,10 @@ type Person = {
   puesto: string;
   mainImage: { _type: string; alt: string };
   nombre: string;
+  puestoESP: string
   jefe?: boolean
 };
-const TeamListImage = ({ person }: { person: Person }) => {
+const TeamListImage = ({ person, lang }: { person: Person, lang: string }) => {
   return (
     <div>
       {" "}
@@ -24,7 +25,7 @@ const TeamListImage = ({ person }: { person: Person }) => {
           />
         </div>
         <p className="uppercase font-bold mt-3">{person.nombre}</p>
-        <p className="text-center">{person.puesto}</p>
+        <p className="">{lang === "en" ? person.puesto : (person.puestoESP || person.puesto)   }</p>
       </div>
     </div>
   );

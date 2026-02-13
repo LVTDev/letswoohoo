@@ -7,8 +7,9 @@ import { ScrollTrigger } from "gsap/all";
 import WoohooSvgWhite from "./WoohooSvgWhite";
 // import { usePathname } from "next/navigation";
 import AnimatedHeaderLinks from "./AnimatedHeaderLinks";
+import LangSwitch from "./LangSwitch";
 
-const Header = () => {
+const Header = ({lang}:{lang: string}) => {
   // const pathname = usePathname();
   // const container = useRef<HTMLDivElement | null>(null);
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -41,7 +42,7 @@ const Header = () => {
         className={`justify-between items-center w-full bg-[#2b2f35] h-16  ${"flex"} py-2 px-4 md:px-12 text-xs`}
       >
         <div className="w-10 md:w-16">
-          <Link href="/">
+          <Link href={`${lang === "en" ? "/" : "/inicio"}`}>
             <WoohooSvgWhite fill="white" />
           </Link>
         </div>
@@ -58,7 +59,8 @@ const Header = () => {
             </a>
           </div>
         </div> */}
-        <AnimatedHeaderLinks />
+        <AnimatedHeaderLinks lang={lang} />
+        <LangSwitch lang={lang} />
       </div>
     </header>
     // <header
