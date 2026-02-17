@@ -43,25 +43,25 @@ const ClientList = () => {
     },
 
     {
-      name: "Tulip",
+      name: "Cleber",
       image:
-        "https://cdn.sanity.io/images/5egex671/production/b137be9949a2f83b8f1d5e53cebce229a2a2f48c-501x501.png",
-      id: 9,
+        "https://cdn.sanity.io/images/5egex671/production/ca92282ec9e5c9dcccee1ea9131399a1f2fc0146-501x500.webp",
+      id: 24,
     },
-       {
+    {
       name: "Como comí",
       image:
-        "https://cdn.sanity.io/images/5egex671/production/b4c934907d5eb3ead27aec73c511f0872b2da4fa-2084x2084.png",
+      "https://cdn.sanity.io/images/5egex671/production/b4c934907d5eb3ead27aec73c511f0872b2da4fa-2084x2084.png",
       id: 21,
     },
-  
-
+    
+    
     {
       name: "Ballet Monterrey",
       image:
         "https://cdn.sanity.io/images/5egex671/production/bdde72b1b2340331d9ad8a394c7261b0a35586ef-501x501.png",
-      id: 19,
-    },
+        id: 19,
+      },
     {
       name: "Barraca Producciones",
       image:
@@ -71,11 +71,11 @@ const ClientList = () => {
     {
       name: "Billu",
       image:
-        "https://cdn.sanity.io/images/5egex671/production/e3ae89e9e4cd271d43039c7fa0a158321fd8d82c-501x500.png",
+      "https://cdn.sanity.io/images/5egex671/production/e3ae89e9e4cd271d43039c7fa0a158321fd8d82c-501x500.png",
       id: 11,
     },
    {
-      name: "Afirme",
+     name: "Afirme",
       image:
         "https://cdn.sanity.io/images/5egex671/production/7d26f3d008036f0f9858e18cc747d0fdba35ac61-500x500.png",
       id: 4,
@@ -104,12 +104,12 @@ const ClientList = () => {
       name: "Players",
       image:
         "https://cdn.sanity.io/images/5egex671/production/a69cc020758144056dfa8b90495c1226fe9585a5-2084x2084.png",
-      id: 22,
-    },
-    {
+        id: 22,
+      },
+      {
       name: "Dos Familias",
       image:
-        "https://cdn.sanity.io/images/5egex671/production/6ef74be4beea6aabe3bef523fcace7f1f1382a7f-501x501.png",
+      "https://cdn.sanity.io/images/5egex671/production/6ef74be4beea6aabe3bef523fcace7f1f1382a7f-501x501.png",
       id: 15,
     },
     // {
@@ -118,6 +118,12 @@ const ClientList = () => {
     //     "https://cdn.sanity.io/images/5egex671/production/77ba4b09f4f4d422cc6c5348c15120dc05c2a5a9-501x501.png",
     //   id: 16,
     // },
+    {
+      name: "Tulip",
+      image:
+        "https://cdn.sanity.io/images/5egex671/production/b137be9949a2f83b8f1d5e53cebce229a2a2f48c-501x501.png",
+      id: 9,
+    },
     {
       name: "Fuerza regia",
       image:
