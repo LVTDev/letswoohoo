@@ -16,11 +16,12 @@ export async function POST(request: NextRequest) {
     const requestContent = await request.json();
     const emailSent = await sendMail(
       "Sitio WOOHOO: Formulario Contactanos",
-      "hello@letswoohoo.com",
+      // "",
+      ["hello@letswoohoo.com", 'sixto@letswoohoo.com'],
       `Client: ${requestContent.name}
      Correo: ${requestContent.email}
      Telefono:${requestContent.phone}
-     Necessidades: ${requestContent.message}`
+     Necesidades: ${requestContent.message}`
     );
 
     // const userRequestContent = await ServiceRequestSchema.create(

@@ -30,7 +30,7 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
     const errors = {} as Error;
     if (!name) {
       errors.name =
-        lang === "en" ? "We need your name" : "Necessitamos tu nombre";
+        lang === "en" ? "We need your name" : "Necesitamos tu nombre";
     }
     if (!email) {
       errors.email =
@@ -91,7 +91,7 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
         {" "}
         {lang === "en" ? (
           <p>
-            lets
+            {"let's"}
             <br /> talk
           </p>
         ) : (
