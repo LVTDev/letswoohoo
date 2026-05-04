@@ -9,9 +9,9 @@ const items = [
   { label: "Clients", id: "firstSection", link: "/clients", labelEs: "Clientes", linkEs: "/clientes"  },
   { label: "Services", id: "secondSection", link: "/services", labelEs: "Servicios", linkEs: "/servicios" },
   { label: "Our Team", id: "thirdSection", link: "/team",  labelEs: "Equipo", linkEs: "/equipo" },
-  { label: "Contact", id: "fourthSection", link: "/letsTalk",  labelEs: "Contacto", linkEs: "/contacto" },
-  { label: "Our Culture", id: "fifthSection", link: "/our-culture", labelEs: "Cultura", linkEs: "/cultura" },
-  { label: "AudioVisual", id: "sixthSection", link: "https://barracaproducciones.mx/",labelEs: "AudioVisual", linkEs: "https://barracaproducciones.mx/" },
+  { label: "Our Culture", id: "fourthSection", link: "/our-culture", labelEs: "Cultura", linkEs: "/cultura" },
+  { label: "Contact", id: "fifthSection", link: "/letsTalk",  labelEs: "Contacto", linkEs: "/contacto" },
+  // { label: "AudioVisual", id: "sixthSection", link: "https://barracaproducciones.mx/",labelEs: "AudioVisual", linkEs: "https://barracaproducciones.mx/" },
 ];
 
 const AnimatedHeaderLinks = ({lang}: {lang: string}) => {
