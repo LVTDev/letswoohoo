@@ -15,6 +15,7 @@ const LangSwitch = ({lang}:{lang:string}) => {
     "/our-culture": "/cultura",
     "/our-culture/posada": "/cultura/posada",
     "/our-culture/cancerMama": "/cultura/cancerMama",
+    '/projects': '/proyectos'
   };
   const engLinks = Object.keys(links);
 

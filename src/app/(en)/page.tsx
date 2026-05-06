@@ -1,5 +1,6 @@
 import HomeVideoReel from "@/components/General UI/HomeVideoReel";
-import HomeProjects from "@/components/Home/HomeProjects";
+import Services from "@/components/services/Services";
+// import HomeProjects from "@/components/Home/HomeProjects";
 // import HomeProjectsMobile from "@/components/Home/HomeProjectsMobile";
 
 export default function Home() {
@@ -22,7 +23,11 @@ export default function Home() {
           urlVertical="https://cdn.sanity.io/files/5egex671/production/806d4c48e992d4a6c46bb240ac9fd170accc82f7.mp4"
         />
       </div>
-      <HomeProjects />
+      <div>
+        <p className="text-4xl font-extrabold tracking-widest uppercase text-center mt-10 font-albert">What we do</p>
+        <Services />
+      </div>
+      {/* <HomeProjects /> */}
       {/* <HomeProjectsMobile /> */}
     </div>
   );

@@ -6,11 +6,12 @@ import Link from "next/link";
 
 
 const items = [
-  { label: "Clients", id: "firstSection", link: "/clients", labelEs: "Clientes", linkEs: "/clientes"  },
-  { label: "Services", id: "secondSection", link: "/services", labelEs: "Servicios", linkEs: "/servicios" },
+  { label: "Projects", id: "firstSection", link: "/projects", labelEs: "Casos de Exito", linkEs: "/proyectos" },
+  { label: "Clients", id: "secondSection", link: "/clients", labelEs: "Clientes", linkEs: "/clientes"  },
+  // { label: "Services", id: "secondSection", link: "/services", labelEs: "Servicios", linkEs: "/servicios" },
   { label: "Our Team", id: "thirdSection", link: "/team",  labelEs: "Equipo", linkEs: "/equipo" },
   { label: "Our Culture", id: "fourthSection", link: "/our-culture", labelEs: "Cultura", linkEs: "/cultura" },
-  { label: "Contact", id: "fifthSection", link: "/letsTalk",  labelEs: "Contacto", linkEs: "/contacto" },
+  { label: "Let's Talk", id: "fifthSection", link: "/letsTalk",  labelEs: "Contacto", linkEs: "/contacto" },
   // { label: "AudioVisual", id: "sixthSection", link: "https://barracaproducciones.mx/",labelEs: "AudioVisual", linkEs: "https://barracaproducciones.mx/" },
 ];
 
