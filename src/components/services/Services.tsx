@@ -26,7 +26,7 @@ const Services = () => {
           data-testid="video"
           className="w-full   h-full  object-cover object-center md:block hidden"
           width="100%"
-          height="1000%"
+          height="100%"
           muted={true}
           autoPlay={true}
           loop
