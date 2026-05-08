@@ -56,7 +56,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     id: 4,
     isVideo: true,
     videoLink:
-      "https://cdn.sanity.io/files/5egex671/production/42bd087789e789cbddbe63f96d3f0ed317dc319d.mp4",
+      "https://sitio-woohoo.s3.us-east-2.amazonaws.com/Manifiesto+Oncosalud+MAR25+960x540.mp4",
     campana: "Protect what you love most with Oncosalud",
     tags: ["AudioVisual Production", "Traditional and Digital Media Campaign"],
   },
@@ -112,7 +112,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     id: 10,
     isVideo: true,
     videoLink:
-      "https://cdn.sanity.io/files/5egex671/production/f08a0434e946c3d8352984e4ec7784dd8d34d596.mp4",
+      "https://sitio-woohoo.s3.us-east-2.amazonaws.com/Credenciales+BdM+1+(1).mp4",
   },
   {
     imageLink:
@@ -166,7 +166,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     id: 16,
     isVideo: true,
     videoLink:
-      "https://cdn.sanity.io/files/5egex671/production/2034b5e91a4074504f09184d9e6df13b40cd0e4c.mp4",
+      "https://sitio-woohoo.s3.us-east-2.amazonaws.com/Video+testimonial_Festival+del+gordo+by+Afirme.mp4",
   },
   {
     imageLink:
