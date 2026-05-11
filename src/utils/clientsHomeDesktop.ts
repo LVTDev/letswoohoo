@@ -56,7 +56,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     id: 4,
     isVideo: true,
     videoLink:
-      "https://sitio-woohoo.s3.us-east-2.amazonaws.com/Manifiesto+Oncosalud+MAR25+960x540.mp4",
+      "https://o5qiahlghji2exja.public.blob.vercel-storage.com/Manifiesto%20Oncosalud%20MAR25%20960x540.mp4",
     campana: "Protect what you love most with Oncosalud",
     tags: ["AudioVisual Production", "Traditional and Digital Media Campaign"],
   },
@@ -112,7 +112,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     id: 10,
     isVideo: true,
     videoLink:
-      "https://sitio-woohoo.s3.us-east-2.amazonaws.com/Credenciales+BdM+1+(1).mp4",
+      "https://o5qiahlghji2exja.public.blob.vercel-storage.com/Credenciales%20BdM%201%20%281%29.mp4",
   },
   {
     imageLink:
@@ -166,7 +166,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     id: 16,
     isVideo: true,
     videoLink:
-      "https://sitio-woohoo.s3.us-east-2.amazonaws.com/Video+testimonial_Festival+del+gordo+by+Afirme.mp4",
+      "https://o5qiahlghji2exja.public.blob.vercel-storage.com/Video%20testimonial_Festival%20del%20gordo%20by%20Afirme.mp4",
   },
   {
     imageLink:
