@@ -18,10 +18,12 @@ export default function Inicio() {
         <HomeVideoReel
           url={
             // "https://cdn.sanity.io/files/5egex671/production/76b959f4aab3c47ee922e5a68fd61783b10b3b96.mp4" NON COMPRESSED LINK
-            "https://cdn.sanity.io/files/5egex671/production/37b86742beab67a4a0225310385d95295b3334a8.mp4"
+            // "https://cdn.sanity.io/files/5egex671/production/37b86742beab67a4a0225310385d95295b3334a8.mp4"
+            "https://o5qiahlghji2exja.public.blob.vercel-storage.com/Credenciales%20Woohoo%202025%20WEB%20V2%20BAJA_compressed.mp4"
           }
           // urlVertical="https://cdn.sanity.io/files/5egex671/production/806d4c48e992d4a6c46bb240ac9fd170accc82f7.mp4" NON COMPRESSED LINK
-          urlVertical="https://cdn.sanity.io/files/5egex671/production/10a372dc36bec3805bbff83c85deb21a85895bae.mp4"
+          // urlVertical="https://cdn.sanity.io/files/5egex671/production/10a372dc36bec3805bbff83c85deb21a85895bae.mp4"
+          urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/Credenciales%20Woohoo%202025%20WEB%20Vertical%20V1%20BAJA_compressed.mp4"
         />
       </div>
       <HomeProjects />
