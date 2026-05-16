@@ -44,7 +44,8 @@ const HomeSlider = ({ lang }: { lang: string }) => {
                 <Image
                   src={slide.slideBG}
                   alt={`bg Poster`}
-                  className="object-cover hidden md:block"
+                //   className={`${i === 1 ? 'object-cover' : 'object-contain' } hidden md:block`} 
+                  className={'object-contain  lg:object-cover hidden md:block'} 
                   fill
                 />
                 <Image
@@ -76,7 +77,7 @@ type Slides = {
 const slidesEn: Slides[] = [
   {
     slideBG:
-      "https://o5qiahlghji2exja.public.blob.vercel-storage.com/BANNER%20WEB.jpg",
+      "https://o5qiahlghji2exja.public.blob.vercel-storage.com/WEB%20BANNER-RETRABAJO2.jpg",
     mobileBG:
       "https://o5qiahlghji2exja.public.blob.vercel-storage.com/BANNER%20MOBIL.jpg",
   },
