@@ -1,5 +1,6 @@
-import HomeVideoReel from "@/components/General UI/HomeVideoReel";
+// import HomeVideoReel from "@/components/General UI/HomeVideoReel";
 import HomeProjects from "@/components/Home/HomeProjects";
+import HomeSlider from "@/components/Home/HomeSlider";
 // import HomeProjectsMobile from "@/components/Home/HomeProjectsMobile";
 
 export default function Home() {
@@ -17,7 +18,14 @@ export default function Home() {
         </p>
         <p>At Woohoo, every idea vibrates, multiplies, and leaves a mark.</p>
       </div>
-      <div className="bg-black">
+
+      {/* Home slider with video */}
+
+      <HomeSlider lang="en" />
+
+      {/* Home Video Reel COmmented out */}
+
+      {/* <div className="bg-black">
         <HomeVideoReel
           url={
             "https://o5qiahlghji2exja.public.blob.vercel-storage.com/Credenciales%20Woohoo%202025%20WEB%20V2%20BAJA_compressed.mp4"
@@ -26,7 +34,7 @@ export default function Home() {
           // urlVertical="https://cdn.sanity.io/files/5egex671/production/806d4c48e992d4a6c46bb240ac9fd170accc82f7.mp4"
           urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/Credenciales%20Woohoo%202025%20WEB%20Vertical%20V1%20BAJA_compressed.mp4"
         />
-      </div>
+      </div> */}
       <HomeProjects />
       {/* <HomeProjectsMobile /> */}
     </div>
