@@ -63,15 +63,15 @@ const HomeSliderTrailerAudio = () => {
         </SwiperSlide>
       ))}
       <SwiperSlide
-        onMouseEnter={() => {
-          // Stop autoplay while user is hovering the video slide
-          swiperRef.current?.autoplay.stop();
-          videoRef.current?.play();
-        }}
-        onMouseLeave={() => {
-          // Resume autoplay when they leave
-          swiperRef.current?.autoplay.start();
-        }}
+        // onMouseEnter={() => {
+        //   // Stop autoplay while user is hovering the video slide
+        //   swiperRef.current?.autoplay.stop();
+        //   videoRef.current?.play();
+        // }}
+        // onMouseLeave={() => {
+        //   // Resume autoplay when they leave
+        //   swiperRef.current?.autoplay.start();
+        // }}
       >
         <TrailerSlideAudio
           urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA4.mp4"

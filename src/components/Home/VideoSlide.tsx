@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useEffect, useState } from "react";
 
 // async function isMobileDevice (){
@@ -7,12 +7,15 @@ import { useEffect, useState } from "react";
 //     return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(userAgent)
 // }
 
-
 const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMobile(/Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent));
+    setIsMobile(
+      /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
+        navigator.userAgent,
+      ),
+    );
   }, []);
 
   return isMobile;
@@ -25,10 +28,9 @@ const VideoSlide = ({
   url: string;
   urlVertical?: string;
 }) => {
-  
-    // const isMobile =  await isMobileDevice()
-    const isMobile =  useIsMobile()
-    const videoUrl = isMobile ? urlVertical : url
+  // const isMobile =  await isMobileDevice()
+  const isMobile = useIsMobile();
+  const videoUrl = isMobile && urlVertical ? urlVertical : url;
   // const videoUrl = url;
   return (
     // <div className="relative w-full pb-[75.25%] md:pb-[45.25%] max-h-[55vh] flex justify-center">
