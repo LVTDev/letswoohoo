@@ -38,10 +38,9 @@ const TrailerSlideAudio = ({
             loop
             playsInline
           >
-            <source src={urlVertical} type="video/mp4" />
+            <source  media="(max-width: 767px)" src={urlVertical} type="video/mp4" />
           </video>
           <video
-            ref={videoRef}
             data-testid="video"
             className="w-full h-full hidden md:block absolute top-0 left-1/2 -translate-x-1/2 object-cover object-center"
             width="100%"
@@ -52,7 +51,7 @@ const TrailerSlideAudio = ({
             loop
             playsInline
           >
-            <source src={src} type="video/mp4" />
+            <source  media="(min-width: 767px)" src={src} type="video/mp4" />
           </video>
         </>
       ) : (
