@@ -6,6 +6,7 @@ interface VideoSlideProps {
   src: string;
   swiperRef: React.RefObject<SwiperType | null>;
   videoRef: React.RefObject<HTMLVideoElement | null>;
+  mobileRef: React.RefObject<HTMLVideoElement | null>;
   urlVertical?: string;
 }
 
@@ -13,6 +14,7 @@ const TrailerSlideAudio = ({
   src,
   videoRef,
   urlVertical,
+  mobileRef
 }: VideoSlideProps) => {
   useEffect(() => {
     videoRef.current?.play().catch(() => {});
@@ -25,7 +27,7 @@ const TrailerSlideAudio = ({
       {urlVertical ? (
         <>
           <video
-            ref={videoRef}
+            ref={mobileRef}
             data-testid="video"
             className="w-full h-[85vh] md:hidden block absolute top-0 left-1/2 -translate-x-1/2 object-cover object-center"
             width="100%"

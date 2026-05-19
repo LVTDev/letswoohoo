@@ -18,15 +18,17 @@ const HomeSliderTrailerAudio = () => {
 
   const swiperRef = useRef<SwiperType | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const mobileRef = useRef<HTMLVideoElement | null>(null);
 
   return (
     <Swiper
+      id="home-trailer-slider"
       modules={[Autoplay, A11y, Navigation, Pagination]}
       navigation
       // direction={'vertical'}
-        pagination={{
-          clickable: true,
-        }}
+      pagination={{
+        clickable: true,
+      }}
       loop
       onSwiper={(swiper) => (swiperRef.current = swiper)}
       // autoplay={{
@@ -38,14 +40,18 @@ const HomeSliderTrailerAudio = () => {
       onSlideChange={() => {
         if (videoRef.current) {
           videoRef.current.pause();
-          videoRef.current.currentTime = 0;
+
+          // videoRef.current.currentTime = 0;
+        }
+        if (mobileRef.current) {
+          mobileRef.current.pause();
         }
       }}
       //   onSwiper={(swiper) => console.log(swiper)}
     >
       {slides.map((slide, i) => (
         <SwiperSlide className="" key={i}>
-          <div className={` h-[85h] bg-cover relative`}>
+          <div className={` h-[85vh] bg-cover relative`}>
             <div className="relative  h-[85vh]">
               <div>
                 <Image
@@ -67,16 +73,16 @@ const HomeSliderTrailerAudio = () => {
         </SwiperSlide>
       ))}
       <SwiperSlide
-      
-        // onMouseEnter={() => {
-        //   // Stop autoplay while user is hovering the video slide
-        //   swiperRef.current?.autoplay.stop();
-        //   videoRef.current?.play();
-        // }}
-        // onMouseLeave={() => {
-        //   // Resume autoplay when they leave
-        //   swiperRef.current?.autoplay.start();
-        // }}
+
+      // onMouseEnter={() => {
+      //   // Stop autoplay while user is hovering the video slide
+      //   swiperRef.current?.autoplay.stop();
+      //   videoRef.current?.play();
+      // }}
+      // onMouseLeave={() => {
+      //   // Resume autoplay when they leave
+      //   swiperRef.current?.autoplay.start();
+      // }}
       >
         <TrailerSlideAudio
           urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA4.mp4"
@@ -85,6 +91,7 @@ const HomeSliderTrailerAudio = () => {
           }
           swiperRef={swiperRef}
           videoRef={videoRef}
+          mobileRef={mobileRef}
         />
       </SwiperSlide>
     </Swiper>
