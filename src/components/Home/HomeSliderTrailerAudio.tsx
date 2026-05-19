@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
+import { Swiper as SwiperType } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, A11y, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -7,38 +8,37 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Image from "next/image";
+// import Link from "next/link";
 // import { ArrowRight } from "react-feather";
-import VideoSlide from "./VideoSlide";
+// import TrailerSlide from "./TrailerSlider";
+import TrailerSlideAudio from "./TrailerSlideAudio";
 
-const HomeSlider = ({ lang }: { lang: string }) => {
-  console.log(lang);
+const HomeSliderTrailerAudio = () => {
   const slides = slidesEn;
-  //   if (lang === "es") slides = slidesE;
-  //   else slides = slidesEn;
+
+  const swiperRef = useRef<SwiperType | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
   return (
     <Swiper
       modules={[Autoplay, A11y, Navigation]}
       navigation
       loop
+      onSwiper={(swiper) => (swiperRef.current = swiper)}
       autoplay={{
         delay: 5000,
         disableOnInteraction: false,
       }}
       className="w-full"
       slidesPerView={1}
-      //   onSlideChange={() => {
-      //     if (currentIndex > 13) setCurrentIndex(0);
-      //     else setCurrentIndex((prev) => prev + 1);
-      //     console.log("slide change");
-      //   }}
+      onSlideChange={() => {
+        if (videoRef.current) {
+          // videoRef.current.pause();
+          videoRef.current.currentTime = 0;
+        }
+      }}
       //   onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide>
-        <VideoSlide
-          urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA4.mp4"
-          url="https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA1.mp4"
-        />
-      </SwiperSlide>
       {slides.map((slide, i) => (
         <SwiperSlide className="" key={i}>
           <div className={` h-[95h] bg-cover relative`}>
@@ -62,6 +62,26 @@ const HomeSlider = ({ lang }: { lang: string }) => {
           </div>
         </SwiperSlide>
       ))}
+      <SwiperSlide
+        onMouseEnter={() => {
+          // Stop autoplay while user is hovering the video slide
+          swiperRef.current?.autoplay.stop();
+          videoRef.current?.play();
+        }}
+        onMouseLeave={() => {
+          // Resume autoplay when they leave
+          swiperRef.current?.autoplay.start();
+        }}
+      >
+        <TrailerSlideAudio
+          urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA4.mp4"
+          src={
+            "https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA1.mp4"
+          }
+          swiperRef={swiperRef}
+          videoRef={videoRef}
+        />
+      </SwiperSlide>
     </Swiper>
   );
 };
@@ -93,4 +113,4 @@ const slidesEn: Slides[] = [
   },
 ];
 
-export default HomeSlider;
+export default HomeSliderTrailerAudio;

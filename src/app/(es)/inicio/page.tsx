@@ -1,6 +1,7 @@
 // import HomeVideoReel from "@/components/General UI/HomeVideoReel";
 import HomeProjects from "@/components/Home/HomeProjects";
-import HomeSlider from "@/components/Home/HomeSlider";
+// import HomeSlider from "@/components/Home/HomeSlider";
+import HomeSliderTrailerAudio from "@/components/Home/HomeSliderTrailerAudio";
 // import HomeProjectsMobile from "@/components/Home/HomeProjectsMobile";
 
 export default function Inicio() {
@@ -16,7 +17,10 @@ export default function Inicio() {
         <p>En Woohoo, cada idea vibra, se multiplica y deja huella.</p>
       </div>
 
-      <HomeSlider lang="es" />
+      {/* <HomeSlider lang="es" /> */}
+      
+      <HomeSliderTrailerAudio/>
+
 
       {/* Home Video reel commented out */}
       {/* <div className="bg-black">

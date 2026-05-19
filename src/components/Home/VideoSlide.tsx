@@ -1,20 +1,35 @@
-// import { headers } from "next/headers";
+'use client'
+import { useEffect, useState } from "react";
 
-// async function isMobileDevice(){
+// async function isMobileDevice (){
 //   const headersList = await headers()
 //   const userAgent = headersList.get('user-agent') || ''
 //     return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(userAgent)
 // }
+
+
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(/Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent));
+  }, []);
+
+  return isMobile;
+};
+
 const VideoSlide = ({
   url,
-//   urlVertical,
+  urlVertical,
 }: {
   url: string;
   urlVertical?: string;
 }) => {
-  //   const isMobile = await isMobileDevice()
-  //   const videoUrl = isMobile ? urlVertical : url
-  const videoUrl = url;
+  
+    // const isMobile =  await isMobileDevice()
+    const isMobile =  useIsMobile()
+    const videoUrl = isMobile ? urlVertical : url
+  // const videoUrl = url;
   return (
     // <div className="relative w-full pb-[75.25%] md:pb-[45.25%] max-h-[55vh] flex justify-center">
     <div className="relative min-h-screen">
@@ -30,7 +45,7 @@ const VideoSlide = ({
       >
         <source src={videoUrl} type="video/mp4" />
       </video>
-      <div className="absolute text-white bottom-0 w-full z-200">
+      {/* <div className="absolute text-white bottom-0 w-full z-200">
         <img
           src={
             "https://cdn.sanity.io/images/yj63f9tw/production/c16b940093e06f810cd5a603315ba98fe5683b49-1520x174.png"
@@ -38,7 +53,7 @@ const VideoSlide = ({
           className="mx-auto md:mx-0"
           alt="Header"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

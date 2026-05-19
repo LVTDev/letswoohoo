@@ -1,6 +1,7 @@
 // import HomeVideoReel from "@/components/General UI/HomeVideoReel";
 import HomeProjects from "@/components/Home/HomeProjects";
-import HomeSlider from "@/components/Home/HomeSlider";
+// import HomeSlider from "@/components/Home/HomeSlider";
+import HomeSliderTrailerAudio from "@/components/Home/HomeSliderTrailerAudio";
 // import HomeProjectsMobile from "@/components/Home/HomeProjectsMobile";
 
 export default function Home() {
@@ -21,7 +22,8 @@ export default function Home() {
 
       {/* Home slider with video */}
 
-      <HomeSlider lang="en" />
+      {/* <HomeSlider lang="en" /> */}
+      <HomeSliderTrailerAudio/>
 
       {/* Home Video Reel COmmented out */}
 
