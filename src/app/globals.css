@@ -28,3 +28,10 @@ body {
   /* fill: #caeb0c; */
   fill: #a501fc;
 }
+
+
+/* Style for pagination buttons */
+
+body > div:nth-child(4) > div > div > div.swiper.swiper-initialized.swiper-horizontal.w-full.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
+  transform: translateY(-220%);
+}

@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import { Swiper as SwiperType } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, A11y, Navigation } from "swiper/modules";
+import { Autoplay, A11y, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -21,19 +21,23 @@ const HomeSliderTrailerAudio = () => {
 
   return (
     <Swiper
-      modules={[Autoplay, A11y, Navigation]}
+      modules={[Autoplay, A11y, Navigation, Pagination]}
       navigation
+      // direction={'vertical'}
+        pagination={{
+          clickable: true,
+        }}
       loop
       onSwiper={(swiper) => (swiperRef.current = swiper)}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      // }}
       className="w-full"
       slidesPerView={1}
       onSlideChange={() => {
         if (videoRef.current) {
-          // videoRef.current.pause();
+          videoRef.current.pause();
           videoRef.current.currentTime = 0;
         }
       }}
@@ -41,8 +45,8 @@ const HomeSliderTrailerAudio = () => {
     >
       {slides.map((slide, i) => (
         <SwiperSlide className="" key={i}>
-          <div className={` h-[95h] bg-cover relative`}>
-            <div className="relative  h-[95vh]">
+          <div className={` h-[85h] bg-cover relative`}>
+            <div className="relative  h-[85vh]">
               <div>
                 <Image
                   src={slide.slideBG}
@@ -63,6 +67,7 @@ const HomeSliderTrailerAudio = () => {
         </SwiperSlide>
       ))}
       <SwiperSlide
+      
         // onMouseEnter={() => {
         //   // Stop autoplay while user is hovering the video slide
         //   swiperRef.current?.autoplay.stop();
