@@ -51,7 +51,7 @@ const TrailerSlideAudio = ({
             loop
             playsInline
           >
-            <source  media="(min-width: 767px)" src={src} type="video/mp4" />
+            <source  media="(min-width: 768px)" src={src} type="video/mp4" />
           </video>
         </>
       ) : (
