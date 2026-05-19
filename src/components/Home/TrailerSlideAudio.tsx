@@ -17,6 +17,7 @@ const TrailerSlideAudio = ({
   mobileRef
 }: VideoSlideProps) => {
   useEffect(() => {
+    mobileRef.current?.play().catch(() => {});
     videoRef.current?.play().catch(() => {});
   }, []);
   return (

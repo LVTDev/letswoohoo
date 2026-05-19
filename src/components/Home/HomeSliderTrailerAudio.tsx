@@ -37,14 +37,22 @@ const HomeSliderTrailerAudio = () => {
       // }}
       className="w-full"
       slidesPerView={1}
-      onSlideChange={() => {
-        if (videoRef.current) {
-          videoRef.current.pause();
+      onSlideChangeTransitionEnd={(swiper) => {
+        const isVideoSlide = swiper.realIndex === slides.length;
 
-          // videoRef.current.currentTime = 0;
-        }
-        if (mobileRef.current) {
-          mobileRef.current.pause();
+        if (isVideoSlide) {
+          videoRef.current?.play().catch(() => {});
+          mobileRef.current?.play().catch(() => {});
+        } else {
+          // Pause and reset when leaving the video slide
+          if (videoRef.current) {
+            videoRef.current.pause();
+            videoRef.current.currentTime = 0;
+          }
+          if (mobileRef.current) {
+            mobileRef.current.pause();
+            mobileRef.current.currentTime = 0;
+          }
         }
       }}
       //   onSwiper={(swiper) => console.log(swiper)}
