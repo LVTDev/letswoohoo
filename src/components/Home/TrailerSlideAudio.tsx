@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { Swiper as SwiperType } from "swiper";
 
 interface VideoSlideProps {
@@ -16,10 +16,7 @@ const TrailerSlideAudio = ({
   urlVertical,
   mobileRef
 }: VideoSlideProps) => {
-  useEffect(() => {
-    mobileRef.current?.play().catch(() => {});
-    videoRef.current?.play().catch(() => {});
-  }, []);
+
   return (
     <div
       className="relative min-h-screen"
