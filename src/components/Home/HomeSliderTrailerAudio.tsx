@@ -120,9 +120,9 @@ type Slides = {
 const slidesEn: Slides[] = [
   {
     slideBG:
-      "https://o5qiahlghji2exja.public.blob.vercel-storage.com/WEB%20BANNER-RETRABAJO2.jpg",
+      "https://o5qiahlghji2exja.public.blob.vercel-storage.com/WEB%20BANNER-250526-08.jpg",
     mobileBG:
-      "https://o5qiahlghji2exja.public.blob.vercel-storage.com/BANNER%20MOBIL.jpg",
+      "https://o5qiahlghji2exja.public.blob.vercel-storage.com/WEB%20BANNER-250526-07.jpg",
   },
   {
     slideBG:
