@@ -63,9 +63,7 @@ const page = () => {
         </svg> */}
       </div>
 
-    
-
-      <div className="border-b border-gray mb-7 pb-4">
+      <div className=" border-b border-gray my-7 pb-4">
         <p className="  text-4xl font-extrabold tracking-widest">
           {" "}
           ADVERTISING
@@ -117,7 +115,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className=" mb-7 pb-4">
+      <div className="border-b border-gray mb-7 pb-4">
         <p className=" text-4xl font-extrabold tracking-widest uppercase">
           AudioVisual
         </p>
@@ -155,7 +153,7 @@ const page = () => {
           </p>
         </div>
       </div>
-        <div className=" border-b border-gray my-7 pb-4">
+      <div className="border-gray mb-7 pb-4 ">
         <div className="text-4xl font-extrabold tracking-widest flex">
           {/* <div className="w-10 ">
             <WoohooSvgWhite fill="#000" />
