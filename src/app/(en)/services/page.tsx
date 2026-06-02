@@ -63,41 +63,7 @@ const page = () => {
         </svg> */}
       </div>
 
-      <div className=" border-b border-gray my-7 pb-4">
-        <div className="text-4xl font-extrabold tracking-widest flex">
-          {/* <div className="w-10 ">
-            <WoohooSvgWhite fill="#000" />
-          </div>{" "} */}
-          <h2>EXPERIENCES</h2>
-        </div>
-        <div className="flex gap-3 my-7 flex-wrap">
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Publicidad BTL */}
-            Publicity BTL
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Activaciones */}
-            Activations
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Eventos */}
-            Events
-          </p>
-
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Convenciones */}
-            Conventions
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Stands
-          </p>
-
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            {/* Exposiciones */}
-            Expositions
-          </p>
-        </div>
-      </div>
+    
 
       <div className="border-b border-gray mb-7 pb-4">
         <p className="  text-4xl font-extrabold tracking-widest">
@@ -186,6 +152,41 @@ const page = () => {
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Equipment Rental
+          </p>
+        </div>
+      </div>
+        <div className=" border-b border-gray my-7 pb-4">
+        <div className="text-4xl font-extrabold tracking-widest flex">
+          {/* <div className="w-10 ">
+            <WoohooSvgWhite fill="#000" />
+          </div>{" "} */}
+          <h2>EXPERIENCES</h2>
+        </div>
+        <div className="flex gap-3 my-7 flex-wrap">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            {/* Publicidad BTL */}
+            Publicity BTL
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            {/* Activaciones */}
+            Activations
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            {/* Eventos */}
+            Events
+          </p>
+
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            {/* Convenciones */}
+            Conventions
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Stands
+          </p>
+
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            {/* Exposiciones */}
+            Expositions
           </p>
         </div>
       </div>

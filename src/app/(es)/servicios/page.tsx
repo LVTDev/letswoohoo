@@ -64,36 +64,7 @@ const page = () => {
         </svg> */}
       </div>
 
-      <div className=" border-b border-gray my-7 pb-4">
-        <div className="text-4xl font-extrabold tracking-widest flex">
-          {/* <div className="w-10 ">
-            <WoohooSvgWhite fill="#000" />
-          </div>{" "} */}
-          <h2>EXPERIENCIAS</h2>
-        </div>
-        <div className="flex gap-3 my-7 flex-wrap">
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Publicidad BTL
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Activaciones
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Eventos
-          </p>
-
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Convenciones
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Stands
-          </p>
-
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Exposiciones
-          </p>
-        </div>
-      </div>
+     
 
       <div className="border-b border-gray mb-7 pb-4">
         <p className="  text-4xl font-extrabold tracking-widest">
@@ -169,6 +140,36 @@ const page = () => {
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Renta de Equipo
+          </p>
+        </div>
+      </div>
+       <div className=" border-b border-gray my-7 pb-4">
+        <div className="text-4xl font-extrabold tracking-widest flex">
+          {/* <div className="w-10 ">
+            <WoohooSvgWhite fill="#000" />
+          </div>{" "} */}
+          <h2>EXPERIENCIAS</h2>
+        </div>
+        <div className="flex gap-3 my-7 flex-wrap">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Publicidad BTL
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Activaciones
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Eventos
+          </p>
+
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Convenciones
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Stands
+          </p>
+
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Exposiciones
           </p>
         </div>
       </div>
