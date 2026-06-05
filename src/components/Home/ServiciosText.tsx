@@ -2,7 +2,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
-import { Mail } from "react-feather";
+// import { Mail } from "react-feather";
 
 const ServiciosText = () => {
   gsap.registerPlugin(useGSAP);
@@ -22,16 +22,22 @@ const ServiciosText = () => {
     <div>
       <p>NUESTROS SERVICIOS</p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi alias
-        nostrum dolorum necessitatibus repellendus harum sed quidem quos, minus
-        laudantium eum vero similique quae doloremque iusto magni magnam.
-        Deserunt voluptatum ea obcaecati fugiat pariatur, sed eos laborum rerum
-        aspernatur, assumenda dolorem quo modi. Harum iste quia tenetur expedita
-        a numquam, aspernatur sed cupiditate earum natus voluptate, consectetur
-        illo assumenda obcaecati.
+        ¿Obsesionarnos con una idea? <br />
+        Para nada.
+        <br />
+        Lo que sí nos obsesiona, son las posibilidades infinitas y por qué no,
+        los retos creativos. Aquí no hacemos magia. Pero sí buscamos estar en
+        donde todos ponen su atención, donde nace una frase inolvidable, un
+        video que desata una conversación o una activación que se convierte en
+        anécdota. En Woohoo nos mueven las experiencias: aquellas historias que
+        se vuelven memorables, virales… que despiertan algo en ti. Porque
+        entendemos algo: que hoy ya nadie mira lo mismo que el otro, así que hay
+        que lograr que te vean. Que te compartan. Que te recuerden. Que te
+        vivan. Que te vuelvan a ver. Creamos experiencias y contamos historias
+        que le pertenecerán al mundo. Y bien ¿cuándo comenzamos con tu historia?
+        Let´s Woohoo
       </p>
-      <div className="md:w-1/2 ">
-    
+      {/* <div className="md:w-1/2 ">
         <p className="text-lg font-medium">
           Río Rosas Sur 330 1er piso, <br />
           Del Valle, C. P. 66220, <br />
@@ -44,9 +50,20 @@ const ServiciosText = () => {
           </div>
           hello@letswoohoo.com
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
 export default ServiciosText;
+
+// ¿Obsesionarnos con una idea?
+// Para nada.
+// Lo que sí nos obsesiona, son las posibilidades infinitas y por qué no, los retos creativos.
+// Aquí no hacemos magia.
+// Pero sí buscamos estar en donde todos ponen su atención, donde nace una frase inolvidable, un video que desata una conversación o una activación que se convierte en anécdota.
+// En Woohoo nos mueven las experiencias: aquellas historias que se vuelven memorables, virales… que despiertan algo en ti.
+// Porque entendemos algo: que hoy ya nadie mira lo mismo que el otro, así que hay que lograr que te vean. Que te compartan. Que te recuerden. Que te vivan. Que te vuelvan a ver.
+// Creamos experiencias y contamos historias que le pertenecerán al mundo.
+// Y bien ¿cuándo comenzamos con tu historia?
+// Let´s Woohoo

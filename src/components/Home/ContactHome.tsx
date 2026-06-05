@@ -13,10 +13,10 @@ const Map = dynamic(() => import("@/components/General UI/Map"), {
 const ContactHome = ({ lang }: { lang: string }) => {
     
   return (
-    <div>
+    <div className="w-3/4 mx-auto">
       <LetsTalkForm lang="en" />
 
-      <div className="md:flex">
+      <div className="md:flex mt-8">
         <div>
           <div className="md:w-1/2 ">
             <h2 className="font-bold text-4xl tracking-widest uppercase mb-6">
@@ -36,7 +36,7 @@ const ContactHome = ({ lang }: { lang: string }) => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="md:w-1/2 ">
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam,
             exercitationem aut similique, fugiat tempore sequi deleniti, fuga

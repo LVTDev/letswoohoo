@@ -1,3 +1,4 @@
+import HomeVideoReel from "@/components/General UI/HomeVideoReel";
 import Clientes from "@/components/Home/Clientes";
 import ContactHome from "@/components/Home/ContactHome";
 import HomeProjectsHorizontal from "@/components/Home/HomeProjectsHorizontal";
@@ -10,9 +11,15 @@ import TeamListHome from "@/components/Home/TeamListHome";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="font-albert">
       <HomeSlider lang="en" />
       <QuienesSomos />
+      <HomeVideoReel 
+         urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA4.mp4"
+          url={
+            "https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA1.mp4"
+          }
+      />
       <Servicios />
       <Clientes />
       <HomeProjectsHorizontal />
