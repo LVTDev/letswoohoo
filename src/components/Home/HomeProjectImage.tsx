@@ -142,6 +142,7 @@ const HomeProjectImage = ({
   }
 
   if (isVideo)
+    return
     return (
       <div
         ref={mainRef}

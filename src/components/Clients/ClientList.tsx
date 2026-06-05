@@ -1,6 +1,12 @@
 import Image from "next/image";
 import React from "react";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, A11y, Navigation, EffectCoverflow } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+// import { ArrowRight } from "react-feat
 const ClientList = () => {
   const clientList = [
     {
@@ -51,17 +57,16 @@ const ClientList = () => {
     {
       name: "Como comí",
       image:
-      "https://cdn.sanity.io/images/5egex671/production/b4c934907d5eb3ead27aec73c511f0872b2da4fa-2084x2084.png",
+        "https://cdn.sanity.io/images/5egex671/production/b4c934907d5eb3ead27aec73c511f0872b2da4fa-2084x2084.png",
       id: 21,
     },
-    
-    
+
     {
       name: "Ballet Monterrey",
       image:
         "https://cdn.sanity.io/images/5egex671/production/bdde72b1b2340331d9ad8a394c7261b0a35586ef-501x501.png",
-        id: 19,
-      },
+      id: 19,
+    },
     {
       name: "Barraca Producciones",
       image:
@@ -71,29 +76,29 @@ const ClientList = () => {
     {
       name: "Billu",
       image:
-      "https://cdn.sanity.io/images/5egex671/production/e3ae89e9e4cd271d43039c7fa0a158321fd8d82c-501x500.png",
+        "https://cdn.sanity.io/images/5egex671/production/e3ae89e9e4cd271d43039c7fa0a158321fd8d82c-501x500.png",
       id: 11,
     },
-   {
-     name: "Afirme",
+    {
+      name: "Afirme",
       image:
         "https://cdn.sanity.io/images/5egex671/production/7d26f3d008036f0f9858e18cc747d0fdba35ac61-500x500.png",
       id: 4,
     },
-       {
+    {
       name: "Bokados",
       image:
         "https://cdn.sanity.io/images/5egex671/production/e374f9bb515f7ae69d70d599f4dc69e09b3b5b70-501x501.png",
       id: 14,
     },
- 
+
     {
       name: "Villacero",
       image:
         "https://cdn.sanity.io/images/5egex671/production/f5b33f54c50e15fcc32f79ce300a2dba512dda07-501x501.png",
       id: 13,
     },
-    
+
     {
       name: "Top Golf",
       image:
@@ -104,12 +109,12 @@ const ClientList = () => {
       name: "Players",
       image:
         "https://cdn.sanity.io/images/5egex671/production/a69cc020758144056dfa8b90495c1226fe9585a5-2084x2084.png",
-        id: 22,
-      },
-      {
+      id: 22,
+    },
+    {
       name: "Dos Familias",
       image:
-      "https://cdn.sanity.io/images/5egex671/production/6ef74be4beea6aabe3bef523fcace7f1f1382a7f-501x501.png",
+        "https://cdn.sanity.io/images/5egex671/production/6ef74be4beea6aabe3bef523fcace7f1f1382a7f-501x501.png",
       id: 15,
     },
     // {
@@ -149,18 +154,48 @@ const ClientList = () => {
       id: 20,
     },
   ];
+
   return (
-    <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-5 w-[90vw] mx-auto">
-      {clientList.map((client) => (
-        <div key={client.id} className="flex justify-center rounded-lg overflow-hidden">
-          <Image
-            src={client.image}
-            height={350}
-            width={350}
-            alt={client.name}
-          />
-        </div>
-      ))}
+    <div className='py-8'>
+      <Swiper
+        modules={[Autoplay, A11y, Navigation, EffectCoverflow]}
+        navigation
+        loop
+        speed={1100}
+        spaceBetween={70}
+        effect="coverflow"
+        coverflowEffect={{
+          rotate: 22.5,
+          stretch: 0,
+          depth: 100,
+          slideShadows: false
+        }}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        className="w-full py-8"
+        slidesPerView={5}
+        //   onSlideChange={() => {
+        //     if (currentIndex > 13) setCurrentIndex(0);
+        //     else setCurrentIndex((prev) => prev + 1);
+        //     console.log("slide change");
+        //   }}
+        //   onSwiper={(swiper) => console.log(swiper)}
+      >
+        {clientList.map((client, i) => (
+          <SwiperSlide className="" key={i}>
+            <div key={client.id} className="flex justify-center rounded-lg ">
+              <Image
+                src={client.image}
+                height={350}
+                width={350}
+                alt={client.name}
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };
