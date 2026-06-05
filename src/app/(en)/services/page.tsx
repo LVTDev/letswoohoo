@@ -62,7 +62,14 @@ const page = () => {
           </g>
         </svg> */}
       </div>
-
+      <p className="mx-auto text-3xl text-center mb-3 w-3/4 font-albert font-bold">¿Obsesionarnos con una idea? Para nada.</p>
+      <p className="mx-auto text-lg w-3/4 font-albert font-bold">
+         Lo que sí nos obsesiona, son las
+        posibilidades infinitas y por qué no, los retos creativos. Aquí no
+        hacemos magia. Pero sí buscamos estar en donde todos ponen su atención,
+        donde nace una frase inolvidable, un video que desata una conversación o
+        una activación que se convierte en anécdota.
+      </p>
       <div className=" border-b border-gray my-7 pb-4">
         <p className="  text-4xl font-extrabold tracking-widest">
           {" "}

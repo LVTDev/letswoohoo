@@ -23,7 +23,15 @@ export default function Home() {
       {/* Home slider with video */}
 
       {/* <HomeSlider lang="en" /> */}
-      <HomeSliderTrailerAudio/>
+      <HomeSliderTrailerAudio />
+      <p className="text-lg w-3/4 mx-auto font-albert py-8 font-bold">
+        En Woohoo nos mueven las experiencias: aquellas historias que se vuelven
+        memorables, virales… que despiertan algo en ti. Porque entendemos algo:
+        que hoy ya nadie mira lo mismo que el otro, así que hay que lograr que
+        te vean. Que te compartan. Que te recuerden. Que te vivan. Que te
+        vuelvan a ver. Creamos experiencias y contamos historias que le
+        pertenecerán al mundo.
+      </p>
 
       {/* Home Video Reel COmmented out */}
 
