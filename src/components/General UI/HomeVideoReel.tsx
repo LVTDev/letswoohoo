@@ -13,7 +13,7 @@ const HomeVideoReel = async ({ url, urlVertical }: { url: string, urlVertical: s
     <div className="relative min-h-screen">
       <video
         data-testid="video"
-        className="w-full  h-full absolute top-0 left-1/2 -translate-x-1/2 object-cover object-center"
+        className="w-full  h-3/4 absolute top-0 left-1/2 -translate-x-1/2 object-cover object-center"
         width="100%"
         height="1000%"
         muted={true}

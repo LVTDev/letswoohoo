@@ -10,8 +10,7 @@ import { homeProjectsDesktop } from "@/utils/clientsHomeDesktop";
 import HomeProjectImage from "./HomeProjectImage";
 const HomeProjectsHorizontal = () => {
   return (
-    <div>
-      HomeProjectsHorizontal
+    <div className="py-10">
       <Swiper
         modules={[Autoplay, A11y, Navigation]}
         navigation

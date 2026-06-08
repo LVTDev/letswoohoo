@@ -10,15 +10,15 @@ import dynamic from "next/dynamic";
 const Map = dynamic(() => import("@/components/General UI/Map"), {
     ssr: false,
 });
-const ContactHome = ({ lang }: { lang: string }) => {
+const ContactHome = () => {
     
   return (
     <div className="w-3/4 mx-auto">
       <LetsTalkForm lang="en" />
 
       <div className="md:flex mt-8">
-        <div>
-          <div className="md:w-1/2 ">
+        <div className="md:w-1/2 ">
+          <div className="">
             <h2 className="font-bold text-4xl tracking-widest uppercase mb-6">
               Contact <br /> Details
             </h2>
@@ -47,14 +47,14 @@ const ContactHome = ({ lang }: { lang: string }) => {
       </div>
 
       <div className="md:flex">
-        <div>
+        <div className="md:w-1/2 mx-auto">
+          <CalendlyForm />
+        </div>
+        <div className="md:w-1/2">
           <p className="font-bold text-4xl tracking-widest uppercase">
             where to <br /> find us
           </p>
           <Map />
-        </div>
-        <div>
-          <CalendlyForm />
         </div>
       </div>
     </div>

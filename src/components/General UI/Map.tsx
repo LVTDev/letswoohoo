@@ -27,7 +27,7 @@ const Map = () => {
   return null;
 };
   return (
-    <div className="md:w-[60vw] mx-auto overflow-hidden mb-8">
+    <div className="md:w-[40vw] mx-auto overflow-hidden mb-8">
       <MapContainer
         className="w-screen h-[250px] md:h-150 max-h-[70vh]"
         center={[25.652817, -100.355108]}

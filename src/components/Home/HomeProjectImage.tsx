@@ -89,7 +89,7 @@ const HomeProjectImage = ({
       <div
         onClick={onClick}
         ref={mainRef}
-        className={`relative   rounded-lg overflow-hidden ${full === "full" && "col-span-3 h-[200px] md:h-[84vh]"} ${full === "wide" && "col-span-2  h-auto"} ${full === "thin" && "col-span-1 aspect-square"}`}
+        className={`relative   rounded-lg overflow-hidden  h-[400px] w-full $`}
       >
         {/* <img src={imageLink} alt={alt} className=""  /> */}
         {/* {premio && (
@@ -109,19 +109,19 @@ const HomeProjectImage = ({
             src={imageLink}
             alt={alt}
             fill
-            className="object-cover object-center" // crop while keeping aspect ratio
-            sizes={sizes}
+            className="object-contain object-center" // crop while keeping aspect ratio
+            // sizes={sizes}
           />
         </div>
-        {campana && (
+        {/* {campana && (
           <div
             ref={campanaRef}
             className="absolute font-albert top-2 left-2 opacity-0 -translate-y-4 bg-[#ffffff7a] backdrop-blur-lg text-black px-2 py-1 rounded-full text-sm md:text-base"
           >
             {campana}
           </div>
-        )}
-        {tags && tags.length > 0 && (
+        )} */}
+        {/* {tags && tags.length > 0 && (
           <div className="absolute font-albert flex gap-3 w-auto bottom-2 left-2">
             {tags.map((tag, i) => (
               <p
@@ -135,7 +135,7 @@ const HomeProjectImage = ({
               </p>
             ))}
           </div>
-        )}
+        )} */}
       </div>
     );
     return hasLink ? <Link href={hasLink}>{imageElement}</Link> : imageElement;
@@ -143,48 +143,48 @@ const HomeProjectImage = ({
 
   if (isVideo)
     return
-    return (
-      <div
-        ref={mainRef}
-        className="relative col-span-3 max-h-[80vh] md:min-h-[400px] rounded-lg overflow-hidden"
-      >
-        <video
-          data-testid="video"
-          // className="w-full   h-full absolute top-0 left-1/2 -translate-x-1/2 object-cover object-center md:block hidden"
-          width="100%"
-          height="1000%"
-          muted={true}
-          autoPlay={true}
-          loop
-          playsInline
-        >
-          <source src={videoLink} type="video/mp4" />
-        </video>
-        {campana && (
-          <div
-            ref={campanaRef}
-            className="absolute z-100 top-2 left-2 opacity-0 -translate-y-4 bg-[#ffffff7a] backdrop-blur-lg text-black px-2 py-1 rounded-full text-sm md:text-base"
-          >
-            {campana}
-          </div>
-        )}
-        {tags && tags.length > 0 && (
-          <div className="absolute z-100 flex gap-3 w-auto bottom-2 left-2">
-            {tags.map((tag, i) => (
-              <p
-                ref={(el) => {
-                  tagsRef.current[i] = el;
-                }}
-                className="bg-[#ffffff7a] opacity-0 translate-y-4 backdrop-blur-lg text-black px-2 py-1 rounded-full text-sm md:text-base"
-                key={i}
-              >
-                {tag}
-              </p>
-            ))}
-          </div>
-        )}
-      </div>
-    );
+    // return (
+    //   <div
+    //     ref={mainRef}
+    //     className="relative col-span-3 max-h-[80vh] md:min-h-[400px] rounded-lg overflow-hidden"
+    //   >
+    //     <video
+    //       data-testid="video"
+    //       // className="w-full   h-full absolute top-0 left-1/2 -translate-x-1/2 object-cover object-center md:block hidden"
+    //       width="100%"
+    //       height="1000%"
+    //       muted={true}
+    //       autoPlay={true}
+    //       loop
+    //       playsInline
+    //     >
+    //       <source src={videoLink} type="video/mp4" />
+    //     </video>
+    //     {campana && (
+    //       <div
+    //         ref={campanaRef}
+    //         className="absolute z-100 top-2 left-2 opacity-0 -translate-y-4 bg-[#ffffff7a] backdrop-blur-lg text-black px-2 py-1 rounded-full text-sm md:text-base"
+    //       >
+    //         {campana}
+    //       </div>
+    //     )}
+    //     {tags && tags.length > 0 && (
+    //       <div className="absolute z-100 flex gap-3 w-auto bottom-2 left-2">
+    //         {tags.map((tag, i) => (
+    //           <p
+    //             ref={(el) => {
+    //               tagsRef.current[i] = el;
+    //             }}
+    //             className="bg-[#ffffff7a] opacity-0 translate-y-4 backdrop-blur-lg text-black px-2 py-1 rounded-full text-sm md:text-base"
+    //             key={i}
+    //           >
+    //             {tag}
+    //           </p>
+    //         ))}
+    //       </div>
+    //     )}
+    //   </div>
+    // );
   //     normal: " aspect-square",
   // half: "col-span-1 aspect-square",
   // large: " aspect-[2.05]",

@@ -14,17 +14,19 @@ export default function Home() {
     <div className="font-albert">
       <HomeSlider lang="en" />
       <QuienesSomos />
-      <HomeVideoReel 
-         urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA4.mp4"
+      <div className="w-3/4  mx-auto rounded-lg">
+        <HomeVideoReel
+          urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA4.mp4"
           url={
             "https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA1.mp4"
           }
-      />
+        />
+      </div>
       <Servicios />
       <Clientes />
       <HomeProjectsHorizontal />
-      <TeamListHome  lang="en" />
-      <ContactHome lang="en"/>
+      <TeamListHome lang="en" />
+      <ContactHome />
     </div>
   );
 }
