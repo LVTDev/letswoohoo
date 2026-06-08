@@ -14,9 +14,9 @@ type ImageProps = {
   hasLink?: string;
   isImage?: boolean;
   isVideo?: boolean;
-  campana: string;
-  tags: string[];
-  sizes: string
+  campana?: string;
+  tags?: string[];
+  sizes?: string
   onClick: () => void;
 };
 // const premioLinks = {
@@ -27,16 +27,12 @@ type ImageProps = {
 const HomeProjectImage = ({
   imageLink,
   alt,
-  full,
   // premio,
   onClick,
-  videoLink,
   isImage,
   isVideo,
   hasLink,
-  campana,
-  tags,
-  sizes
+
 }: ImageProps) => {
   gsap.registerPlugin(useGSAP);
   const contRef = useRef<null | HTMLDivElement>(null);
