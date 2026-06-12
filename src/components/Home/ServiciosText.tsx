@@ -20,16 +20,18 @@ const ServiciosText = () => {
   });
   return (
     <div>
-      <p>NUESTROS SERVICIOS</p>
-      <p>
-        ¿Obsesionarnos con una idea? <br />
-        Para nada.
-        <br />
+      <p className="text-2xl font-bold">NUESTROS SERVICIOS</p>
+      <p className="mt-4">
+        <span className="block my-1 italic">¿Obsesionarnos con una idea?</span>
+        <span className="block my-1 italic">Para nada.</span>
         Lo que sí nos obsesiona, son las posibilidades infinitas y por qué no,
         los retos creativos. Aquí no hacemos magia. Pero sí buscamos estar en
         donde todos ponen su atención, donde nace una frase inolvidable, un
         video que desata una conversación o una activación que se convierte en
-        anécdota. En Woohoo nos mueven las experiencias: aquellas historias que
+        anécdota.
+        <br/>
+        <br/>
+         En Woohoo nos mueven las experiencias: aquellas historias que
         se vuelven memorables, virales… que despiertan algo en ti. Porque
         entendemos algo: que hoy ya nadie mira lo mismo que el otro, así que hay
         que lograr que te vean. Que te compartan. Que te recuerden. Que te

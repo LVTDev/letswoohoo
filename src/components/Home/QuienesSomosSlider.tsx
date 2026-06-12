@@ -31,14 +31,14 @@ const QuienesSomosSlider = () => {
     >
       {slides.map((slide, i) => (
         <SwiperSlide className="" key={i}>
-          <div className={` h-[400px] bg-cover relative`}>
+          <div className={` h-[400px] bg-cover relative rounded-lg overflow-hidden`}>
             <div className="relative  h-[400px]">
               <div>
                 <Image
                   src={slide.link}
                   alt={`bg Poster`}
                   //   className={`${i === 1 ? 'object-cover' : 'object-contain' } hidden md:block`}
-                  className={"object-contain  lg:object-cover "}
+                  className={"object-contain  lg:object-cover rounded-lg"}
                   fill
                 />
        

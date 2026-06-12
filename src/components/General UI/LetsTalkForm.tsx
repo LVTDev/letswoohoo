@@ -86,7 +86,7 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
     }
   };
   return (
-    <div className="md:w-3/4" id="contactanos">
+    <div className="md:w-3/4 md:mx-auto" id="contactanos">
       <div className="font-bold text-4xl tracking-widest uppercase mb-6">
         {" "}
         {lang === "en" ? (

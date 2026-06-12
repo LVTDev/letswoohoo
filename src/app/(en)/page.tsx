@@ -14,7 +14,7 @@ export default function Home() {
     <div className="font-albert">
       <HomeSlider lang="en" />
       <QuienesSomos />
-      <div className="w-3/4  mx-auto rounded-lg">
+      <div className="w-3/4  mx-auto ">
         <HomeVideoReel
           urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA4.mp4"
           url={

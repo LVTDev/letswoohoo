@@ -192,6 +192,8 @@ const ClientList = () => {
                 height={350}
                 width={350}
                 alt={client.name}
+                className="rounded-lg"
+
               />
             </div>
           </SwiperSlide>
