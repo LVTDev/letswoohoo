@@ -48,8 +48,8 @@ const HomeProjectImage = ({
   useGSAP(() => {
     if (contRef.current) {
       tl.to(contRef.current, {
-        scale: 1.1,
-        rotate: 2,
+        scale: 1.05,
+        // rotate: 2,
         duration: 0.8,
         ease: "elastic.out",
       });
