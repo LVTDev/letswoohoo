@@ -42,12 +42,12 @@ export const homeProjectsDesktop: HomeProject[] = [
   },
   {
     imageLink:
-      "https://cdn.sanity.io/images/5egex671/production/a7f811fe9ea414bada5415b32a9055c7518242d1-1000x1000.png",
+      "https://cdn.sanity.io/images/5egex671/production/0a6581965a19fe85f70a12a936dfcc8d52866f5c-1000x1000.png",
     full: "thin",
-    alt: "Entrevista Denisse",
+    alt: "Entrevista Denisse 2026",
     id: 3,
     isImage: true,
-    hasLink: "/blog/marketing-women",
+    hasLink: "/blog/titanesDeAltura",
     sizes: "calc(28.33vw - 13px)",
   },
   {
@@ -60,16 +60,25 @@ export const homeProjectsDesktop: HomeProject[] = [
     campana: "Protect what you love most with Oncosalud",
     tags: ["AudioVisual Production", "Traditional and Digital Media Campaign"],
   },
-
   {
     imageLink:
-      "https://cdn.sanity.io/images/5egex671/production/ed6880c5938b9786f407c4c57715b813c5cc8751-1000x1000.jpg",
+      "https://cdn.sanity.io/images/5egex671/production/a7f811fe9ea414bada5415b32a9055c7518242d1-1000x1000.png",
     full: "thin",
-    alt: "top golf",
+    alt: "Entrevista Denisse",
     id: 5,
     isImage: true,
+    hasLink: "/blog/marketing-women",
     sizes: "calc(28.33vw - 13px)",
   },
+  // {
+  //   imageLink:
+  //     "https://cdn.sanity.io/images/5egex671/production/ed6880c5938b9786f407c4c57715b813c5cc8751-1000x1000.jpg",
+  //   full: "thin",
+  //   alt: "top golf",
+  //   id: 5,
+  //   isImage: true,
+  //   sizes: "calc(28.33vw - 13px)",
+  // },
   {
     imageLink:
       "https://cdn.sanity.io/images/5egex671/production/7d5467ca0146c8d7f535b154f123ceacd42f37ca-1920x1080.jpg",
