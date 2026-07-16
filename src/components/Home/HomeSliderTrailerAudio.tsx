@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import Image from "next/image";
+// import Image from "next/image";
 // import Link from "next/link";
 // import { ArrowRight } from "react-feather";
 // import TrailerSlide from "./TrailerSlider";
@@ -57,7 +57,7 @@ const HomeSliderTrailerAudio = () => {
       }}
       //   onSwiper={(swiper) => console.log(swiper)}
     >
-      {slides.map((slide, i) => (
+      {/* {slides.map((slide, i) => (
         <SwiperSlide className="" key={i}>
           <div className={` h-[85vh] bg-cover relative`}>
             <div className="relative  h-[85vh]">
@@ -79,7 +79,7 @@ const HomeSliderTrailerAudio = () => {
             </div>
           </div>
         </SwiperSlide>
-      ))}
+      ))} */}
       <SwiperSlide
 
       // onMouseEnter={() => {
