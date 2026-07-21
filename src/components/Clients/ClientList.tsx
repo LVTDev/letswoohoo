@@ -40,7 +40,7 @@ const ClientList = () => {
     },
 
     {
-      name: "FIC",
+      name: "ficmonterrey",
       image:
         "https://cdn.sanity.io/images/5egex671/production/bab7e3b38343c7111b2e4577940888e2eef64461-501x500.png",
       id: 2,
@@ -256,7 +256,7 @@ const ClientList = () => {
   const handleClose = () => setSelectedClient(null);
 
   return (
-    <div className="w-[90vw] mx-auto">
+    <div className="w-[90vw] mx-auto font-albert">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {clientList.map((client) => (
           <button
@@ -290,7 +290,7 @@ const ClientList = () => {
             <button
               type="button"
               onClick={handleClose}
-              className="absolute top-4 right-4 text-2xl leading-none text-gray-500 hover:text-black"
+              className="absolute cursor-pointer p-3 top-4 right-4 text-2xl leading-none text-gray-500 hover:text-black"
               aria-label="Close"
             >
               &times;
