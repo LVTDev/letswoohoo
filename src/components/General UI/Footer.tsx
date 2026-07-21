@@ -17,10 +17,10 @@ const Footer = () => {
         <div>
           <p>&copy; 2025 WOOHOO</p>
           <div className="block">
-            <Link href={"/aviso-de-privacidad"}>PRIVACY NOTICE</Link>
+            <Link href={"/privacy-policy"}>PRIVACY NOTICE</Link>
           </div>
           <div className="block">
-            <Link href="/terminos">TERMS AND CONDITIONS OF USE</Link>
+            <Link href="/terms-and-conditions">TERMS AND CONDITIONS OF USE</Link>
           </div>
         </div>
         <div>

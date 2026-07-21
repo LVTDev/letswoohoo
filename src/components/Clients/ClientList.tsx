@@ -1,6 +1,13 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
+type Client = {
+  name: string;
+  image: string;
+  id: number;
+  popupContent?: React.JSX.Element;
+};
 const ClientList = () => {
   const clientList = [
     {
@@ -8,6 +15,28 @@ const ClientList = () => {
       image:
         "https://cdn.sanity.io/images/5egex671/production/992b926672d87d26aae476b59e0461bd3203843b-501x501.png",
       id: 3,
+      popupContent: (
+        <div>
+          <p>
+            Una campaña encabezada por un manifiesto que exalta ese sentimiento
+            único de los mexicanos por procurar el bienestar de los demás, en
+            situaciones críticas. Una sociedad reflejada en un audiovisual, para
+            posicionar la llegada de AUNA a México, a través del lanzamiento de
+            su seguro ONCOSALUD, fue nuestra primera acción con la marca.
+            <br />
+             La
+            expansión de este partnership se dio con campañas de salud
+            preventiva en redes sociales, OOH y medios tradicionales, cimentando
+            la presencia de AUNA como referente en temas de atención médica
+            privada y de seguros en México.
+          </p>
+          <p className="mt-2 italic font-bold">
+            Advertising design. Campaign development. Corporate videos. Digital
+            Marketing. Market Analysis and Research. Film and video production.
+            Media.
+          </p>
+        </div>
+      ),
     },
 
     {
@@ -15,12 +44,39 @@ const ClientList = () => {
       image:
         "https://cdn.sanity.io/images/5egex671/production/bab7e3b38343c7111b2e4577940888e2eef64461-501x500.png",
       id: 2,
+      popupContent: (
+        <div>
+          <p>
+            Uno de los festivales más importantes de cine en el país, requería
+            una identidad capaz de vivir dentro y fuera de la pantalla.
+          </p>
+          <p className="mt-2 ">
+            Replanteamos desde su universo visual y su comunicación, hasta las
+            experiencias, un cineminuto y la producción de distintos eventos,
+            expandiendo el festival después de cada función.
+          </p>
+        </div>
+      ),
     },
     {
       name: "Arca",
       image:
         "https://cdn.sanity.io/images/5egex671/production/7c8398a7fa8441dfb856227edc598cd317d7becc-501x500.png",
       id: 1,
+      popupContent: (
+        <div>
+          <p>
+            Esta importante embotelladora requería un equipo con la capacidad de
+            regionalizar y mantener los estándares internacionales de las
+            campañas de sus marcas más importantes. Objetivo cumplido. Es así
+            que comenzó también la creación y desarrollo de experiencias en
+            activaciones BTL de importantes marcas y productos tanto nacionales
+            como internacionales, que incluían el uso de tecnología inmersiva,
+            volviendo cada acción una memoria en la vida de los usuarios.
+          </p>
+          <p className="mt-2 italic font-bold">Activations, Film and Video Production, Audio Production</p>
+        </div>
+      ),
     },
     {
       name: "Naterra",
@@ -31,6 +87,23 @@ const ClientList = () => {
 
     {
       name: "Soriana",
+      popupContent: (
+        <div>
+          <p>
+            “Sorianeros” Uno de los grupos más importantes de México, buscaba
+            tener una de las redes de colaboradores más leales, felices y
+            comprometidas. Una campaña de comunicación interna en redes
+            sociales, dirigida exclusivamente a colaboradores para generar
+            comunidad, fue la propuesta de WooHoo. Contenido en el que las
+            personas trabajadoras son las protagonistas, quienes invitan a más
+            gente a conocer a Soriana, sus propuestas, dinámicas, iniciativas,
+            su día a día y también, los momentos de convivencia. Una manera de
+            conocer al equipo incluso, en otros estados del país, sintiéndose
+            orgullosos de ser #SorianerosDeCorazón.
+          </p>
+          <p className="mt-2 italic font-bold">Digital Marketing, Advertising Design, Internal Communication</p>
+        </div>
+      ),
       image:
         "https://cdn.sanity.io/images/5egex671/production/b46b5d0ae85cf10481748142aa9a520c6aea443f-500x501.png",
       id: 5,
@@ -39,6 +112,20 @@ const ClientList = () => {
       name: "Midea",
       image:
         "https://cdn.sanity.io/images/5egex671/production/cddb95ab0e73fe7ac9cde2f01c483ff24ed26756-501x501.png",
+      popupContent: (
+        <div>
+          <p>
+            Posicionar una marca de electrodomésticos a nivel nacional. El reto
+            creativo: la adaptación estratégica de materiales OOH, con mensajes
+            que mostraban la funcionalidad de cada producto, localizaciones
+            específicas y reforzamiento con una campaña de menciones en medios
+            audiovisuales. La presencia de MIDEA se amplificó en el país ¿la
+            siguiente etapa? La producción de un showroom que convirtió a la
+            marca en una experiencia.
+          </p>
+          <p className="mt-2 italic font-bold">Media. PR. Film and Video Production</p>
+        </div>
+      ),
       id: 6,
     },
 
@@ -47,21 +134,36 @@ const ClientList = () => {
       image:
         "https://cdn.sanity.io/images/5egex671/production/ca92282ec9e5c9dcccee1ea9131399a1f2fc0146-501x500.webp",
       id: 24,
+      popupContent: (
+        <div>
+          <p>
+            La creatividad para una campaña de contenido en redes sociales, fue
+            la clave para posicionar a CLEBER como grupo automotriz multimarca
+            líder en la región. Y es que 20 años de historia debían comunicarse
+            para su posicionamiento. Nuevos retos se sumaron a nuestra historia
+            y dieron paso a la generación de experiencias de marca estratégicas
+            y al lanzamiento de alguna de sus SUV insignia.
+          </p>
+          <p className="mt-2 italic font-bold">
+            Activations. Advertising design. Campaign Development, Digital
+            Marketing. Publicity. BTL.
+          </p>
+        </div>
+      ),
     },
     {
       name: "Como comí",
       image:
-      "https://cdn.sanity.io/images/5egex671/production/b4c934907d5eb3ead27aec73c511f0872b2da4fa-2084x2084.png",
+        "https://cdn.sanity.io/images/5egex671/production/b4c934907d5eb3ead27aec73c511f0872b2da4fa-2084x2084.png",
       id: 21,
     },
-    
-    
+
     {
       name: "Ballet Monterrey",
       image:
         "https://cdn.sanity.io/images/5egex671/production/bdde72b1b2340331d9ad8a394c7261b0a35586ef-501x501.png",
-        id: 19,
-      },
+      id: 19,
+    },
     {
       name: "Barraca Producciones",
       image:
@@ -71,29 +173,29 @@ const ClientList = () => {
     {
       name: "Billu",
       image:
-      "https://cdn.sanity.io/images/5egex671/production/e3ae89e9e4cd271d43039c7fa0a158321fd8d82c-501x500.png",
+        "https://cdn.sanity.io/images/5egex671/production/e3ae89e9e4cd271d43039c7fa0a158321fd8d82c-501x500.png",
       id: 11,
     },
-   {
-     name: "Afirme",
+    {
+      name: "Afirme",
       image:
         "https://cdn.sanity.io/images/5egex671/production/7d26f3d008036f0f9858e18cc747d0fdba35ac61-500x500.png",
       id: 4,
     },
-       {
+    {
       name: "Bokados",
       image:
         "https://cdn.sanity.io/images/5egex671/production/e374f9bb515f7ae69d70d599f4dc69e09b3b5b70-501x501.png",
       id: 14,
     },
- 
+
     {
       name: "Villacero",
       image:
         "https://cdn.sanity.io/images/5egex671/production/f5b33f54c50e15fcc32f79ce300a2dba512dda07-501x501.png",
       id: 13,
     },
-    
+
     {
       name: "Top Golf",
       image:
@@ -104,12 +206,12 @@ const ClientList = () => {
       name: "Players",
       image:
         "https://cdn.sanity.io/images/5egex671/production/a69cc020758144056dfa8b90495c1226fe9585a5-2084x2084.png",
-        id: 22,
-      },
-      {
+      id: 22,
+    },
+    {
       name: "Dos Familias",
       image:
-      "https://cdn.sanity.io/images/5egex671/production/6ef74be4beea6aabe3bef523fcace7f1f1382a7f-501x501.png",
+        "https://cdn.sanity.io/images/5egex671/production/6ef74be4beea6aabe3bef523fcace7f1f1382a7f-501x501.png",
       id: 15,
     },
     // {
@@ -149,18 +251,68 @@ const ClientList = () => {
       id: 20,
     },
   ];
+  const [selectedClient, setSelectedClient] = useState<null | Client>(null);
+
+  const handleClose = () => setSelectedClient(null);
+
   return (
-    <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-5 w-[90vw] mx-auto">
-      {clientList.map((client) => (
-        <div key={client.id} className="flex justify-center rounded-lg overflow-hidden">
-          <Image
-            src={client.image}
-            height={350}
-            width={350}
-            alt={client.name}
-          />
+    <div className="w-[90vw] mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        {clientList.map((client) => (
+          <button
+            key={client.id}
+            type="button"
+            onClick={() => client.popupContent && setSelectedClient(client)}
+            className={`relative flex justify-center items-center rounded-lg overflow-hidden aspect-square ${
+              client.popupContent ? "cursor-pointer" : "cursor-default"
+            }`}
+            aria-haspopup={!!client.popupContent}
+          >
+            <Image
+              src={client.image}
+              fill
+              alt={client.name}
+              className="object-contain"
+            />
+          </button>
+        ))}
+      </div>
+
+      {selectedClient && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+          onClick={handleClose}
+        >
+          <div
+            className="relative bg-white rounded-lg max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={handleClose}
+              className="absolute top-4 right-4 text-2xl leading-none text-gray-500 hover:text-black"
+              aria-label="Close"
+            >
+              &times;
+            </button>
+
+            <div className="flex items-center gap-4 mb-4">
+              <Image
+                src={selectedClient.image}
+                height={80}
+                width={80}
+                alt={selectedClient.name}
+                className="rounded"
+              />
+              <h2 className="text-xl font-semibold">{selectedClient.name}</h2>
+            </div>
+
+            <div className="text-gray-700 space-y-3">
+              {selectedClient.popupContent}
+            </div>
+          </div>
         </div>
-      ))}
+      )}
     </div>
   );
 };

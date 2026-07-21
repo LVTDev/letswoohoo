@@ -15,6 +15,8 @@ const LangSwitch = ({lang}:{lang:string}) => {
     "/our-culture": "/cultura",
     "/our-culture/posada": "/cultura/posada",
     "/our-culture/cancerMama": "/cultura/cancerMama",
+    "/terms-and-conditions": "/terminos",
+    "/privacy-policy": "/aviso-de-privacidad",
   };
   const engLinks = Object.keys(links);
 
