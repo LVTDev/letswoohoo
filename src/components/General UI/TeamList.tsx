@@ -9,24 +9,23 @@ type Person = {
   mainImage: { _type: string; alt: string };
   nombre: string;
   departamento: string;
-  puestoESP: string
+  puestoESP: string;
 };
 
 type Team = {
   teamList: Person[];
-  lang: string
+  lang: string;
 };
 
 const TeamList = ({ teamList, lang }: Team) => {
   return (
     <div className="">
-      <div className="md:flex  justify-center gap-40 mb-10">
-        {teamList.map((person, i) => {
-          if (!(person.departamento === "direccion")) return;
-          return <TeamListImage lang={lang} key={i} person={person} />;
-        })}
+      <div className="grid grid-cols-2 md:grid-cols-3  gap-10 mb-10 justify-items-center">
+        {teamList.map((person, i) => (
+          <TeamListImage lang={lang} key={i} person={person} />
+        ))}
       </div>
-      <div>
+      {/* <div>
         <p className="text-4xl font-extrabold tracking-widest mb-8 text-center">Accounts</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamList.map((person, i) => {
@@ -115,7 +114,7 @@ const TeamList = ({ teamList, lang }: Team) => {
             return <TeamListImage lang={lang} key={i} person={person} />;
           })}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
