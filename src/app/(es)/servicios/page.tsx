@@ -22,84 +22,95 @@ const page = () => {
           marcas y las personas.
         </p>
       </div>
-    
-
-     
 
       <div className="border-b border-gray mb-7 pb-4">
         <p className="  text-4xl font-extrabold tracking-widest">
           {" "}
-          PUBLICIDAD
+          AUDIOVISUAL
         </p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Análisis e Investigación de Mercados
+            2D/3D
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Publicidad ATL
+            Animación{" "}
           </p>
 
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Desarrollo de Campañas
+            Audio{" "}
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Diseño Publicitario
+            Comerciales
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Marketing Digital
+            Podcast{" "}
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Branding
+            Renta de equipo cinematográfico
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Medios
+            Spot{" "}
           </p>
-     
+
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Comunicación Interna
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Manejo de Crisis
+            Videoclip{" "}
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Impresos
+            Videos Institucional{" "}
           </p>
         </div>
       </div>
 
       <div className="border-b border-gray mb-7 pb-4">
         <p className=" text-4xl font-extrabold tracking-widest uppercase">
-          AudioVisual
+          CREATIVIDAD
         </p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Producción de Cine y Video
+            Campañas publicitarias
           </p>
-   
+
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Post produccion
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Producción de Audio
+            Copywriting{" "}
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Videos Corporativos
+            Dirección de arte
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Animaciones 2D y 3D
+            Estrategia creativa de comunicación
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Podcast
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Studio
-          </p>
-          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Renta de Equipo
+            Identidad visual{" "}
           </p>
         </div>
       </div>
-       <div className=" border-gray my-7 pb-4">
+      <div className="border-b border-gray mb-7 pb-4">
+        <p className=" text-4xl font-extrabold tracking-widest uppercase">
+          DIGITAL
+        </p>
+        <div className="flex gap-3 my-7 flex-wrap">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Análisis de competidores y benchmark
+          </p>
+
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Automatización de dashboard para canales digitales
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Community management
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Contenido para redes sociales
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Pauta digital
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Social Media listening{" "}
+          </p>
+        </div>
+      </div>
+      <div className="border-b border-gray my-7 pb-4">
         <div className="text-4xl font-extrabold tracking-widest flex">
           {/* <div className="w-10 ">
             <WoohooSvgWhite fill="#000" />
@@ -108,7 +119,7 @@ const page = () => {
         </div>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
-            Publicidad BTL
+            BTL
           </p>
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Activaciones
@@ -126,6 +137,58 @@ const page = () => {
 
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Exposiciones
+          </p>
+        </div>
+      </div>
+      <div className="border-b border-gray my-7 pb-4">
+        <div className="text-4xl font-extrabold tracking-widest flex">
+          {/* <div className="w-10 ">
+            <WoohooSvgWhite fill="#000" />
+          </div>{" "} */}
+          <h2>MEDIOS</h2>
+        </div>
+        <div className="flex gap-3 my-7 flex-wrap">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Estrategia de Medios
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Monitoreo de Medios
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Planificación y Compra de Medios ATL
+          </p>
+
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Relaciones públicas{" "}
+          </p>
+        </div>
+      </div>
+      <div className=" border-gray my-7 pb-4">
+        <div className="text-4xl font-extrabold tracking-widest flex">
+          {/* <div className="w-10 ">
+            <WoohooSvgWhite fill="#000" />
+          </div>{" "} */}
+          <h2>MERCADOTECNIA</h2>
+        </div>
+        <div className="flex gap-3 my-7 flex-wrap">
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Campañas
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Comunicación Interna
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Digital Marketing
+          </p>
+
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Estrategia{" "}
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Manejo de crisis
+          </p>
+          <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
+            Marketing analysis and research{" "}
           </p>
         </div>
       </div>
