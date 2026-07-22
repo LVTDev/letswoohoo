@@ -24,8 +24,7 @@ const ClientList = () => {
             posicionar la llegada de AUNA a México, a través del lanzamiento de
             su seguro ONCOSALUD, fue nuestra primera acción con la marca.
             <br />
-             La
-            expansión de este partnership se dio con campañas de salud
+            La expansión de este partnership se dio con campañas de salud
             preventiva en redes sociales, OOH y medios tradicionales, cimentando
             la presencia de AUNA como referente en temas de atención médica
             privada y de seguros en México.
@@ -74,7 +73,9 @@ const ClientList = () => {
             como internacionales, que incluían el uso de tecnología inmersiva,
             volviendo cada acción una memoria en la vida de los usuarios.
           </p>
-          <p className="mt-2 italic font-bold">Activations, Film and Video Production, Audio Production</p>
+          <p className="mt-2 italic font-bold">
+            Activations, Film and Video Production, Audio Production
+          </p>
         </div>
       ),
     },
@@ -101,7 +102,9 @@ const ClientList = () => {
             conocer al equipo incluso, en otros estados del país, sintiéndose
             orgullosos de ser #SorianerosDeCorazón.
           </p>
-          <p className="mt-2 italic font-bold">Digital Marketing, Advertising Design, Internal Communication</p>
+          <p className="mt-2 italic font-bold">
+            Digital Marketing, Advertising Design, Internal Communication
+          </p>
         </div>
       ),
       image:
@@ -123,7 +126,9 @@ const ClientList = () => {
             siguiente etapa? La producción de un showroom que convirtió a la
             marca en una experiencia.
           </p>
-          <p className="mt-2 italic font-bold">Media. PR. Film and Video Production</p>
+          <p className="mt-2 italic font-bold">
+            Media. PR. Film and Video Production
+          </p>
         </div>
       ),
       id: 6,
@@ -259,11 +264,27 @@ const ClientList = () => {
     <div className="w-[90vw] mx-auto font-albert">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {clientList.map((client) => (
+          // <button
+          //   key={client.id}
+          //   type="button"
+          //   onClick={() => client.popupContent && setSelectedClient(client)}
+          //   className={`relative flex justify-center items-center rounded-lg overflow-hidden aspect-square ${
+          //     client.popupContent ? "cursor-pointer" : "cursor-default"
+          //   }`}
+          //   aria-haspopup={!!client.popupContent}
+          // >
+          //   <Image
+          //     src={client.image}
+          //     fill
+          //     alt={client.name}
+          //     className="object-contain"
+          //   />
+          // </button>
           <button
             key={client.id}
             type="button"
             onClick={() => client.popupContent && setSelectedClient(client)}
-            className={`relative flex justify-center items-center rounded-lg overflow-hidden aspect-square ${
+            className={`group relative flex justify-center items-center rounded-lg overflow-hidden aspect-square ${
               client.popupContent ? "cursor-pointer" : "cursor-default"
             }`}
             aria-haspopup={!!client.popupContent}
@@ -272,8 +293,21 @@ const ClientList = () => {
               src={client.image}
               fill
               alt={client.name}
-              className="object-contain"
+              className="object-contain transition-transform duration-300 group-hover:scale-105"
             />
+
+            {client.popupContent && (
+              <div
+                className="absolute inset-0 flex flex-col justify-end p-4
+                 bg-gradient-to-t from-black/80 via-black/20 to-transparent
+                 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <p className="text-white font-semibold text-sm">
+                  {client.name}
+                </p>
+                <p className="text-white/80 text-xs mt-1">Click para ver más</p>
+              </div>
+            )}
           </button>
         ))}
       </div>
