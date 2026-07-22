@@ -4,6 +4,7 @@ type HomeProject = {
   premio?: string;
   id: number;
   full?: string;
+  clientName?: string
   videoLink?: string;
   descriptionESP?: string;
   descriptionENG?: string;
@@ -28,6 +29,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     campana: "ficmonterrey 20",
     tags: ["AudioVisual Production", "BTL"],
     sizes: "(min-width: 460px) 85vw, calc(12.14vw + 321px)",
+    clientName: "ficmonterrey"
   },
   {
     imageLink:
@@ -39,6 +41,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     campana: "Open a Goal Scream",
     tags: ["Branding", "Creativity"],
     sizes: "56.67vw",
+    clientName: "Arca"
   },
   {
     imageLink:
@@ -59,6 +62,7 @@ export const homeProjectsDesktop: HomeProject[] = [
       "https://o5qiahlghji2exja.public.blob.vercel-storage.com/Manifiesto%20Oncosalud%20MAR25%20960x540.mp4",
     campana: "Protect what you love most with Oncosalud",
     tags: ["AudioVisual Production", "Traditional and Digital Media Campaign"],
+    clientName:"Auna"
   },
   {
     imageLink:
@@ -185,6 +189,7 @@ export const homeProjectsDesktop: HomeProject[] = [
     id: 17,
     isImage: true,
     sizes: "calc(28.33vw - 13px)",
+    clientName: "Arca"
   },
   {
     imageLink:

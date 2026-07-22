@@ -11,7 +11,7 @@ const Modal = ({
 }) => {
   if (!isOpen) return null;
   return (
-    <div onClick={onClose} className="fixed inset-0 bg-[#00000062] bg-opacity-50 z-50 flex justify-center items-center">
+    <div onClick={onClose} className="fixed inset-0 bg-[#00000062] bg-opacity-50 z-1000 flex justify-center items-center">
       <div onClick={e => e.stopPropagation()} className="bg-white py-8 px-4 rounded-lg w-full max-w-md relative">
         <button
           onClick={onClose}

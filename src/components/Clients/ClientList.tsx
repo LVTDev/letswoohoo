@@ -9,7 +9,104 @@ type Client = {
   popupContent?: React.JSX.Element;
 };
 const ClientList = () => {
-  const clientList = [
+ 
+  const [selectedClient, setSelectedClient] = useState<null | Client>(null);
+
+  const handleClose = () => setSelectedClient(null);
+
+  return (
+    <div className="w-[90vw] mx-auto font-albert">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        {listOfClients.map((client) => (
+          // <button
+          //   key={client.id}
+          //   type="button"
+          //   onClick={() => client.popupContent && setSelectedClient(client)}
+          //   className={`relative flex justify-center items-center rounded-lg overflow-hidden aspect-square ${
+          //     client.popupContent ? "cursor-pointer" : "cursor-default"
+          //   }`}
+          //   aria-haspopup={!!client.popupContent}
+          // >
+          //   <Image
+          //     src={client.image}
+          //     fill
+          //     alt={client.name}
+          //     className="object-contain"
+          //   />
+          // </button>
+          <button
+            key={client.id}
+            type="button"
+            onClick={() => client.popupContent && setSelectedClient(client)}
+            className={`group relative flex justify-center items-center rounded-lg overflow-hidden aspect-square ${
+              client.popupContent ? "cursor-pointer" : "cursor-default"
+            }`}
+            aria-haspopup={!!client.popupContent}
+          >
+            <Image
+              src={client.image}
+              fill
+              alt={client.name}
+              className="object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+
+            {client.popupContent && (
+              <div
+                className="absolute inset-0 flex flex-col justify-end p-4
+                 bg-gradient-to-t from-black/80 via-black/20 to-transparent
+                 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <p className="text-white font-semibold text-sm">
+                  {client.name}
+                </p>
+                <p className="text-white/80 text-xs mt-1">Click para ver más</p>
+              </div>
+            )}
+          </button>
+        ))}
+      </div>
+
+      {selectedClient && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+          onClick={handleClose}
+        >
+          <div
+            className="relative bg-white rounded-lg max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={handleClose}
+              className="absolute cursor-pointer p-3 top-4 right-4 text-2xl leading-none text-gray-500 hover:text-black"
+              aria-label="Close"
+            >
+              &times;
+            </button>
+
+            <div className="flex items-center gap-4 mb-4">
+              <Image
+                src={selectedClient.image}
+                height={80}
+                width={80}
+                alt={selectedClient.name}
+                className="rounded"
+              />
+              <h2 className="text-xl font-semibold">{selectedClient.name}</h2>
+            </div>
+
+            <div className="text-gray-700 space-y-3">
+              {selectedClient.popupContent}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ClientList;
+export const listOfClients = [
     {
       name: "Auna",
       image:
@@ -256,99 +353,3 @@ const ClientList = () => {
       id: 20,
     },
   ];
-  const [selectedClient, setSelectedClient] = useState<null | Client>(null);
-
-  const handleClose = () => setSelectedClient(null);
-
-  return (
-    <div className="w-[90vw] mx-auto font-albert">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-        {clientList.map((client) => (
-          // <button
-          //   key={client.id}
-          //   type="button"
-          //   onClick={() => client.popupContent && setSelectedClient(client)}
-          //   className={`relative flex justify-center items-center rounded-lg overflow-hidden aspect-square ${
-          //     client.popupContent ? "cursor-pointer" : "cursor-default"
-          //   }`}
-          //   aria-haspopup={!!client.popupContent}
-          // >
-          //   <Image
-          //     src={client.image}
-          //     fill
-          //     alt={client.name}
-          //     className="object-contain"
-          //   />
-          // </button>
-          <button
-            key={client.id}
-            type="button"
-            onClick={() => client.popupContent && setSelectedClient(client)}
-            className={`group relative flex justify-center items-center rounded-lg overflow-hidden aspect-square ${
-              client.popupContent ? "cursor-pointer" : "cursor-default"
-            }`}
-            aria-haspopup={!!client.popupContent}
-          >
-            <Image
-              src={client.image}
-              fill
-              alt={client.name}
-              className="object-contain transition-transform duration-300 group-hover:scale-105"
-            />
-
-            {client.popupContent && (
-              <div
-                className="absolute inset-0 flex flex-col justify-end p-4
-                 bg-gradient-to-t from-black/80 via-black/20 to-transparent
-                 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
-                <p className="text-white font-semibold text-sm">
-                  {client.name}
-                </p>
-                <p className="text-white/80 text-xs mt-1">Click para ver más</p>
-              </div>
-            )}
-          </button>
-        ))}
-      </div>
-
-      {selectedClient && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
-          onClick={handleClose}
-        >
-          <div
-            className="relative bg-white rounded-lg max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              type="button"
-              onClick={handleClose}
-              className="absolute cursor-pointer p-3 top-4 right-4 text-2xl leading-none text-gray-500 hover:text-black"
-              aria-label="Close"
-            >
-              &times;
-            </button>
-
-            <div className="flex items-center gap-4 mb-4">
-              <Image
-                src={selectedClient.image}
-                height={80}
-                width={80}
-                alt={selectedClient.name}
-                className="rounded"
-              />
-              <h2 className="text-xl font-semibold">{selectedClient.name}</h2>
-            </div>
-
-            <div className="text-gray-700 space-y-3">
-              {selectedClient.popupContent}
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default ClientList;

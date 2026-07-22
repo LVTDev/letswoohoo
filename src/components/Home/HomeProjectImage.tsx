@@ -1,4 +1,4 @@
-// import Image from "next/image";
+"use client";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
@@ -14,54 +14,38 @@ type ImageProps = {
   hasLink?: string;
   isImage?: boolean;
   isVideo?: boolean;
-  campana: string;
-  tags: string[];
-  sizes: string
+  campana?: string;
+  tags?: string[];
+  sizes: string;
+  clientName?: string;
   onClick: () => void;
+  popupContent: React.ReactElement;
 };
-// const premioLinks = {
-//   muse: "https://cdn.sanity.io/images/5egex671/production/11bef979b16c33138314dc46011cb442a51ca379-173x201.png",
-//   amco: "https://cdn.sanity.io/images/5egex671/production/b5cf8babf84c5ff7f5d6db74db9c10aa1e4f816f-172x201.png",
-//   wina: "https://cdn.sanity.io/images/5egex671/production/cea75aea900778d0d714599f5f6682fc32f7dd14-173x201.png",
-// };
+
 const HomeProjectImage = ({
   imageLink,
   alt,
   full,
-  // premio,
   onClick,
   videoLink,
   isImage,
   isVideo,
   hasLink,
-  campana,
-  tags,
-  sizes
+  // campana,
+  // tags,
+  sizes,
+  popupContent,
 }: ImageProps) => {
   gsap.registerPlugin(useGSAP);
-  const contRef = useRef<null | HTMLDivElement>(null);
+
   const mainRef = useRef<null | HTMLDivElement>(null);
   const campanaRef = useRef<HTMLDivElement>(null);
   const tagsRef = useRef<(HTMLParagraphElement | null)[]>([]);
-  const tl = gsap.timeline({ paused: true });
   const hovertl = gsap.timeline({ paused: true });
-  useGSAP(() => {
-    if (contRef.current) {
-      tl.to(contRef.current, {
-        scale: 1.05,
-        // rotate: 2,
-        duration: 0.8,
-        ease: "elastic.out",
-      });
-      // Add hover events
-      const onEnter = () => tl.play();
-      const onLeave = () => tl.reverse();
-      if (hasLink) {
-        contRef.current.addEventListener("mouseenter", onEnter);
-        contRef.current.addEventListener("mouseleave", onLeave);
-      }
-    }
 
+  const isInteractive = Boolean(hasLink || popupContent);
+
+  useGSAP(() => {
     if (!mainRef.current) return;
     hovertl
       .to(campanaRef.current, {
@@ -84,72 +68,64 @@ const HomeProjectImage = ({
     mainRef.current.addEventListener("mouseenter", onHoverEnter);
     mainRef.current.addEventListener("mouseleave", onHoverLeave);
   });
+
   if (isImage && imageLink && imageLink.length > 0) {
     const imageElement = (
       <div
         onClick={onClick}
         ref={mainRef}
-        className={`relative   rounded-lg overflow-hidden ${full === "full" && "col-span-3 h-[200px] md:h-[84vh]"} ${full === "wide" && "col-span-2  h-auto"} ${full === "thin" && "col-span-1 aspect-square"}`}
+        className={`group relative rounded-lg overflow-hidden ${
+          isInteractive ? "cursor-pointer" : "cursor-default"
+        } ${full === "full" && "col-span-3 h-[200px] md:h-[84vh]"} ${
+          full === "wide" && "col-span-2 h-auto"
+        } ${full === "thin" && "col-span-1 aspect-square"}`}
       >
-        {/* <img src={imageLink} alt={alt} className=""  /> */}
-        {/* {premio && (
-          <div className="absolute right-3 top-0 w-10 h-10">
-            <Image
-              width={40}
-              height={40}
-              src={premioLinks[premio]}
-              alt={`${premio} award`}
-            />
-          </div>
-        )} */}
-        <div ref={contRef} className="relative w-full h-full ">
-          {" "}
-          {/* fixed height for uniform display */}
+        <div className="relative w-full h-full">
           <Image
             src={imageLink}
             alt={alt}
             fill
-            className="object-cover object-center" // crop while keeping aspect ratio
+            className={`object-cover object-center transition-transform duration-300 ${
+              isInteractive ? "group-hover:scale-105" : ""
+            }`}
             sizes={sizes}
           />
         </div>
-        {campana && (
-          <div
-            ref={campanaRef}
-            className="absolute font-albert top-2 left-2 opacity-0 -translate-y-4 bg-[#ffffff7a] backdrop-blur-lg text-black px-2 py-1 rounded-full text-sm md:text-base"
-          >
-            {campana}
-          </div>
-        )}
-        {tags && tags.length > 0 && (
-          <div className="absolute font-albert flex gap-3 w-auto bottom-2 left-2">
-            {tags.map((tag, i) => (
-              <p
-                ref={(el) => {
-                  tagsRef.current[i] = el;
-                }}
-                className="bg-[#ffffff7a] opacity-0 translate-y-4 backdrop-blur-lg text-black px-2 py-1 rounded-full text-sm md:text-base"
-                key={i}
-              >
-                {tag}
+
+        {popupContent ||
+          (hasLink && (
+            <div
+              className="absolute inset-0 flex flex-col justify-end p-4
+             bg-gradient-to-t from-black/80 via-black/20 to-transparent
+             opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <p className="text-white/80 text-xs text-center font-bold">
+                Click para ver más
               </p>
-            ))}
-          </div>
-        )}
+            </div>
+          ))}
       </div>
     );
-    return hasLink ? <Link href={hasLink}>{imageElement}</Link> : imageElement;
+    return hasLink ? (
+      <Link className="cursor-pointer" href={hasLink}>
+        {imageElement}
+      </Link>
+    ) : (
+      imageElement
+    );
   }
 
   if (isVideo)
     return (
       <div
+        onClick={onClick}
         ref={mainRef}
-        className="relative col-span-3 max-h-[80vh] md:min-h-[400px] rounded-lg overflow-hidden"
+        className={`group relative col-span-3 max-h-[80vh] md:min-h-[400px] rounded-lg overflow-hidden ${
+          isInteractive ? "cursor-pointer" : "cursor-default"
+        }`}
       >
         <video
           data-testid="video"
-          // className="w-full   h-full absolute top-0 left-1/2 -translate-x-1/2 object-cover object-center md:block hidden"
           width="100%"
           height="1000%"
           muted={true}
@@ -159,16 +135,27 @@ const HomeProjectImage = ({
         >
           <source src={videoLink} type="video/mp4" />
         </video>
-        {campana && (
+        {isInteractive && (
+          <div
+            className="absolute inset-0 flex flex-col justify-end p-4
+   bg-gradient-to-t from-black/80 via-black/20 to-transparent
+   opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p className="text-white/80 text-xs text-center font-bold">
+              Click para ver más
+            </p>
+          </div>
+        )}
+        {/* {campana && (
           <div
             ref={campanaRef}
-            className="absolute z-100 top-2 left-2 opacity-0 -translate-y-4 bg-[#ffffff7a] backdrop-blur-lg text-black px-2 py-1 rounded-full text-sm md:text-base"
+            className="absolute z-10 top-2 left-2 opacity-0 -translate-y-4 bg-[#ffffff7a] backdrop-blur-lg text-black px-2 py-1 rounded-full text-sm md:text-base"
           >
             {campana}
           </div>
-        )}
-        {tags && tags.length > 0 && (
-          <div className="absolute z-100 flex gap-3 w-auto bottom-2 left-2">
+        )} */}
+        {/* {tags && tags.length > 0 && (
+          <div className="absolute z-10 flex gap-3 w-auto bottom-2 left-2">
             {tags.map((tag, i) => (
               <p
                 ref={(el) => {
@@ -181,13 +168,11 @@ const HomeProjectImage = ({
               </p>
             ))}
           </div>
-        )}
+        )} */}
       </div>
     );
-  //     normal: " aspect-square",
-  // half: "col-span-1 aspect-square",
-  // large: " aspect-[2.05]",
-  // tall: "col-span-1 row-span-2 "
+
+  return null;
 };
 
 export default HomeProjectImage;
