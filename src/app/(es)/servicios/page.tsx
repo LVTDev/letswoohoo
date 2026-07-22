@@ -28,6 +28,11 @@ const page = () => {
           {" "}
           AUDIOVISUAL
         </p>
+        <p className="my-3">
+          Contar historias, provocar, emocionar, ser parte de la cultura y
+          contexto. Los formatos cambian, pero si tienes el cine en tu ADN… el
+          toque solo evoluciona.
+        </p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             2D/3D
@@ -65,6 +70,11 @@ const page = () => {
         <p className=" text-4xl font-extrabold tracking-widest uppercase">
           CREATIVIDAD
         </p>
+        <p className="my-3">
+          Ver al mundo considerando todas las posibilidades, las más
+          inesperadas. Convirtiendo a una marca en una experiencia…en una
+          conversación en un día cualquiera.
+        </p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Campañas publicitarias
@@ -87,6 +97,10 @@ const page = () => {
       <div className="border-b border-gray mb-7 pb-4">
         <p className=" text-4xl font-extrabold tracking-widest uppercase">
           DIGITAL
+        </p>{" "}
+        <p className="my-3">
+          Competir con millones de posibilidades en segundos de scrolleo y que
+          tengas el like…o mejor aún, crear comunidad.
         </p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
@@ -117,6 +131,11 @@ const page = () => {
           </div>{" "} */}
           <h2>EXPERIENCIAS</h2>
         </div>
+        <p className="my-3">
+          Vivir una marca y así recordarla. Y es que cuando una activación se
+          convierte en una experiencia, se comparte, se vuelve parte de la
+          memoria.
+        </p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             BTL
@@ -147,6 +166,10 @@ const page = () => {
           </div>{" "} */}
           <h2>MEDIOS</h2>
         </div>
+        <p className="my-3">
+          El momento, el mensaje, la audiencia correctos. Así tu historia
+          realmente permea en las emociones de tu target
+        </p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Estrategia de Medios
@@ -170,6 +193,11 @@ const page = () => {
           </div>{" "} */}
           <h2>MERCADOTECNIA</h2>
         </div>
+        <p className="my-3">
+          Nada es al azar. Nos infiltramos en el mercado y así cada estrategia,
+          campaña o decisión, logra un resultado: que la audiencia construya una
+          relación con tu marca.
+        </p>
         <div className="flex gap-3 my-7 flex-wrap">
           <p className="py-1 border rounded-2xl px-4 mb-1 w-max font-medium">
             Campañas
