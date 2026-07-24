@@ -6,10 +6,10 @@ import Link from "next/link";
 
 
 const items = [
-  { label: "Clients", id: "firstSection", link: "/clients", labelEs: "Clientes", linkEs: "/clientes"  },
   { label: "Services", id: "secondSection", link: "/services", labelEs: "Servicios", linkEs: "/servicios" },
-  { label: "Our Team", id: "thirdSection", link: "/team",  labelEs: "Equipo", linkEs: "/equipo" },
+  { label: "Clients", id: "firstSection", link: "/clients", labelEs: "Clientes", linkEs: "/clientes"  },
   { label: "About Us", id: "fourthSection", link: "/nosotros", labelEs: "Nosotros", linkEs: "/nosotros" },
+  { label: "Our Team", id: "thirdSection", link: "/team",  labelEs: "Equipo", linkEs: "/equipo" },
   { label: "Contact", id: "fifthSection", link: "/letsTalk",  labelEs: "Contacto", linkEs: "/contacto" },
   // { label: "AudioVisual", id: "sixthSection", link: "https://barracaproducciones.mx/",labelEs: "AudioVisual", linkEs: "https://barracaproducciones.mx/" },
 ];

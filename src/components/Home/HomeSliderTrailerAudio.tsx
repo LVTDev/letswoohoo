@@ -95,7 +95,7 @@ const HomeSliderTrailerAudio = () => {
         <TrailerSlideAudio
           urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA4.mp4"
           src={
-            "https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA1.mp4"
+            "https://o5qiahlghji2exja.public.blob.vercel-storage.com/2banner.mov"
           }
           swiperRef={swiperRef}
           videoRef={videoRef}

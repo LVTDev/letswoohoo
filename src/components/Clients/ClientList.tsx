@@ -8,7 +8,7 @@ type Client = {
   id: number;
   popupContent?: React.JSX.Element;
 };
-const ClientList = () => {
+const ClientList = ({numberToRender}:{numberToRender?: number}) => {
   const [selectedClient, setSelectedClient] = useState<null | Client>(null);
 
   const handleClose = () => setSelectedClient(null);
@@ -16,7 +16,9 @@ const ClientList = () => {
   return (
     <div className="w-[90vw] mx-auto font-albert">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-        {listOfClients.map((client) => (
+        {listOfClients.map((client, i) => {
+          if(numberToRender && i >= numberToRender) return
+          return (
           // <button
           //   key={client.id}
           //   type="button"
@@ -62,7 +64,7 @@ const ClientList = () => {
               </div>
             )}
           </button>
-        ))}
+        )})}
       </div>
 
       {selectedClient && (
