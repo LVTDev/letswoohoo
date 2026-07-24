@@ -14,7 +14,7 @@ export default function GradientButton({ children, className = "", ...props }: G
       className={`
         py-2 px-4 rounded-full uppercase font-bold
         inline-flex items-center justify-center
-         text-base 
+        text-xs md:text-base 
         cursor-pointer no-underline
         text-black
         hover:text-white

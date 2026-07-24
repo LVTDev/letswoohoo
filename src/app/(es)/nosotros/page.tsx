@@ -31,7 +31,7 @@ const page = () => {
            
         </p>
       </div>
-      <div className="grid gap-3 my-4 grid-cols-3 items-center justify-center">
+      <div className="grid gap-3 my-4 grid-cols-2 lg:grid-cols-3 items-center justify-center">
         <GradientButton href={"/servicios"}>Audiovisual</GradientButton>
         <GradientButton href={"/servicios"}>Creatividad</GradientButton>
         <GradientButton href={"/servicios"}>Digital</GradientButton>
@@ -46,12 +46,12 @@ const page = () => {
 
       <h3 className="mb-4 font-extrabold uppeercase text-3xl">Noticias</h3>
 
-      <div className="gap-3 lg:flex">
+      <div className="gap-3 flex flex-col lg:flex-row mb-4 md:mb-0">
         <Link
           href={"/blog/marketing-women"}
-          className="flex gap-7 mb-10 lg:mb-0"
+          className="md:flex gap-7  lg:mb-0 pb-8"
         >
-          <div className="relative w-[200px] h-[200px]">
+          <div className="relative mb-4 md:mb-0 w-[200px] h-[200px]">
             <Image
               alt="Entrevista Dennise Chapa Imagen"
               src={
@@ -60,7 +60,7 @@ const page = () => {
               fill
             />
           </div>
-          <div className="w-1/2 ">
+          <div className="md:w-1/2 ">
             <p className="bg-black text-white uppercase text-center py-2 px-4 rounded-xl w-max font-bold">
               Marketing Women
             </p>
@@ -74,8 +74,8 @@ const page = () => {
             </ul>
           </div>
         </Link>
-        <Link href={"/blog/titanesDeAltura"} className="flex gap-7">
-          <div className="relative w-[200px] h-[200px]">
+        <Link href={"/blog/titanesDeAltura"} className="md:flex gap-7 pt-5 mb-10 lg:mb-0">
+          <div className="relative mb-4 md:mb-0 w-[200px] h-[200px]">
             <Image
               alt="Entrevista Dennise Chapa Imagen"
               src={
@@ -84,7 +84,7 @@ const page = () => {
               fill
             />
           </div>
-          <div className="w-1/2 ">
+          <div className="md:w-1/2 ">
             <p className="bg-black text-white uppercase text-center py-2 px-4 rounded-xl w-max font-bold">
               Titanes de Altura 2026
             </p>
