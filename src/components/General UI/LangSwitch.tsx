@@ -12,6 +12,7 @@ const LangSwitch = ({lang}:{lang:string}) => {
     "/services": "/servicios",
     "/letsTalk": "/contacto",
     "/team": "/equipo",
+    // "/about-us": "/nosotros",
     "/our-culture": "/cultura",
     "/our-culture/posada": "/cultura/posada",
     "/our-culture/cancerMama": "/cultura/cancerMama",
