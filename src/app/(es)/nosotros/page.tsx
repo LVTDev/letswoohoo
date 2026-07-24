@@ -12,7 +12,7 @@ const page = () => {
   return (
     <div className="w-3/4 mx-auto font-albert">
       <h1 className="hidden ">Our Culture</h1>
-      <div className="pt-6 md:pt-10 md:text-lg">
+      <div className="pt-6 md:pt-10 text-justify md:text-2xl lg:w-3/4">
         <p>
           Somos WOOHOO.{" "}
           <span className="bg-gradient-to-r from-[#EE340C]  to-[#CA1261] bg-clip-text text-transparent font-bold">
@@ -26,7 +26,7 @@ const page = () => {
           Nos movemos entre eventos, digital, audiovisual, data, estrategia,
           audiovisual, medios, creatividad y btl{" "}
           <span className="bg-gradient-to-r from-[#EE340C]  to-[#CA1261] bg-clip-text text-transparent font-bold">
-            para inspirar y emocionar, porque aquí, creamos experiencias.
+           <br /> para inspirar y emocionar, porque aquí, creamos experiencias.
           </span>{" "}
            
         </p>
@@ -40,7 +40,7 @@ const page = () => {
         <GradientButton href={"/servicios"}>Mercadotecnia</GradientButton>
         {/* <Link className="border rounder py-1 px-3 uppercase font-bold rounded-full w-max"></Link> */}
       </div>
-      <p className="text-lg text-center my-8">
+      <p className="text-lg lg:text-3xl font-bold text-center my-8">
         Si recuerdas cómo te hizo sentir, fue una buena historia. 
       </p>
 
@@ -69,7 +69,7 @@ const page = () => {
               necesidades del cliente y al mismo tiempo alinearlas con nuestra
               filosofia de trabajo y creatividad&quot;
             </p>
-            <ul className="list-disc text-sm">
+            <ul className=" text-sm">
               <li>Denisse Chapa, CEO en WOOHOO</li>
             </ul>
           </div>
@@ -92,7 +92,7 @@ const page = () => {
               &quot;Ante cualquier crisis, limitacion o cambio de reglas en el
               juego, elimina las quejas.&quot;
             </p>
-            <ul className="list-disc text-sm">
+            <ul className=" text-sm">
               <li>Denisse Chapa, CEO en WOOHOO</li>
             </ul>
           </div>
