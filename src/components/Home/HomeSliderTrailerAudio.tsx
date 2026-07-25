@@ -93,7 +93,7 @@ const HomeSliderTrailerAudio = () => {
       // }}
       >
         <TrailerSlideAudio
-          urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/TELEFERICO%20V6_BAJA4.mp4"
+          urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/BANNER%20WOHOO%20%20VERTICAL.mov"
           src={
             "https://o5qiahlghji2exja.public.blob.vercel-storage.com/2banner.mov"
           }
