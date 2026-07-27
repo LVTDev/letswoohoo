@@ -7,7 +7,7 @@ const LangSwitch = ({lang}:{lang:string}) => {
   const pathname = usePathname();
   console.log(pathname);
   const links = {
-    "/": "/inicio",
+    "/home": "/",
     "/clients": "/clientes",
     "/services": "/servicios",
     "/letsTalk": "/contacto",
