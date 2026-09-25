@@ -24,7 +24,7 @@ const page = () => {
         </p>
         <p className="mt-4 mb-8">
           Nos movemos entre eventos, digital, audiovisual, data, estrategia,
-          audiovisual, medios, creatividad y btl{" "}
+         medios, creatividad y btl{" "}
           <span className="bg-gradient-to-r from-[#EE340C]  to-[#CA1261] bg-clip-text text-transparent font-bold">
             <br /> para inspirar y emocionar, porque aquí, creamos experiencias.
           </span>{" "}
