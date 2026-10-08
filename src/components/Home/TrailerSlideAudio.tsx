@@ -1,75 +1,51 @@
 "use client";
-import React from "react";
-import { Swiper as SwiperType } from "swiper";
+import React, { useEffect, useState } from "react";
 
 interface VideoSlideProps {
   src: string;
-  swiperRef: React.RefObject<SwiperType | null>;
   videoRef: React.RefObject<HTMLVideoElement | null>;
-  mobileRef: React.RefObject<HTMLVideoElement | null>;
   urlVertical?: string;
 }
 
-const TrailerSlideAudio = ({
-  src,
-  videoRef,
-  urlVertical,
-  mobileRef
-}: VideoSlideProps) => {
+function useIsMobile(breakpoint = 768) {
+  // undefined until mounted, to avoid hydration mismatch
+  const [isMobile, setIsMobile] = useState<boolean | undefined>(undefined);
+
+  useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+
+const TrailerSlideAudio = ({ src, urlVertical, videoRef }: VideoSlideProps) => {
+  const isMobile = useIsMobile();
+
+  // Don't render anything until we know which source to use
+  if (urlVertical && isMobile === undefined) {
+    return <div className="relative min-h-screen" />;
+  }
+
+  const activeSrc = urlVertical && isMobile ? urlVertical : src;
 
   return (
-    <div
-      className="relative min-h-screen"
-     
-    >
-      {urlVertical ? (
-        <>
-          <video
-            ref={mobileRef}
-            data-testid="video"
-            className="w-full h-[85vh] md:hidden block absolute top-0 left-1/2 -translate-x-1/2 object-cover object-center"
-            width="100%"
-            height="100%"
-            muted
-            autoPlay
-            controls
-            loop
-            playsInline
-          >
-            <source  media="(max-width: 767px)" src={urlVertical} type="video/mp4" />
-          </video>
-          <video
-            ref={videoRef}
-
-            data-testid="video"
-            className="w-full h-[85vh] hidden md:block absolute top-0 left-1/2 -translate-x-1/2 object-cover object-center"
-            width="100%"
-            height="100%"
-            muted
-            autoPlay
-            controls
-            loop
-            playsInline
-          >
-            <source  media="(min-width: 768px)" src={src} type="video/mp4" />
-          </video>
-        </>
-      ) : (
-        <video
-          ref={videoRef}
-          data-testid="video"
-          className="w-full h-full  absolute top-0 left-1/2 -translate-x-1/2 object-cover object-center"
-          width="100%"
-          height="100%"
-          muted
-          autoPlay
-          controls
-          loop
-          playsInline
-        >
-          <source src={src} type="video/mp4" />
-        </video>
-      )}
+    <div className="relative min-h-screen">
+      <video
+        key={activeSrc} // remount when source changes (e.g. rotate/resize)
+        ref={videoRef}
+        data-testid="video"
+        className="absolute top-0 left-1/2 h-[85vh] w-full -translate-x-1/2 object-cover object-center"
+        src={activeSrc}
+        muted
+        autoPlay
+        controls
+        loop
+        playsInline
+      />
     </div>
   );
 };

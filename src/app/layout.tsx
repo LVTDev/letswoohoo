@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
+// eslint-disable-next-line 
+// @ts-expect-error
+// importcss
 import "./globals.css";
 import LetsTalkButton from "@/components/General UI/LetsTalkButton";
 import Footer from "@/components/General UI/Footer";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
-import { PostHogProvider } from "@/components/PostHogProvider";
+// import { PostHogProvider } from "@/components/PostHogProvider";
 import { Suspense } from "react";
 
 const albert = Albert_Sans({
@@ -54,14 +57,16 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
+        
+        {/* vercel analytics */}
         <Analytics />
 
         <Suspense>
-          <PostHogProvider>
+          {/* <PostHogProvider> */}
             <LetsTalkButton />
             <div>{children}</div>
             <Footer />
-          </PostHogProvider>
+          {/* </PostHogProvider> */}
         </Suspense>
       </body>
     </html>

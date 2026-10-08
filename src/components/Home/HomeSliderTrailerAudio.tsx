@@ -97,9 +97,9 @@ const HomeSliderTrailerAudio = () => {
           src={
             "https://o5qiahlghji2exja.public.blob.vercel-storage.com/2banner.mov"
           }
-          swiperRef={swiperRef}
+          // swiperRef={swiperRef}
           videoRef={videoRef}
-          mobileRef={mobileRef}
+          // mobileRef={mobileRef}
         />
       </SwiperSlide>
     </Swiper>
