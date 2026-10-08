@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
-// eslint-disable-next-line 
-// @ts-expect-error
-// importcss
 import "./globals.css";
 import LetsTalkButton from "@/components/General UI/LetsTalkButton";
 import Footer from "@/components/General UI/Footer";
