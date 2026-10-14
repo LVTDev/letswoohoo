@@ -1,5 +1,5 @@
 // import HomeVideoReel from "@/components/General UI/HomeVideoReel";
-'use client'
+"use client";
 import ClientList from "@/components/Clients/ClientList";
 import NoticiasDisplay from "@/components/Clients/NoticiasDisplay";
 import ServicesList from "@/components/Clients/ServicesList";
@@ -28,12 +28,14 @@ export default function Inicio() {
 
       <HomeSliderTrailerAudio />
 
-      <div className="w-3/4 mx-auto my-10">
+      <div className="w-3/4 mx-auto my-14">
         <ServicesList />
       </div>
+      {/* 
       <p className="text-lg lg:text-3xl font-bold text-center my-8 bg-gradient-to-r from-[#EE340C]  to-[#CA1261] bg-clip-text text-transparent ">
         Si recuerdas cómo te hizo sentir, fue una buena historia. 
       </p>
+        */}
       <ClientList numberToRender={8} />
       <div className="my-10 w-4/5 mx-auto">
         <NoticiasDisplay />
@@ -41,7 +43,7 @@ export default function Inicio() {
       {/* <HomeProjects /> */}
       {/* <HomeProjectsMobile /> */}
 
-       <div className="mt-10 pt-8 ">
+      <div className="mt-10 pt-8 ">
         <h2 className="text-3xl text-center font-extrabold mb-8 bg-gradient-to-r from-[#F38605]  to-[#EF240D] bg-clip-text text-transparent ">
           LET&apos;S WOOHOO
         </h2>
