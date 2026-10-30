@@ -87,18 +87,12 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
   };
   return (
     <div className="md:w-3/4" id="contactanos">
-      <div className="font-bold text-4xl tracking-widest uppercase mb-6">
+      <div className="font-extralight text-4xl tracking-widest uppercase mb-6">
         {" "}
-        {lang === "en" ? (
-          <p>
-            {"let's"}
-            <br /> talk
-          </p>
-        ) : (
-          <p>
-            hablar <br /> a nosotors
-          </p>
-        )}
+        <p>
+          {"let's"}
+          <br /> talk
+        </p>
       </div>
 
       {!formSubmitValid && (
@@ -118,7 +112,7 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
                 type="text"
                 name="name"
                 id="name"
-                className="border border-black placeholder-black text-black rounded-full bg-transparent w-full px-2 py-2 "
+                className=" placeholder-gray-600 text-black  bg-white w-full px-2 py-2 "
                 value={name}
                 onBlur={() => setTouched((prev) => ({ ...prev, name: true }))}
                 onChange={(e) => setName(e.target.value)}
@@ -134,7 +128,7 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
                 name="email"
                 onBlur={() => setTouched((prev) => ({ ...prev, email: true }))}
                 id="email"
-                className="border border-black placeholder-black text-black rounded-full bg-transparent w-full px-2 py-2 "
+                className=" placeholder-gray-600 text-black  bg-white w-full px-2 py-2 "
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -147,7 +141,7 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
                 placeholder={lang === "en" ? "Telephone" : "Teléfono"}
                 type="tel"
                 id="phone"
-                className="border border-black placeholder-black text-black rounded-full bg-transparent w-full px-2 py-2"
+                className=" placeholder-gray-600 text-black  bg-white w-full px-2 py-2"
                 value={phone}
                 onBlur={() => setTouched((prev) => ({ ...prev, phone: true }))}
                 onChange={(e) => setPhone(e.target.value)}
@@ -165,7 +159,7 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
                     ? "Tell us what your company needs"
                     : "Cuéntanos qué necesita tu empresa."
                 }
-                className="border border-black placeholder-black text-black rounded-xl bg-transparent w-full px-2 py-2 "
+                className=" placeholder-gray-600 text-black bg-white w-full px-2 py-2 "
                 rows={4}
                 value={userNeeds}
                 onBlur={() =>

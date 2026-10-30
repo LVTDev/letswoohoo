@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Albert_Sans } from "next/font/google";
+// import { Albert_Sans } from "next/font/google";
 import "./globals.css";
 import LetsTalkButton from "@/components/General UI/LetsTalkButton";
 import Footer from "@/components/General UI/Footer";
@@ -7,10 +7,33 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 // import { PostHogProvider } from "@/components/PostHogProvider";
 import { Suspense } from "react";
+import localFont from "next/font/local";
 
-const albert = Albert_Sans({
-  variable: "--font-albert",
-  subsets: ["latin"],
+// const albert = Albert_Sans({
+//   variable: "--font-albert",
+//   subsets: ["latin"],
+// });
+const gilroy = localFont({
+  src: [
+    {
+      path: "../fonts/Gilroy-Bold.ttf",
+      weight: "600",
+    },
+    {
+      path: "../fonts/Gilroy-ExtraBold.otf",
+      weight: "800",
+    },
+    {
+      path: "../fonts/Gilroy-Light.otf",
+      weight: "200",
+    },
+    {
+      path: "../fonts/Gilroy-Regular.ttf",
+      weight: "400",
+    },
+
+  ],
+  variable: "--font-gilroy",
 });
 
 export const metadata: Metadata = {
@@ -35,7 +58,7 @@ export default function RootLayout({
         `}
         </Script>
 
-        {/* <Script id="clarity_tracking">
+        <Script id="clarity_tracking">
           {`
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -43,9 +66,9 @@ export default function RootLayout({
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wm2rrgkhtf");
 `}
-        </Script> */}
+        </Script> 
       </head>
-      <body className={` ${albert.variable} antialiased`}>
+      <body className={` ${gilroy.variable} antialiased`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-K275LP93"
@@ -54,15 +77,15 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-        
+
         {/* vercel analytics */}
         <Analytics />
 
         <Suspense>
           {/* <PostHogProvider> */}
-            <LetsTalkButton />
-            <div>{children}</div>
-            <Footer />
+          <LetsTalkButton />
+          <div>{children}</div>
+          <Footer />
           {/* </PostHogProvider> */}
         </Suspense>
       </body>
