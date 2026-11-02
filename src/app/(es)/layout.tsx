@@ -1,4 +1,4 @@
-import Header from "@/components/General UI/Header";
+import SpanishLayoutChrome from "@/components/General UI/SpanishLayoutChrome";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,11 +14,5 @@ export default function ESPLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <div className="pt-16">
-      <Header lang={"es"} />
-
-      {children}
-    </div>
-  );
+  return <SpanishLayoutChrome>{children}</SpanishLayoutChrome>;
 }

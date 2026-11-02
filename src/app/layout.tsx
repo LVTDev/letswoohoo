@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
 import "./globals.css";
-import LetsTalkButton from "@/components/General UI/LetsTalkButton";
-import Footer from "@/components/General UI/Footer";
+import SiteChrome from "@/components/General UI/SiteChrome";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 // import { PostHogProvider } from "@/components/PostHogProvider";
@@ -35,7 +34,7 @@ export default function RootLayout({
         `}
         </Script>
 
-        {/* <Script id="clarity_tracking">
+        <Script id="clarity_tracking">
           {`
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -43,7 +42,7 @@ export default function RootLayout({
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wm2rrgkhtf");
 `}
-        </Script> */}
+        </Script>
       </head>
       <body className={` ${albert.variable} antialiased`}>
         <noscript>
@@ -60,9 +59,7 @@ export default function RootLayout({
 
         <Suspense>
           {/* <PostHogProvider> */}
-            <LetsTalkButton />
-            <div>{children}</div>
-            <Footer />
+             <SiteChrome>{children}</SiteChrome>
           {/* </PostHogProvider> */}
         </Suspense>
       </body>
