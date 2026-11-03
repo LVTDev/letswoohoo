@@ -1,4 +1,4 @@
-import Header from "@/components/General UI/Header";
+import EnglishLayoutChrome from "@/components/General UI/EnglishLayoutChrome";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,11 +16,5 @@ export default function ENGLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <div className="pt-16">
-      <Header lang={"en"} />
-
-      {children}
-    </div>
-  );
+  return <EnglishLayoutChrome>{children}</EnglishLayoutChrome>;
 }

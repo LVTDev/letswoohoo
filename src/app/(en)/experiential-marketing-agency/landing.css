@@ -1,0 +1,265 @@
+.btl-landing {
+  font-family: var(--font-outfit), sans-serif;
+  line-height: normal;
+  --btl-gradient: linear-gradient(90deg, #bd35a4, #ff1229 50%, #ffba03);
+  --btl-card-gradient: linear-gradient(160deg, #bd35a4, #ff1229 55%, #ffba03);
+}
+
+.btl-landing .btl-gradient-text {
+  background: var(--btl-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btl-landing :is(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid #bd35a4;
+  outline-offset: 5px;
+}
+
+.btl-landing :is(section, main)[id] {
+  scroll-margin-top: 24px;
+}
+
+.btl-landing.btl-motion-ready .btl-reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.btl-landing .btl-reveal {
+  transition: opacity 400ms cubic-bezier(.2, .7, .2, 1), transform 400ms cubic-bezier(.2, .7, .2, 1);
+}
+
+@media (min-width: 68.75rem) {
+  .btl-landing .btl-process-step:nth-child(2) { transition-delay: 60ms; }
+  .btl-landing .btl-process-step:nth-child(3) { transition-delay: 120ms; }
+  .btl-landing .btl-process-step:nth-child(4) { transition-delay: 180ms; }
+  .btl-landing .btl-process-step:nth-child(5) { transition-delay: 240ms; }
+}
+
+.btl-landing .btl-mobile-menu:not([hidden]) {
+  animation: btl-menu-in 180ms ease-out both;
+  transform-origin: top right;
+}
+
+@keyframes btl-menu-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Matching groups include their trailing gap so each loop joins seamlessly. */
+.btl-landing .btl-service-marquee {
+  margin: 8px -24px 0;
+  overflow: hidden;
+  padding-block: 14px;
+  background: var(--btl-gradient);
+  transform: rotate(-1.5deg);
+}
+
+.btl-landing .btl-service-track,
+.btl-landing .btl-client-track {
+  display: flex;
+  width: max-content;
+  animation: btl-marquee-scroll 40s linear infinite;
+}
+
+.btl-landing .btl-service-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100vw;
+}
+
+.btl-landing .btl-service-item {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 24px;
+  padding-right: 24px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.btl-landing .btl-service-separator {
+  letter-spacing: 0;
+}
+
+.btl-landing .btl-clients {
+  overflow: hidden;
+  padding-block: 64px;
+}
+
+.btl-landing .btl-clients-heading {
+  margin-bottom: 32px;
+}
+
+.btl-landing .btl-client-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btl-landing .btl-client-track {
+  animation-duration: 64s;
+}
+
+.btl-landing .btl-client-track-reverse {
+  animation-direction: reverse;
+}
+
+.btl-landing .btl-client-group {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-around;
+  gap: 10px;
+  min-width: 100vw;
+  padding-right: 10px;
+}
+
+.btl-landing .btl-client-pill {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 148px;
+  height: 64px;
+  border: 1px solid rgb(255 255 255 / 24%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 8%);
+}
+
+.btl-landing .btl-client-logo {
+  position: relative;
+  width: 100px;
+  height: 34px;
+}
+
+@keyframes btl-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (min-width: 48rem) {
+  .btl-landing .btl-service-marquee { padding-block: 16px; }
+  .btl-landing .btl-service-item { gap: 32px; padding-right: 32px; font-size: 16px; letter-spacing: .32em; }
+  .btl-landing .btl-clients { padding-block: 80px; }
+  .btl-landing .btl-clients-heading { margin-bottom: 36px; }
+  .btl-landing .btl-client-pill { width: 184px; height: 80px; }
+  .btl-landing .btl-client-logo { width: 120px; height: 40px; }
+}
+
+@media (min-width: 68.75rem) {
+  .btl-landing .btl-service-marquee { margin-top: 10px; padding-block: 18px; }
+  .btl-landing .btl-service-item { gap: 40px; padding-right: 40px; font-size: 22px; letter-spacing: .38em; }
+  .btl-landing .btl-clients { padding-block: 96px; }
+  .btl-landing .btl-clients-heading { margin-bottom: 40px; }
+  .btl-landing .btl-client-rows { gap: 12px; }
+  .btl-landing .btl-client-group { gap: 12px; padding-right: 12px; }
+  .btl-landing .btl-client-pill { width: 208px; height: 88px; }
+  .btl-landing .btl-client-logo { width: 132px; height: 44px; }
+}
+
+.btl-landing .btl-input {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 0;
+  border: 0;
+  border-bottom: 1.5px solid #bdbdbd;
+  border-radius: 0;
+  background: transparent;
+  font: 400 17px/1.3 var(--font-outfit), sans-serif;
+  color: #141414;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.btl-landing .btl-input:focus {
+  border-bottom-color: #bd35a4;
+}
+
+.btl-landing .btl-input::placeholder {
+  color: #757575;
+  opacity: 1;
+}
+
+/* Keep the approved type scale at 390px, while fitting smaller phones. */
+.btl-landing .btl-hero-title { font-size: clamp(40px, 12.82vw, 50px); }
+.btl-landing .btl-claim { font-size: clamp(36px, 11.8vw, 46px); }
+.btl-landing .btl-quote-title { font-size: clamp(34px, 11.8vw, 46px); }
+.btl-landing .btl-thanks-title { font-size: clamp(40px, 13.33vw, 52px); }
+
+@media (min-width: 48rem) {
+  .btl-landing .btl-hero-title { font-size: clamp(74px, 10.55vw, 100px); }
+  .btl-landing .btl-claim { font-size: clamp(68px, 10.07vw, 100px); }
+  .btl-landing .btl-quote-title { font-size: clamp(48px, 7.67vw, 64px); }
+  .btl-landing .btl-thanks-title { font-size: clamp(80px, 11.51vw, 112px); }
+  .btl-landing .btl-input { padding: 16px 0; }
+}
+
+@media (48rem <= width < 68.75rem) {
+  .btl-landing .btl-hero-details {
+    border-top: 0;
+    padding-top: 56px;
+  }
+
+  .btl-landing .btl-hero-details::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -352px;
+    height: 1px;
+    background: rgb(255 255 255 / 18%);
+  }
+}
+
+@media (min-width: 68.75rem) {
+  .btl-landing .btl-hero-title { font-size: clamp(80px, 8.4vw, 124px); }
+  .btl-landing .btl-claim { font-size: clamp(88px, 8vw, 124px); }
+  .btl-landing .btl-quote-title { font-size: clamp(52px, 5.6vw, 80px); }
+  .btl-landing .btl-thanks-title { font-size: clamp(100px, 9vw, 140px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btl-landing *, .btl-landing *::before, .btl-landing *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .btl-landing .btl-reveal,
+  .btl-landing.btl-motion-ready .btl-reveal:not(.is-visible) {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .btl-landing .btl-process-step {
+    transition-delay: 0ms !important;
+  }
+
+  .btl-landing .btl-service-marquee { transform: none; }
+  .btl-landing .btl-service-track,
+  .btl-landing .btl-client-track { width: 100%; }
+  .btl-landing .btl-service-group,
+  .btl-landing .btl-client-group {
+    min-width: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding-inline: 20px;
+  }
+  .btl-landing .btl-service-item { padding-right: 0; }
+  .btl-landing .btl-service-group + .btl-service-group,
+  .btl-landing .btl-client-group + .btl-client-group,
+  .btl-landing .btl-client-pill:nth-child(n + 6) { display: none; }
+
+  .btl-landing :is(a, button):is(:hover, :focus-visible) {
+    transform: none !important;
+  }
+}

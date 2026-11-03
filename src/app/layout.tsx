@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
 import "./globals.css";
-import LetsTalkButton from "@/components/General UI/LetsTalkButton";
-import Footer from "@/components/General UI/Footer";
+import SiteChrome from "@/components/General UI/SiteChrome";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 // import { PostHogProvider } from "@/components/PostHogProvider";
@@ -60,9 +59,7 @@ export default function RootLayout({
 
         <Suspense>
           {/* <PostHogProvider> */}
-            <LetsTalkButton />
-            <div>{children}</div>
-            <Footer />
+             <SiteChrome>{children}</SiteChrome>
           {/* </PostHogProvider> */}
         </Suspense>
       </body>
