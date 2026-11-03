@@ -17,7 +17,7 @@ NEXT_PUBLIC_NODEMAILER_EMAIL
 We initially had a setup of saving data to Sanity CMS but the sizes of the videos and the fact that we reached bandwith limit made a move of some of the heavy videos to vercel blob.
 
 ## Experiential marketing / BTL landing
- 
+
 - Landing: `/experiential-marketing`
 - Confirmation: `/experiential-marketing/thank-you`
 - Partial-service CTA: `/experiential-marketing?service=partial#quote`

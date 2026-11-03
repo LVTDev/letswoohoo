@@ -31,7 +31,7 @@ export default function Inicio() {
       <div className="w-3/4 mx-auto my-14">
         <ServicesList />
       </div>
-      {/* 
+      {/*
       <p className="text-lg lg:text-3xl font-bold text-center my-8 bg-gradient-to-r from-[#EE340C]  to-[#CA1261] bg-clip-text text-transparent ">
         Si recuerdas cómo te hizo sentir, fue una buena historia. 
       </p>

@@ -34,6 +34,14 @@ export default function QuoteForm({ locale = "en" }: { locale?: "en" | "es" }) {
     const email = String(fields.get("email") ?? "").trim();
     const phone = String(fields.get("phone") ?? "").trim();
     const message = String(fields.get("message") ?? "").trim();
+    const eventMonth = String(fields.get("date") ?? "").trim();
+    const eventDate = eventMonth
+      ? new Intl.DateTimeFormat(isSpanish ? "es-MX" : "en-US", {
+          month: "long",
+          year: "numeric",
+          timeZone: "UTC",
+        }).format(new Date(`${eventMonth}-01T00:00:00Z`))
+      : isSpanish ? "No especificada" : "Not provided";
 
     for (const [field, valid, error] of [
       ["name", Boolean(name), isSpanish ? "Escribe tu nombre completo." : "Please enter your full name."],
@@ -62,7 +70,7 @@ export default function QuoteForm({ locale = "en" }: { locale?: "en" | "es" }) {
             isSpanish ? "Solicitud de cotización de marketing experiencial / BTL" : "Experiential marketing / BTL quote request",
             `${isSpanish ? "Empresa" : "Company"}: ${String(fields.get("company") ?? "").trim() || (isSpanish ? "No especificada" : "Not provided")}`,
             `${isSpanish ? "Servicio" : "Service"}: ${fields.get("service")}`,
-            `${isSpanish ? "Fecha del evento" : "Event date"}: ${String(fields.get("date") ?? "").trim() || (isSpanish ? "No especificada" : "Not provided")}`,
+            `${isSpanish ? "Fecha del evento" : "Event date"}: ${eventDate}`,
             "",
             message,
           ].join("\n"),
@@ -102,7 +110,7 @@ export default function QuoteForm({ locale = "en" }: { locale?: "en" | "es" }) {
         </select>
       </label>
       <label htmlFor="date" className={labelClassName}>{isSpanish ? "Fecha aproximada del evento" : "Event date (approx.)"}
-        <input className="btl-input" id="date" type="date" name="date" />
+        <input className="btl-input" id="date" type="month" name="date" inputMode="numeric" pattern="[0-9]{4}-(0[1-9]|1[0-2])" placeholder={isSpanish ? "AAAA-MM" : "YYYY-MM"} maxLength={7} />
       </label>
       <label className={`${labelClassName} col-span-full`}>{isSpanish ? "Cuéntanos qué quieres lograr" : "Tell us what you want to achieve"}<span className="sr-only"> ({isSpanish ? "obligatorio" : "required"})</span>
         <textarea className="btl-input resize-y" name="message" rows={3} placeholder={isSpanish ? "Objetivo, ubicación, audiencia, presupuesto…" : "Goal, location, audience, budget range…"} required maxLength={5000} />
