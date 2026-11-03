@@ -101,8 +101,8 @@ export default function QuoteForm({ locale = "en" }: { locale?: "en" | "es" }) {
           <option>{partialServiceOption}</option>
         </select>
       </label>
-      <label className={labelClassName}>{isSpanish ? "Fecha aproximada del evento" : "Event date (approx.)"}
-        <input className="btl-input" type="text" name="date" placeholder={isSpanish ? "MM / AAAA" : "MM / YYYY"} maxLength={100} />
+      <label htmlFor="date" className={labelClassName}>{isSpanish ? "Fecha aproximada del evento" : "Event date (approx.)"}
+        <input className="btl-input" id="date" type="date" name="date" />
       </label>
       <label className={`${labelClassName} col-span-full`}>{isSpanish ? "Cuéntanos qué quieres lograr" : "Tell us what you want to achieve"}<span className="sr-only"> ({isSpanish ? "obligatorio" : "required"})</span>
         <textarea className="btl-input resize-y" name="message" rows={3} placeholder={isSpanish ? "Objetivo, ubicación, audiencia, presupuesto…" : "Goal, location, audience, budget range…"} required maxLength={5000} />
