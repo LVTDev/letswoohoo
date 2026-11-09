@@ -15,7 +15,7 @@ const page = () => {
       <div className="pt-6 md:pt-10 text-justify md:text-2xl lg:w-3/4">
         <p>
           Somos WOOHOO.{" "}
-          <span className="bg-gradient-to-r from-[#EE340C]  to-[#CA1261] bg-clip-text text-transparent font-bold">
+          <span className="bg-gradient-to-r from-[#EE340C] via-[#DE1F42] to-[#CA1261] bg-clip-text text-transparent font-bold">
             Contamos historias,
           </span>{" "}
           venimos del cine, vivimos entre escenarios, festivales y proyectos
@@ -25,7 +25,7 @@ const page = () => {
         <p className="mt-4 mb-8">
           Nos movemos entre eventos, digital, audiovisual, data, estrategia,
          medios, creatividad y btl{" "}
-          <span className="bg-gradient-to-r from-[#EE340C]  to-[#CA1261] bg-clip-text text-transparent font-bold">
+          <span className="bg-gradient-to-r from-[#EE340C] via-[#DE1F42] to-[#CA1261] bg-clip-text text-transparent font-bold">
             <br /> para inspirar y emocionar, porque aquí, creamos experiencias.
           </span>{" "}
            

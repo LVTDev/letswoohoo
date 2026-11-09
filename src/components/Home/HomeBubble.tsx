@@ -27,10 +27,11 @@ export default function HomeBubble({
 }) {
   const uid = useId().replace(/:/g, "");
   const ref = useRef(null);
-  const id = (n) => `${n}-${uid}`;
+  const id = (n:string) => `${n}-${uid}`;
  
   useEffect(() => {
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
+      //@ts-expect-error not needed to esc error
       ref.current?.pauseAnimations?.();
     }
   }, []);
