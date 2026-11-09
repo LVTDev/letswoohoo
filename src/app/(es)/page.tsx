@@ -2,7 +2,7 @@
 "use client";
 import HorizontalInfoSection from "@/components/General UI/HorizontalInfoSection";
 import Alliances from "@/components/Home/Alliances";
-import HomeBubble from "@/components/Home/HomeBubble";
+// import HomeBubble from "@/components/Home/HomeBubble";
 import HomeContact from "@/components/Home/HomeContact";
 // import ClientList from "@/components/Clients/ClientList";
 // import NoticiasDisplay from "@/components/Clients/NoticiasDisplay";
@@ -10,12 +10,12 @@ import HomeContact from "@/components/Home/HomeContact";
 // import CalendlyForm from "@/components/General UI/CalendlyForm";
 // import HomeSlider from "@/components/Home/HomeSlider";
 import HomeSliderTrailerAudio from "@/components/Home/HomeSliderTrailerAudio";
-import HomeText from "@/components/Home/HomeText";
+// import HomeText from "@/components/Home/HomeText";
 import HorizontalInfiniteClients from "@/components/Home/HorizontalInfiniteClients";
 import NosotrosSticky from "@/components/Home/NosotrosSticky";
 import Numeros from "@/components/Home/Numeros";
-import ProjectParallax from "@/components/Home/ProjectParallax";
-import Services from "@/components/Home/Services";
+// import ProjectParallax from "@/components/Home/ProjectParallax";
+// import Services from "@/components/Home/Services";
 // import dynamic from "next/dynamic";
 // import HomeProjectsMobile from "@/components/Home/HomeProjectsMobile";
 // const Map = dynamic(() => import("@/components/General UI/Map"), {

@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Lenis from "lenis";
 import React, { useEffect } from "react";
-import HomeBubble from "./HomeBubble";
+// import HomeBubble from "./HomeBubble";
 import Image from "next/image";
 
 const NosotrosSticky = () => {

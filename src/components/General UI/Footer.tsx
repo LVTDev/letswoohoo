@@ -1,12 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import {
-  Facebook,
-  Instagram,
-  Linkedin,
+
   Mail,
-  Phone,
-  Youtube,
+
 } from "react-feather";
 
 const Footer = () => {
