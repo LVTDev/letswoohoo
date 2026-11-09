@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
 
-const WoohooSvgWhite = ({ fill }: { fill: string }) => {
+const WoohooSvgWhite = ({ fill, className }: { fill: string; className?: string }) => {
   const dotRef = useRef<null | SVGSVGElement>(null);
   useGSAP(() => {
     gsap.to(dotRef.current, {
@@ -58,7 +58,7 @@ const WoohooSvgWhite = ({ fill }: { fill: string }) => {
       id="Capa_1"
       version="1.1"
       viewBox="0 0 500 351.5"
-      className={`overflow-visible text-$white !important scale-50`}
+      className={className ?? "overflow-visible text-$white !important scale-50"}
       ref={dotRef}
     >
       <path

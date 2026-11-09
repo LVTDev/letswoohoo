@@ -4,7 +4,7 @@ import { listOfClients } from "../Clients/ClientList";
 
 const HorizontalInfiniteClients = () => {
   return (
-    <div className="py-20 scroll relative flex w-full overflow-hidden">
+    <div className="py-20 scroll relative flex w-full overflow-hidden  bg-gradient-to-r from-[#FFBA03] via-[#FF1219] to-[#BD35A4]">
       <div className="whitespace-nowrap div">
         {listOfClients.map((image, index) => (
           <div

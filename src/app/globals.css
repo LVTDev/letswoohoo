@@ -1,5 +1,5 @@
 @import "tailwindcss";
- @import 'leaflet/dist/leaflet.css';
+@import "leaflet/dist/leaflet.css";
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,7 +19,6 @@ body {
   font-family: Gilroy;
 }
 
-
 /* SVG STYLES */
 .st0 {
   fill: #fff !important;
@@ -29,10 +28,9 @@ body {
   fill: #a501fc;
 }
 
-
 /* Style for pagination buttons */
 
-#home-trailer-slider .swiper-pagination-horizontal{
+#home-trailer-slider .swiper-pagination-horizontal {
   transform: translateY(-220%);
 }
 
@@ -62,5 +60,48 @@ body {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+/* STICKY NOSOTROS SECTION */
+.spotlight {
+  height: auto;
+  overflow: visible;
+  position: relative;
+}
+
+.spotlight-layout {
+  --pin-top: 7rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(3rem, 5vw, 6rem);
+  align-items: start;
+}
+
+.spotlight-headline {
+  position: sticky;
+  top: var(--pin-top);
+}
+
+.spotlight-track {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.spotlight-card{
+  position: sticky;
+  top: var(--pin-top);
+  transform-origin: center top;
+  height: calmp(220px, 34vh, 340px);
+  height: 20rem;
+}
+
+@media(max-width: 768px){
+  .spotlight-layout{
+    --pin-top: 5rem;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
   }
 }

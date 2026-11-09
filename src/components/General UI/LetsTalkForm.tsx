@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-const LetsTalkForm = ({ lang }: { lang: string }) => {
+const LetsTalkForm = ({ lang, isHome }: { lang: string, isHome: boolean }) => {
   type Error = {
     name: string;
     email: string;
@@ -89,9 +89,9 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
     <div className="md:w-3/4" id="contactanos">
       <div className="font-extralight text-4xl tracking-widest uppercase mb-6">
         {" "}
-        <p>
+        <p className={`text-white ${isHome && "text-center"}`} >
           {"let's"}
-          <br /> talk
+          talk
         </p>
       </div>
 
@@ -112,7 +112,7 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
                 type="text"
                 name="name"
                 id="name"
-                className=" placeholder-gray-600 text-black  bg-white w-full px-2 py-2 "
+                className={` placeholder-gray-600 text-black rounded-full  bg-white w-full px-2 py-2 ${isHome ? "border-[3px] border-transparent p-8 [background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#f0b429,#d92d2d,#a23b8f)_border-box]" : "border border-black"}`}
                 value={name}
                 onBlur={() => setTouched((prev) => ({ ...prev, name: true }))}
                 onChange={(e) => setName(e.target.value)}
@@ -128,7 +128,7 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
                 name="email"
                 onBlur={() => setTouched((prev) => ({ ...prev, email: true }))}
                 id="email"
-                className=" placeholder-gray-600 text-black  bg-white w-full px-2 py-2 "
+                className={` placeholder-gray-600 text-black rounded-full  bg-white w-full px-2 py-2 ${isHome ? "border-[3px] border-transparent p-8 [background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#f0b429,#d92d2d,#a23b8f)_border-box]" : "border border-black"}`}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -141,7 +141,7 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
                 placeholder={lang === "en" ? "Telephone" : "Teléfono"}
                 type="tel"
                 id="phone"
-                className=" placeholder-gray-600 text-black  bg-white w-full px-2 py-2"
+                className={` placeholder-gray-600 text-black rounded-full  bg-white w-full px-2 py-2 ${isHome ? "border-[3px] border-transparent p-8 [background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#f0b429,#d92d2d,#a23b8f)_border-box]" : "border border-black"}`}
                 value={phone}
                 onBlur={() => setTouched((prev) => ({ ...prev, phone: true }))}
                 onChange={(e) => setPhone(e.target.value)}
@@ -159,7 +159,7 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
                     ? "Tell us what your company needs"
                     : "Cuéntanos qué necesita tu empresa."
                 }
-                className=" placeholder-gray-600 text-black bg-white w-full px-2 py-2 "
+                className={` placeholder-gray-600 text-black rounded-2xl  bg-white w-full px-2 py-2 ${isHome ? "border-[3px] border-transparent p-8 [background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#f0b429,#d92d2d,#a23b8f)_border-box]" : "border border-black"}`}
                 rows={4}
                 value={userNeeds}
                 onBlur={() =>
@@ -173,7 +173,7 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
             {isFormValid ? (
               <button
                 type="submit"
-                className={`mt-auto md:ml-8 px-3 rounded py-2 font-bold bg-black text-white w-max cursor-pointer`}
+                className={`mt-auto h-max md:ml-8 px-3 rounded py-2 font-bold  text-black ml-auto cursor-not-allowed ${isHome ? "border-[3px] border-transparent p-8 [background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#f0b429,#d92d2d,#a23b8f)_border-box]" : "border border-black"}`}
               >
                 <p>{lang === "en" ? "Send" : "Enviar"}</p>
               </button>
@@ -181,7 +181,8 @@ const LetsTalkForm = ({ lang }: { lang: string }) => {
               <button
                 data-testid="inactiveButton"
                 disabled
-                className="h-max md:ml-8 px-3 rounded py-2 font-bold bg-black text-white ml-auto cursor-not-allowed"
+                className={` h-max md:ml-8 px-3 rounded py-2 font-bold  text-black ml-auto cursor-not-allowed ${isHome ? "border-[3px] border-transparent p-8 [background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#f0b429,#d92d2d,#a23b8f)_border-box]" : "border border-black"}`}
+
               >
                 <p>{lang === "en" ? "Send" : "Enviar"}</p>
               </button>

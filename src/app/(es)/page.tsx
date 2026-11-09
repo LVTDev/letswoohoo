@@ -1,5 +1,6 @@
 // import HomeVideoReel from "@/components/General UI/HomeVideoReel";
 "use client";
+import HorizontalInfoSection from "@/components/General UI/HorizontalInfoSection";
 import Alliances from "@/components/Home/Alliances";
 import HomeBubble from "@/components/Home/HomeBubble";
 import HomeContact from "@/components/Home/HomeContact";
@@ -11,6 +12,7 @@ import HomeContact from "@/components/Home/HomeContact";
 import HomeSliderTrailerAudio from "@/components/Home/HomeSliderTrailerAudio";
 import HomeText from "@/components/Home/HomeText";
 import HorizontalInfiniteClients from "@/components/Home/HorizontalInfiniteClients";
+import NosotrosSticky from "@/components/Home/NosotrosSticky";
 import Numeros from "@/components/Home/Numeros";
 import ProjectParallax from "@/components/Home/ProjectParallax";
 import Services from "@/components/Home/Services";
@@ -35,16 +37,18 @@ export default function Inicio() {
       {/* <HomeSlider lang="es" /> */}
 
       <HomeSliderTrailerAudio />
-      <HomeText />
-      <ProjectParallax />
-      <Services />
-      <Alliances />
+      <HorizontalInfoSection />
+      <NosotrosSticky/>
       <Numeros />
       <HorizontalInfiniteClients />
+      {/* <HomeText /> */}
+      {/* <ProjectParallax /> */}
+      {/* <Services /> */}
+      <Alliances />
       <HomeContact />
-      <div className="absolute top-1/2 right-3 z-30">
+      {/* <div className="absolute top-1/2 right-3 z-30">
         <HomeBubble/>
-      </div>
+      </div> */}
     </div>
   );
 }
