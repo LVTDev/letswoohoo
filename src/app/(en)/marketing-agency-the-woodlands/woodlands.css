@@ -1,0 +1,24 @@
+.btl-landing .wh-swap { display: block; height: 1em; overflow: hidden; }
+.btl-landing .wh-swap-track { display: flex; flex-direction: column; animation: wh-swap 5s cubic-bezier(.75, 0, .25, 1) infinite; }
+.btl-landing .wh-swap-track > span { display: block; height: 1em; line-height: 1em; }
+@keyframes wh-swap {
+  0%, 40% { transform: translateY(0); }
+  50%, 90% { transform: translateY(-33.3333%); }
+  100% { transform: translateY(-66.6667%); }
+}
+.btl-landing .wh-claim-lg { font-size: clamp(44px, 11.8vw, 46px); }
+@media (min-width: 48rem) { .btl-landing .wh-claim-lg { font-size: clamp(64px, 10vw, 96px); } }
+@media (min-width: 68.75rem) { .btl-landing .wh-claim-lg { font-size: clamp(44px, 8vw, 124px); } }
+@media (prefers-reduced-motion: reduce) { .btl-landing .wh-swap-track { animation: none; } }
+
+/* Wide client logos (e.g. Lexus Monterrey | Cleber lockup) */
+.btl-landing .wh-pill-wide { width: 232px; }
+.btl-landing .wh-pill-wide .btl-client-logo { width: 188px; height: 38px; }
+@media (min-width: 48rem) {
+  .btl-landing .wh-pill-wide { width: 296px; }
+  .btl-landing .wh-pill-wide .btl-client-logo { width: 240px; height: 48px; }
+}
+@media (min-width: 68.75rem) {
+  .btl-landing .wh-pill-wide { width: 340px; }
+  .btl-landing .wh-pill-wide .btl-client-logo { width: 280px; height: 54px; }
+}
