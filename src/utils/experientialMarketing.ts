@@ -1,5 +1,11 @@
 export const experientialMarketingPath = "/experiential-marketing-agency";
 export const experientialMarketingSpanishPath = "/agencia-btl";
+export const woodlandsPath = "/marketing-agency-the-woodlands";
+
+export const landingPaths = [experientialMarketingPath, experientialMarketingSpanishPath, woodlandsPath];
+
+export const isLandingPath = (pathname: string) =>
+  landingPaths.some((path) => pathname === path || pathname.startsWith(`${path}/`));
 
 export const experientialServices = [
   {
