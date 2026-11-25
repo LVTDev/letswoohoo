@@ -41,7 +41,7 @@ const NosotrosSticky = () => {
           </div> */}
         </div>
         <div className="spotlight-track bg-gradient-to-br from-[#FFBA03] via-[#FF1219] to-[#BD35A4] px-4 pb-30 z-2 lg:-z-1">
-          <div className="spotlight-card my-12 flex justify-center w-3/4 mx-auto">
+          <div className="spotlight-card my-4 md:my-12 flex justify-center w-3/4 mx-auto">
             <div className="relative aspect-video w-full overflow-hidden rounded-lg">
               <video
                 className="absolute inset-0 h-full w-full object-cover"
@@ -55,7 +55,7 @@ const NosotrosSticky = () => {
               />
             </div>
           </div>
-          <div className="spotlight-card h-30 w-3/4 mx-auto mt-12 flex justify-between">
+          <div className="spotlight-card h-30 w-3/4 mx-auto mt-4 md:mt-12 flex justify-between">
             <div className="relative rounded-lg overfow-hidden aspect-square">
               <Image
                 className="rounded-lg"
@@ -78,7 +78,7 @@ const NosotrosSticky = () => {
             </div>
           </div>
 
-          <div className="spotlight-card w-4/5 mx-auto my-12 flex justify-center">
+          <div className="spotlight-card w-4/5 mx-auto my-4 md:my-12 flex justify-center">
             <div className="relative h-full rounded-lg overfow-hidden aspect-video">
               <Image
                 className="rounded-lg"
@@ -91,7 +91,7 @@ const NosotrosSticky = () => {
             </div>
           </div>
 
-          <div className="spotlight-card my-12 flex w-3/4 mx-auto gap-4 justify-between">
+          <div className="spotlight-card my-4 md:my-12 flex w-3/4 mx-auto gap-4 justify-between">
             <div className="relative aspect-square rounded-lg overfow-hidden">
               <Image
                 fill
@@ -114,7 +114,7 @@ const NosotrosSticky = () => {
             </div>
           </div>
 
-          <div className="spotlight-card my-12 flex justify-center w-3/4 mx-auto">
+          <div className="spotlight-card my-4 md:my-12 flex justify-center w-3/4 mx-auto">
             <div className="relative h-full  overfow-hidden aspect-video">
               <Image
                 className="rounded-lg"
@@ -127,7 +127,7 @@ const NosotrosSticky = () => {
             </div>
           </div>
           {/* FIC &  */}
-          <div className="spotlight-card mt-12 flex gap-4 justify-between w-3/4 mx-auto">
+          <div className="spotlight-card mt-4 md:mt-12 flex gap-4 justify-between w-3/4 mx-auto">
             <div className="relative aspect-square rounded-lg overfow-hidden">
               <Image
                 fill
@@ -150,7 +150,7 @@ const NosotrosSticky = () => {
             </div>
           </div>
 
-          <div className="spotlight-card my-12 flex justify-center w-3/4 mx-auto">
+          <div className="spotlight-card my-4 md:my-12 flex justify-center w-3/4 mx-auto">
             <div className="relative aspect-video w-full overflow-hidden rounded-lg">
               <video
                 className="absolute inset-0 h-full w-full object-cover"
