@@ -44,50 +44,54 @@ export default function HorizontalInfoSection() {
   }, []);
 
   return (
-    <div className="scroll-section-outer  relative">
-      <div ref={triggerRef} className="bg-black ">
-        <div ref={sectionRef} className="scroll-section-inner ">
-          <section className="h-[95vh] pt-[2vh] w-[200vw] flex justify-center flex-col  relative gap-[30px] my-auto bg-gradient-to-r from-[#FFBA03] via-[#FF1219] to-[#BD35A4] bg-clip-text text-transparent ">
-            <p className="absolute left-20 top-20 text-white border px-3 py-2 rounded-full uppercase">Servicios</p>
-            <div className="flex justify-around uppercase mb-10 lg:mb-0">
-              <div
-                tabIndex={0}
-                className="flex flex-col  group  transition duration-300 ease-out"
-              >
-                <div className="flex items-center">
-                  <p className="text-[3rem] lg:text-[6.5rem] font-extrabold group-hover:scale-[1.2] mr-8 transition">
-                    CREATIVIDAD
-                  </p>
+    <>
+      <div className="scroll-section-outer  relative hidden lg:block">
+        {/* DESKTOP VERSION */}
+        <div ref={triggerRef} className="bg-black ">
+          <div ref={sectionRef} className="scroll-section-inner ">
+            <section className="h-[95vh] pt-[2vh] w-[200vw] flex justify-center flex-col  relative gap-[30px] my-auto bg-gradient-to-r from-[#FFBA03] via-[#FF1219] to-[#BD35A4] bg-clip-text text-transparent ">
+              <p className="absolute left-20 top-20 text-white border px-3 py-2 rounded-full uppercase">
+                Servicios
+              </p>
+              <div className="flex justify-around uppercase mb-10 lg:mb-0">
+                <div
+                  tabIndex={0}
+                  className="flex flex-col  group  transition duration-300 ease-out"
+                >
+                  <div className="flex items-center">
+                    <p className="text-[3rem] lg:text-[6.5rem] font-extrabold group-hover:scale-[1.2] mr-8 transition">
+                      CREATIVIDAD
+                    </p>
 
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-end leading-20">
-                      <p className="text-[3rem]  lg:text-[10rem] font-extrabold group-hover:scale-[1.2] mr-20 transition">
-                        MEDIOS
-                      </p>
-                      <p className="text-[3rem] lg:text-[7rem] font-extrabold group-hover:scale-[1.2] mr-8 transition">
-                        BTL
-                      </p>
-                    </div>
-                    <div className="flex  gap-10">
-                      <p className="text-[3rem] lg:text-[5rem] font-extrabold group-hover:scale-[1.2] mr-8 transition">
-                        DATA
-                      </p>
-                      <p className="text-[3rem] lg:text-[5rem] font-extrabold group-hover:scale-[1.2] mr-8 transition">
-                        producción
-                      </p>
+                    <div className="flex flex-col items-center">
+                      <div className="flex items-end leading-20">
+                        <p className="text-[3rem]  lg:text-[10rem] font-extrabold group-hover:scale-[1.2] mr-20 transition">
+                          MEDIOS
+                        </p>
+                        <p className="text-[3rem] lg:text-[7rem] font-extrabold group-hover:scale-[1.2] mr-8 transition">
+                          BTL
+                        </p>
+                      </div>
+                      <div className="flex  gap-10">
+                        <p className="text-[3rem] lg:text-[5rem] font-extrabold group-hover:scale-[1.2] mr-8 transition">
+                          DATA
+                        </p>
+                        <p className="text-[3rem] lg:text-[5rem] font-extrabold group-hover:scale-[1.2] mr-8 transition">
+                          producción
+                        </p>
+                      </div>
                     </div>
                   </div>
+                  <div className="flex gap-20">
+                    <p className="text-[1.3rem] lg:text-[10rem] leading-[1] font-extrabold">
+                      ESTRATEGIA
+                    </p>
+                    <p className="text-[1.3rem] lg:text-[10rem] leading-[1] font-extrabold">
+                      AUDIOVISUAL
+                    </p>
+                  </div>
                 </div>
-                <div className="flex gap-20">
-                  <p className="text-[1.3rem] lg:text-[10rem] leading-[1] font-extrabold">
-                    ESTRATEGIA
-                  </p>
-                  <p className="text-[1.3rem] lg:text-[10rem] leading-[1] font-extrabold">
-                    AUDIOVISUAL
-                  </p>
-                </div>
-              </div>
-              {/* <div
+                {/* <div
                 tabIndex={0}
                 className="flex  group   transition duration-300 ease-out items-center"
               >
@@ -98,7 +102,7 @@ export default function HorizontalInfoSection() {
                   </p>
                 </div>
               </div> */}
-              {/* <div
+                {/* <div
                 tabIndex={0}
                 className="flex  group   transition duration-300 ease-out items-center"
               >
@@ -130,10 +134,49 @@ export default function HorizontalInfoSection() {
                   mejor agencia <br /> independiente <br /> de mexico
                 </p>
               </div> */}
-            </div>
-          </section>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
-    </div>
+      {/* MOBILE VERSION */}
+      <div className="bg-black uppercase py-10 px-2">
+           <p className="w-max mb-10 text-white border px-3 py-2 rounded-full uppercase">
+                Servicios
+              </p>
+        <div className="lg:hidden bg-gradient-to-br from-[#FFBA03] via-[#FF1219] to-[#BD35A4] bg-clip-text text-transparent ">
+          <p className="text-[3rem] lg:text-[6.5rem] font-extrabold group-hover:scale-[1.2] mr-8 transition">
+            CREATIVIDAD
+          </p>
+
+          <div>
+            <p className="text-[3rem]  lg:text-[10rem] font-extrabold group-hover:scale-[1.2] mr-20 transition">
+              MEDIOS
+            </p>
+            <p className="text-[3rem] lg:text-[7rem] font-extrabold group-hover:scale-[1.2] mr-8 transition">
+              BTL
+            </p>
+          </div>
+
+          <div>
+            <p className="text-[3rem] lg:text-[5rem] font-extrabold group-hover:scale-[1.2] mr-8 transition">
+              DATA
+            </p>
+            <p className="text-[3rem] lg:text-[5rem] font-extrabold group-hover:scale-[1.2] mr-8 transition">
+              producción
+            </p>
+          </div>
+
+          <div>
+            <p className="text-[3rem] lg:text-[10rem] leading-[1] font-extrabold">
+              ESTRATEGIA
+            </p>
+            <p className="text-[3rem] lg:text-[10rem] leading-[1] font-extrabold">
+              AUDIOVISUAL
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

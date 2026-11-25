@@ -86,7 +86,7 @@ const LetsTalkForm = ({ lang, isHome }: { lang: string, isHome: boolean }) => {
     }
   };
   return (
-    <div className="md:w-3/4" id="contactanos">
+    <div className="lg:w-3/4" id="contactanos">
       <div className="font-extralight text-4xl tracking-widest uppercase mb-6">
         {" "}
         <p className={`text-white ${isHome && "text-center"}`} >

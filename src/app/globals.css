@@ -81,7 +81,11 @@ body {
 
 .spotlight-headline {
   position: sticky;
-  top: var(--pin-top);
+  top: 33%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 3rem;
 }
 
 .spotlight-track {
@@ -94,14 +98,26 @@ body {
   position: sticky;
   top: var(--pin-top);
   transform-origin: center top;
-  height: calmp(220px, 34vh, 340px);
+  /* height: clamp(220px, 34vh, 340px); */
   height: 20rem;
 }
 
 @media(max-width: 768px){
+
   .spotlight-layout{
     --pin-top: 5rem;
     grid-template-columns: 1fr;
     row-gap: 2rem;
   }
+
+  .spotlight-headline{
+    position: relative;
+    top: auto;
+    order: -1;
+  }
+
+  .spotlight-card{
+    height: 150px;
+  }
 }
+

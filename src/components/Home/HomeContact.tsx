@@ -6,9 +6,9 @@ const HomeContact = () => {
   
   return (
     <div className="bg-[#303030] md:flex justify-center py-10">
-      <div className="w-1/2 flex flex-col items-center">
+      <div className="lg:w-1/2 flex flex-col px-3 lg:items-center">
         <LetsTalkForm isHome={true} lang="es" />
-        <div className="flex gap-4">
+        <div className="flex gap-4 mx-auto">
           <div className="from-[#f0b429]  via-[#d92d2d] to-[#a23b8f] bg-gradient-to-r rounded-full w-10 h-10 flex items-center justify-center">
             <Facebook color="white" fill="white" />
           </div>

@@ -9,7 +9,7 @@ import {
 const Footer = () => {
   return (
     <footer className="pb-8 font-albert  w-[90%] mx-auto py-3">
-      <div className="md:flex justify-between  items-center">
+      <div className="md:flex justify-between   items-center">
         <div>
           <p className="text-lg font-medium">
             Río Rosas Sur 330 1er piso, <br />
