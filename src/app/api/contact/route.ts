@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     const emailSent = await sendMail(
       "Sitio WOOHOO: Formulario Contactanos",
       // "",
-      ["hello@letswoohoo.com", 'sixto@letswoohoo.com'],
+      ["comercial@letswoohoo.com"],
       `Client: ${requestContent.name}
      Correo: ${requestContent.email}
      Telefono:${requestContent.phone}
