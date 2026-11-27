@@ -49,7 +49,7 @@ export default function HorizontalInfoSection() {
         {/* DESKTOP VERSION */}
         <div ref={triggerRef} className="bg-black ">
           <div ref={sectionRef} className="scroll-section-inner ">
-            <section className="h-[95vh] pt-[2vh] w-[200vw] flex justify-center flex-col  relative gap-[30px] my-auto bg-gradient-to-r from-[#FFBA03] via-[#FF1219] to-[#BD35A4] bg-clip-text text-transparent ">
+            <section className="overflow-hidden h-[95vh] pt-[2vh] w-[200vw] flex justify-center flex-col  relative gap-[30px] my-auto bg-gradient-to-r from-[#FFBA03] via-[#FF1219] to-[#BD35A4] bg-clip-text text-transparent ">
               <p className="absolute left-20 top-20 text-white border px-3 py-2 rounded-full uppercase">
                 Servicios
               </p>
