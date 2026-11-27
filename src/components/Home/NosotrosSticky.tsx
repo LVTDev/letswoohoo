@@ -25,10 +25,10 @@ const NosotrosSticky = () => {
     <div className="spotlight min-h-screen max-w-screen">
       <div className="spotlight-layout">
         <div className="spotlight-headline relative">
-          <p className="uppercase border rounded-full px-3 text-lg lg:text-[40px] mt-12 w-max mx-auto">
+          <p className="uppercase border rounded-full px-3 text-lg lg:text-3xl mt-2 w-max mx-auto">
             Nosotros
           </p>
-          <p className="text-center w-3/4 mx-auto text-lg lg:text-3xl mt-6">
+          <p className="text-center w-3/4 mx-auto text-lg lg:text-2xl mt-6">
             Somos una agencia que cree que las ideas están en constante
             movimiento y que la creatividad es el motor de transformación que
             impulsa marcas, conecta personas y hace crecer negocios. Integramos

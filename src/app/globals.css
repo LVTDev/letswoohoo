@@ -81,7 +81,7 @@ body {
 
 .spotlight-headline {
   position: sticky;
-  top: 33%;
+  top: 20%;
   display: flex;
   justify-content: center;
   flex-direction: column;
