@@ -93,9 +93,9 @@ const HomeSliderTrailerAudio = () => {
       // }}
       >
         <TrailerSlideAudio
-          urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/BANNER%20WOHOO%20%20VERTICAL.mov"
+          // urlVertical="https://o5qiahlghji2exja.public.blob.vercel-storage.com/BANNER%20WOHOO%20%20VERTICAL.mov"
           src={
-            "https://o5qiahlghji2exja.public.blob.vercel-storage.com/2banner.mov"
+            "https://cdn.sanity.io/files/5egex671/production/a9628f2a7c1e3ad533564c0d49e17a0e70a82c96.mp4"
           }
           // swiperRef={swiperRef}
           videoRef={videoRef}
